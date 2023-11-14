@@ -1,0 +1,15 @@
+#Modal rejected
+mdl_rejected_cndn: //*[@id="modalAlert"]/div[@class="modal-overlay"]/div[@class="modal-content"]
+mdl_rejected_cndn_content: //*[@id="modalAlert"]//div[@class="modal-content"]
+lbl_modal_rejected_cndn_title: //*[@id="modalAlert"]/div[@class="modal-overlay"]/div[@class="modal-content"]/div[@class="modal-title"]
+lbl_reason_rejected_cndn_title: //*[@id="modalAlert"]/div[@class="modal-overlay"]/div[@class="modal-content"]//div[@class="form-group"]/label[1]
+txt_reason_rejected_cndn: //textarea[@id="rb-ta-buyer-reject"] 
+
+##Button Confirm and Cancel
+btn_confirm_rejected: id=rb-btn-confirm
+btn_cancel_rejected: id=rb-btn-cancel
+
+#
+txt_form_rejected_required_error: //*[@id="modalAlert"]//span[@class="text-form-error"]
+ico_required_error: //*[@id="modalAlert"]//span[@class="text-form-error"]/i[@class="icon-fail"]
+frm_required_error: //*[@id="rb-ta-buyer-reject"][@class="form-control form-error"]

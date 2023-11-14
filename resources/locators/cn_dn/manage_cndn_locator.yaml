@@ -1,0 +1,80 @@
+obj_manage_cndn:
+  right_menu:
+    lnk_manage_cndn_menu: //a[@data-rb="Manage Credit Note_menu_lv2"]
+
+obj_search:
+  txt_search: //*[@id="rb-txt-buyer-search-text"] 
+  btn_search: //button[@class="btn-op-primary btn-search"]
+
+manage_cndn_label: //a[@class="list-tab-menu active"]
+
+ddl_cndn_status: id=rb-dd-buyer-status
+ddl_cndn_status_with_value: //li/a[text()='${selected_approval_status}']
+
+ddl_tax_invoice_WithTaxInvoice: id=tax-filter-with
+ddl_tax_invoice_AllTaxInvoice: id=tax-filter-all
+ddl_tax_invoice_NoTaxInvoice: id=tax-filter-no
+ddl_tax_invoice: id=tax-filter-box-dropdown
+
+btn_tax_invoice_filter: id=tax-filter
+
+obj_table:
+  firstrow: //table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[1]
+  tbl_cndn_firstrow_with_columm: (//*[@class='frontend-items-list']//table//tbody//tr)[1]//td[${ret_col_no}]
+  tbl_cndn_buyer_result_row: //table[@id="rb-tbl-buyer-credit-note"]/tbody/tr
+  row_data_with_columm: (//table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[not(contains(@class,'col-detail'))])[${row_number}]/td[${ret_col_no}]
+  tbl_cndn_result_header_row: //*[@class='frontend-items-list']//table//thead//th
+  header_row: //table//thead//th
+  tbl_cndn_result_header_text: //*[@class='frontend-items-list']//table//thead//tr
+  tbl_cndn_firstrow_data_with_columm: //*[@class='frontend-items-list']//table//tbody//tr[1]//td[${ret_col_no}]
+  lbl_buyer_cndn_status: //*[@class="box-dropdown-list form-dropdown-list ein-dropdown-list"]//a[contains(.,'${cndn_status}')]
+  row_per_page: //table[@id="rb-tbl-buyer-credit-note"]/tbody/tr
+  lbl_cndn_status: //*[@id='rb-bdl-status-cndn']//a[contains(.,'${cndn_status}')]  
+  lbl_cndn_num: (//table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[not(contains(@class,'col-detail'))])[${row_num}]/td[@class="buyer-inv-num"]/span[1]
+  lbl_cndn_num_w_taxicon: (//table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[not(contains(@class,'col-detail'))])[${row_num}]/td[@class="buyer-inv-num"]//*[@class="icon-tax-invoice op-tooltip"]
+  lbl_buyer: (//table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[not(contains(@class,'col-detail'))])[${row_num}]/td[@class="ein-buyer-name"]/span[1]
+  lbl_supplier: (//table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[not(contains(@class,'col-detail'))])[${row_num}]/td[@class="ein-buyer-sup"]/span[1]
+  lbl_createddate: (//table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[not(contains(@class,'col-detail'))])[${row_num}]/td[@class="ein-buyer-sup"]/following-sibling::td
+  lbl_costcenter: (//table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[not(contains(@class,'col-detail'))])[${row_num}]/td[@class="ein-buyer-sup"]/following-sibling::td[2]
+  lbl_notetype: (//table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[not(contains(@class,'col-detail'))])[${row_num}]/td[contains(@class,'buyer-note-type')]
+  lbl_includevat: (//table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[not(contains(@class,'col-detail'))])[${row_num}]/td[contains(@class,'buyer-note-type')]/following-sibling::td
+  lbl_status: (//table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[not(contains(@class,'col-detail'))])[${row_num}]/td[@class="col-action-dot"]/div[contains(@class,'ein-text-status')]
+  tbl_expandsion_with_row: (//*[@class='frontend-items-list']//table//tbody//tr[@class="col-detail"])[${row_num}]
+  tbl_expand_button: //table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[${row_num}]/td[contains(@class,'col-ein-no')]//*[@class="icon-arrow-right-page"]
+  tbl_refno: (//*[@class='frontend-items-list']//table//tbody//tr[@class="col-detail"])[${row_num}]//div[@class="blxw-header"]/span[@class="blxw-hd"]
+  tbl_inv_num: (//div[@class="blxw-left"])[${inv_row_num}] 
+  tbl_inv_count: //div[@class="blxw-left"]
+  tbl_po_count: (//*[@class='frontend-items-list']//table//tbody//tr[@class="col-detail"])[${row_num}]//div[@class="blxw-right"]
+  tbl_po_num: (//div[@class="blxw-table"]//span[@class="blxw-cd"][1])[${inv_row_num}]
+  tbl_gr_num: (//div[@class="blxw-table"]//span[@class="blxw-cd"][2])[${inv_row_num}]
+  tbl_cost_center: (//div[@class="blxw-right"]//div[@class="blxw-table"]//span[@class="blxw-cd"][3])[${inv_row_num}]
+  tbl_detail_count: (//*[@class='frontend-items-list']//table//tbody//tr[@class="col-detail"])[${row_num}]//div[@class="blxw-right"]//table/tbody/tr/td[@class="blxw-num"]
+  tbl_no: (//div[@class="blxw-right"]//table/tbody/tr/td[@class="blxw-num"])[${detail_row_num}]
+  tbl_Item_name: (//div[@class="blxw-right"]//table/tbody/tr/td[@class="blxw-name"])[${detail_row_num}]
+  tbl_rows: //*[@id="rb-tbl-buyer-credit-note"]/tbody/tr[${row_num}]
+  cel_span_invoice_num_tax_icon: //*[@id="rb-tbl-buyer-credit-note"]/tbody/tr/td[@class="buyer-inv-num"]//i[@class="icon-tax-invoice op-tooltip"]
+
+btn_row_select_action: //*[@id="rb-bdd-action-${specific_rows}"]
+action:
+  history:  //*[@id="rb-ddl-action-selected-${specific_rows}"]//i[@class="pr-icon-action icon-history"]
+btn_action:
+  history:  //*[@id="rb-ddl-action-selected-${specific_rows}"]//i[@class="pr-icon-action icon-history"] 
+
+tbl_cndn_list:
+  col_cndn_num:  (//tr[${row_num}]/td[position()=(count(//tr/th[contains(@class,'buyer-inv-num')]/preceding-sibling::*)+1)]/span)[1]
+  col_buyer: //tr[${row_num}]/td[position()=(count(//tr/th[text()[contains(.,'Buyer') or contains(.,'ผู้ซื้อ')]]/preceding-sibling::*)+1) ]
+  col_create_date: //tr[${row_num}]/td[position()=(count(//tr/th[text()[contains(.,'Created Date') or contains(.,'วันที่สร้าง')]]/preceding-sibling::*)+1)]
+  col_status_label: //tr[${row_num}]/td[position()=(count(//tr/th[text()[contains(.,'Status') or contains(.,'สถานะ')]]/preceding-sibling::*)+1)]/div/span
+  selectrow_on_column: //*[@id="pageContent"]//table/tbody/tr[${row_number}]/td[${ret_col_no}]
+  row_col: //table/tbody/tr[${row_number}]/td[${ret_col_no}]
+  #cel_span_invoice_num_tax_icon: //*[@id="rb-tbl-buyer-credit-note"]/tbody/tr/td[@class="buyer-inv-num"]//i[@class="icon-tax-invoice op-tooltip"]
+select_row_col: //table/tbody/tr[${row_number}]/td[${ret_col_no}]  
+
+filter_tax_invoice:
+  icon_filter: //i[@id="tax-filter-icon"]
+  with_tax_invoice: //li[@id="tax-filter-with"]
+  no_tax_invoice: //li[@id="tax-filter-no"]
+  all_invoice: //li[@id="tax-filter-all"]
+
+
+

@@ -1,0 +1,110 @@
+obj_view_cndn:
+  lbl_section_header: (//*[@class='full-popup-inner']//div[@class='top-view-title']//parent::*)[1]
+  lbl_section_under: //*[@class='full-popup-inner']//div[@class='box-row']
+  lbl_header: //*[@class='full-popup-title pull-left'][contains(.,'View Credit / Debit Note')]
+  div_view_cndn: //div[@class='information-bar']
+  lbl_data_ApprovalStatus: //span[contains(@class,"pr-status")]/span
+  lbl_data_CNDNNumwithtitle: //*[@class="title-pr-number"]
+  lbl_data_BuyerName: (//div[@class="pr-detail-detail"])[1]
+  lbl_data_SupplierName: (//div[@class="pr-detail-detail"])[2]
+  lbl_data_Received_date: (//div[@class="pr-detail-detail"])[3]
+  lbl_data_Reference_no: (//div[@class="pr-detail-detail"])[4]
+  lbl_data_Duedate: (//div[@class="pr-detail-detail"])[5]
+  lbl_data_PaymentLocation: (//div[@class="pr-detail-detail"])[6]
+  lbl_data_CNDNtotal: id=rb-lbl-pr-amount
+  lbl_data_Currency: //*[@id="rb-lbl-pr-amount"]/following-sibling::strong
+  lbl_data_Notefromsupplier: //div[@class="einb-view-note"]/p
+  lbl_data_CNDNNum: //table[@class="table-default table-border table-ein-list einb-table"]//td[1]/span
+  lbl_data_CNDNDate: //table[@class="table-default table-border table-ein-list einb-table"]//td[1]/span[3]
+  lbl_data_TaxInvoiceNum: //table[@class="table-default table-border table-ein-list einb-table"]//td[2]/span
+  lbl_data_TaxInvoiceDate: //table[@class="table-default table-border table-ein-list einb-table"]//td[2]/span[2]
+  lbl_data_ExcludeVat: //table[@class="table-default table-border table-ein-list einb-table"]//td[3]
+  lbl_data_Vat: //table[@class="table-default table-border table-ein-list einb-table"]//td[4]
+  lbl_data_VatBaseAmount: //table[@class="table-default table-border table-ein-list einb-table"]//td[5]
+  lbl_data_IncludeVat: //table[@class="table-default table-border table-ein-list einb-table"]//td[6]
+  lbl_data_No: //table[@class="in-col-detail"]/tbody//tr[${row}]/td[1]
+  lbl_data_InvoiceNum: //table[@class="in-col-detail"]/tbody//tr[${row}]/td[2]
+  lbl_data_InvoiceAmount: //table[@class="in-col-detail"]/tbody//tr[${row}]/td[3]
+  lbl_data_CNDNAmount: //table[@class="in-col-detail"]/tbody//tr[${row}]/td[4]
+  icn_noti_green: //tr[@class='cur-default']//i[@class='noti-green']
+  icn_attachment: //tr[@class='cur-default']//i[contains(@class,'icon-attachment')]
+  first_row: //table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[1] 
+  btn_information_need: //div[@class="top-view-title"]//a[@class="pending op-tooltip"]
+  
+  action:
+    btn_edit: //*[@class='popup-top-action hide-sm']//a[contains(.,'Edit')]
+    btn_close_invoice: //*[@class='popup-top-action hide-sm']//a[contains(.,'Close CN/DN')]
+    btn_print_billing: //*[@class='popup-top-action hide-sm']//a[contains(.,'Print Billing')]
+    btn_history: //*[@class='popup-top-action hide-sm']//a[contains(.,'History')]
+    btn_close_cndn: //div[@id='rb-modal-viewapproval-cndn']//a/i[@class="icon-close-invoice"]
+    btn_x_mark: //*[@class='full-popup-close pull-right']
+
+cndn_detail_section:
+  tbl_invoice_firstrow_with_columm: //table[@class='in-col-detail']//tbody//td[${ret_col_no}]
+  tbl_invoice_row_with_columm: //table[@class="in-col-detail"]/tbody/tr[${row_number}]/td[${ret_col_no}]
+  tbl_invoice_header_with_columm: //table[@class='in-col-detail']//thead//th
+  tbl_invoice_row_count: //table[@class="in-col-detail"]/tbody//tr
+  icn_noti_green_firstrow: //tr[contains(@class,'col-detail')]//tbody//tr[1]//i[@class='noti-green']
+  icn_attachment_firstrow: //tr[contains(@class,'col-detail')]//tbody//tr[1]//i[contains(@class,'icon-attachment')]
+
+footer_section:
+  btn_request_document: //div[@id="rb-modal-viewapproval-cndn"]//div[@class="pull-left"]
+
+btn_rejected_cndn: //button[@class="btn-op-default btn-half mr-10 false" and text() = 'Reject' or text() ='ปฎิเสธ']
+btn_approve_cndn: //button[@class="btn-op-primary btn-half false" and text() = 'Approve' or text() ='อนุมัติ']
+
+gr_detail_modal:
+  tbl_gr_data_rows: //*[@id='modalHistory']//tbody//tr    
+  tbl_gr_data_specify_row: //*[@id='modalHistory']//tbody//tr[${row_number}]
+  lbl_x_mark_to_close: //*[@id='modalHistory']//*[@class='pull-right']
+  div_modal_gr_detail: //*[@id='modalHistory']//*[text()='GR Details:']
+  lbl_gr_data_row_po_count: //div[@class="modal-inner modal-history"]//div[@class="frontend-top-ctrl"]
+  lbl_gr_data_row_po_num: (//div[@class="modal-inner modal-history"]//div[@class="frontend-top-ctrl"]/div[1]//span[1])[${xpath_row}]
+  lbl_gr_data_row_gr_num: (//div[@class="modal-inner modal-history"]//div[@class="frontend-top-ctrl"]/div[2]//span[1])[${xpath_row}]
+  lbl_gr_data_row_no: (//table[@class="fixed-headers dn-gr-detail"]//tbody//td[1])[${xpath_row}]
+  lbl_gr_data_row_desc: (//table[@class="fixed-headers dn-gr-detail"]//tbody//td[2])[${xpath_row}]
+  lbl_gr_data_row_unit: (//table[@class="fixed-headers dn-gr-detail"]//tbody//td[3])[${xpath_row}]
+  lbl_gr_data_row_inv_amt: (//table[@class="fixed-headers dn-gr-detail"]//tbody//td[4])[${xpath_row}]
+  lbl_gr_data_row_cndn_amt: (//table[@class="fixed-headers dn-gr-detail"]//tbody//td[5])[${xpath_row}]
+
+attachment_modal:
+  lbl_detail_msg: //div[@class='modal-content']/div[@class='modal-inner']//*[text()=${message}]
+  lbl_header_txt: //div[@class='modal-content']/div[@class='modal-title']//*[text()=${message}]
+  lbl_firstrow_note_msg: (//div[@class='box-upload-attachment view'])[1]/p[span[text()='Note']]
+  lbl_firstrow_note: (//div[@class='box-upload-attachment view'])[1]/p[span[text()='Note']]//span[3]
+  lbl_firstrow_send_to_supplier: (//div[@class='box-upload-attachment view'])[1]/p[4]/span[text()='Send to supplier']
+  btn_close: //div[@class='modal-content']/div[@class='modal-title']//*[@class="icon-cross"]    
+
+modal_information_need: 
+  modal: //div[@id='modalCreateInvoice']//div[@class='modal-content']
+  lbl_note: //div[@id='modalCreateInvoice']//div[@class='modal-content']//p[1]
+  lbl_buyer: //div[@id='modalCreateInvoice']//div[@class='modal-content']//p[2]/span[1]
+  lbl_date: //div[@id='modalCreateInvoice']//div[@class='modal-content']//p[2]/span[2]
+  txt_request_document: id=rb-ta-buyer-requestInformation
+
+lbl_success_bar_req_doc: //div[@class="box-alert box-alert-success box-fixed-content"]     
+
+box1_approval:
+  ico_note: //div[@class="hasnote"]/i[@class="icon-note"]  
+  txtarea_note: //li/p/span[2]
+  ico_approve : //i[@class="icon-check-green"]
+  ico_awaiting_approve : (//i[@class="icon-awaiting-img"])[1]
+  ico_reject: (//i[@class="icon-reject-img"])[1]
+  lst_box: (//*[@class="approver-list"])[1]
+  approver:
+    firstname : (//ul[@class="user-detail"]/li//span)[1]
+    lastname: (//ul[@class="user-detail"]/li//span)[2]
+    email : (//ul[@class="user-detail"]/li/span)[1]
+    tel: (//ul[@class="user-detail"]/li/span[2])[1]
+
+box2_approval:  
+  ico_suspend: //i[@class="icon-stop-img"]
+  ico_awaiting: //i[@class="icon-awaiting-img"]
+  ico_pending: //i[@class="icon-clock-grey"]
+  ico_approve :  (//i[@class="icon-check-green"])[2]
+  lst_box : (//*[@class="approver-list"])[2]
+  approver:
+    all_group: (//ul[@class="user-detail"])[2]/li
+    name : (//ul[@class="user-detail"])[2]/li[${index}]/strong
+    email: (//ul[@class="user-detail"])[2]/li[${index}]/span[1]
+    tel: (//ul[@class="user-detail"])[2]/li[${index}]/span[2]

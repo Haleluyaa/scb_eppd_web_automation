@@ -1,0 +1,197 @@
+btn_select_po_gr: //ul[@id='rb-ddl-po-gr-selected']
+btn_create_invoice: //a[@id='rb-btn-create-invoice']    
+btn_continue: id=rb-btn-continue
+txt_create_credit_note_header: //div[@class='modal-title']/span[text()='Create Invoice :']
+btn_create_invoice_step1: //button[@class="btn-op-primary btn-add-invoice "]/span[2] 
+ddl_selected_buyer_offline: id=rb-ddl-select-buyer
+txt_search_buyer: id=rb-txt-search-buyer
+ddl_selected_supplier_offline: id=rb-ddl-select-supplier
+txt_search_supplier: id=rb-txt-search-supplier
+ddl_selected_currency_offline: id=rb-ddl-select-currency
+btn_continue_offline: id=rb-btn-continue
+ico_cross: //i[@class="icon-cross"]
+ddl_selected_buyer_offline_default_value: id=rb-ddl-select-buyer
+ddl_selected_supplier_offline_default_value: id=rb-ddl-select-supplier
+ddl_search_buyer_offline: //div[@id='rb-div-buyer-list']
+ddl_search_supplier_offline: //div[@id='rb-div-supplier-list']
+ddl_currency_offline_list: //div[@id='rb-div-currency-list']
+btn_next_step1: //button[@id='rb-btn-next' and @class='btn-op-primary ']
+
+lbl_header_buyer_name: //div[@class='full-popup-wrap'][1]//div[@id='rb-lbl-buyer']
+lbl_header_supplier_name: //div[@class='full-popup-wrap'][1]//div[@id='rb-lbl-supplier']
+lbl_header_created_date: //div[@class='full-popup-wrap'][1]//div[@id='rb-lbl-create-date']
+lbl_header_amount: //div[@class='full-popup-wrap'][1]//strong[@id='rb-lbl-pr-amount']
+lbl_header_amount_currency: //div[@class='full-popup-wrap'][1]//div[@class='text-right pull-right buyer-ein-amount']/strong[@class='font-sub-title color-info']
+txt_total_invoice_amount: //div[@class='full-popup-wrap'][1]//div[@class='text-right pull-right buyer-ein-amount']//strong[@id='rb-lbl-pr-amount']//span
+
+btn_create_new_invoice: //button[contains(@class,'btn-op-primary btn-add-invoice')]
+
+btn_next_disabled: //button[@class='btn-op-primary btn-op-disabled']
+btn_next_enabled: //button[@class='btn-op-primary ']
+
+lbl_showing_entries: //div[@id='invoiceTableContent']//select[@id='rb-lbl-showing-entries-per-page-add-inv']
+
+
+lbl_footer_record_summary_create_inv_page: //div[@id='invoiceTableContent']//div[@id='rb-lbl-records-summary-add-inv']/strong//span[contains(.,'to')]
+lbl_footer_total_entries_create_inv_page: //div[@id='invoiceTableContent']//div[@id='rb-lbl-records-summary-add-inv']//span[contains(.,'entries')]
+ico_next_page: //div[@id='invoiceTableContent']//a[@id='rb-ico-arrow-right-page-add-inv']/i[@class='icon-arrow-right-page']
+ico_previous_page: //div[@id='invoiceTableContent']//a[@id='rb-ico-arrow-left-back-add-inv']/i[@class='icon-arrow-left-page']
+ico_first_page: //div[@id='invoiceTableContent']//a[@id='rb-ico-arrow-left-end-add-inv']/i[@class='icon-arrow-left-end']
+ico_last_page: //div[@id='invoiceTableContent']//a[@id='rb-ico-arrow-right-end-add-inv']/i[@class='icon-arrow-right-end']
+
+ico_step_1: //li[@class='boxstep step1 active']/span/i
+ico_step_last: //li[@class='boxstep steplast active']/span/i
+
+cbo_po_with_row: //*[@id="rb-tbl-pogr-list"]/tbody/tr[${row}]/td[1]/input[@id="rb-btn-add-to-new-invoice"]
+
+txt_notetobuyer: id=rb-ta-invoice-detail-note-to-buyer
+txt_invoice_number: rb_txt_invoice_number_${row}
+txt_tax_invoice_number: rb_txt_taxInvoice_number_${row}  
+txt_invoice_date: id=rb_calendar_invoiceDate_${row}
+txt_tax_invoice_date: id=rb_calendar_taxInvoiceDate_${row}
+txt_vat: id=rb_txt_vat_${vat_rownum}
+
+select_buyer: //div[@id='rb-div-buyer-list']/label/strong[contains(text(),'${selected_value}')]
+select_supplier: //div[@id='rb-div-supplier-list']/label/strong[contains(text(),'${selected_value}')]
+select_currency: //div[@id='rb-div-currency-list']/label[contains(text(),'${selected_value}')]
+
+
+calendar_menu:
+  btn_previous_year: //*[@id="rb_calendarPopup"]//a[@class="rc-calendar-prev-year-btn"]
+  btn_previous_month: //*[@id="rb_calendarPopup"]//a[@class="rc-calendar-prev-month-btn"]
+  btn_next_year: //*[@id="rb_calendarPopup"]//a[@class="rc-calendar-next-month-btn"]
+  btn_next_month: //*[@id="rb_calendarPopup"]//a[@class="rc-calendar-next-month-btn"]
+  spn_month_select: //*[@id="rb_calendarPopup"]//a[@class="rc-calendar-month-select"]
+  spn_year_select: //*[@id="rb_calendarPopup"]//a[@class="rc-calendar-year-select"]
+
+btn_footer_submit: //button[@class='btn-op-primary false']
+btn_footer_submit_yes: //button[@id='btnCon' and @class='btn-op-primary']
+btn_footer_submit_retention: //button[@class='btn-op-primary']
+
+invoice_detail:
+  tbl_first_row_po: //*[@class="in-col-detail create"]//tbody//tr//td[1]
+
+gr_detail:
+  txt_invoice_amount : (//*[contains(@id,"rb_txt_gr_item_amount")])[1]
+  tr_row: //div[div[text()="รายละเอียดของใบแจ้งหนี้" or text()="Invoice Details"]]/following-sibling::div//table/tbody/tr
+  txt_invoice_amount_row : (//*[contains(@id,"rb_txt_gr_item_amount")])[${row}]
+  txt_retention_amount_row : (//*[contains(@id,"rb_txt_gr_item_retention")])[${row}]
+  ddl_retention_select_row : (//*[contains(@id,"rb_txt_gr_item_retention")])[${row}]/following-sibling::div
+  ddl_retention_option_row_percent : (//*[contains(@id,"rb_txt_gr_item_retention")])[${row}]/following-sibling::div/div[2]//li/a[text()="%"]
+  ddl_retention_option_row_amount : (//*[contains(@id,"rb_txt_gr_item_retention")])[${row}]/following-sibling::div/div[2]//li/a[text()="Amount"]
+  btn_save_invoice_amount: //*[@data-reactid=".0.0.1:1:4.0.1.3.9.2.0.0"]
+  create_step2_btn_save_invoice_amount: //div[@class="full-popup-bottom"]//button[@class="btn-op-primary"]
+
+adjust_gr_amount:
+  txt_amount_all_items: (//*[contains(@id,"rb_txt_gr_item_amount")])  
+  txt_amount_line_item: (//*[contains(@id,"rb_txt_gr_item_amount")])[${line_item}]
+  btn_save: //div[@id="bodyContainer"]//div[@class="full-popup-bottom"]//button[@class="btn-op-primary"] [contains(text(),'บันทึก') or contains(text(),'Save')]
+
+lbl_amount_included_vat: //div[not(@id="rb-modal-createinvoice-add") and @class="full-popup-wrap"]//strong[@id="rb-lbl-pr-amount"]/span
+lbl_amt_currency: //div[not(@id="rb-modal-createinvoice-add") and @class="full-popup-wrap"]//div[@class='text-right pull-right buyer-ein-amount']/strong[@class='font-sub-title color-info']
+lbl_amount_excluded_vat: //div[@class="column-12"]//table[@class="table-default table-border table-ein-list"]/tbody/tr[@class="cur-default "]/td[5]/span
+
+msg_required:
+  config: //label[span[contains(.,'lbl_configuration_fields}')]]/following-sibling::span//span[contains(.,'${error_msg}')]
+
+config:
+  txt_with_value: //label[span[contains(.,'${lbl_config}')]]UI_locator}  
+  ddl_with_value: (//li[@class='einb-form-control'])[${row_seq}]//select/option[text()!='Please select...']
+  ddl: (//li[@class='einb-form-control'])[${row_seq}]//select
+  lbl: (//li[@class='einb-form-control'])[${row_ui}]//span[contains(.,'${lbl_config}')]
+
+lbl_invoice_number_required: //span[@class='text-form-error'][1]//span[text()='This field is required'] 
+lbl_invoice_date_required: //span[@class='text-form-error'][2]//span[text()='This field is required'] 
+lbl_tax_invoice_number_required: //td[@class='pd-5-15'][2]//span[@class='text-form-error'][1]/span[text()='This field is required']
+lbl_vat_amount_required: //td[@class='pd-5-15'][3]//span[@class='text-form-error'][1]/span[text()='This field is required']
+
+btn_additional_invoice: //tr[@class='cur-default '][${row_num}]/td[10]/a//*[@class="icon-details set-icon"]  
+invoice_additional_tab: //div[@class="einb-tab-form"]/ul/li[${tab_num}]
+btn_additional_invoice_update: //div[@id="edit-invoice-additional-modal"]//button
+
+additional_inv_header:
+  lbl_invoicenumber: (//div[@class="pdd-td"])[1]
+  lbl_invoicedate: (//div[@class="pdd-td"])[2]
+  lbl_invoiceamt: //div[@class="buyer-ein-amount"]/strong[@class="pr-amount"]
+  lbl_currency: //div[@class="buyer-ein-amount"]/strong[@class="font-sub-title color-info"]
+
+tbl_po_gr:
+  tr_rows: //table[@id='rb-tbl-pogr-list']/tbody//tr  
+  tr_row: //table[@id='rb-tbl-pogr-list']//tr[${index}][@data-reactid[contains(.,'${index}')]]
+  po_number: //table[@id='rb-tbl-pogr-list']//tr[${row}]//td[3]
+  gr_number: //table[@id='rb-tbl-pogr-list']//tr[${row}]//td[6]
+  tr_row_with_linenum: //table[@id='rb-tbl-pogr-list']//tr[${line_num}]
+  tr_row_expand_detail: //tr[@class='col-detail' and @data-reactid[contains(.,'item_${line_num}')]]
+  tr_row_expand_detail_all: //tr[@class='col-detail'][${row}]//table[@class='in-col-detail']//tbody[1]
+  tr_btn_expand_row: //table[@id='rb-tbl-pogr-list']//tr[${line_num}]//i[@data-reactid[contains(.,'$${line_num}')]]
+  tr_btn_expand: //table[@id='rb-tbl-pogr-list']//tr[${line_num}]//i[@data-reactid[contains(.,'${line_num}')] and @class='icon-arrow-right-page']
+  tr_btn_collapse_row: //tr[${line_num}]//td/i[@class='icon-arrow-down-page']
+  tr_btn_collapse: //table[@id='rb-tbl-pogr-list']//i[@data-reactid[contains(.,'${line_num}')] and @class='icon-arrow-down-page']
+
+# Search Section 
+txt_search_box_create_inv_page:    //input[@id='rb-txt-search-add-inv']
+btn_search_po_gr:    id=rb-btn-search-button-add-inv
+ddl_search_po_gr:    //div[@class='box-dropdown']
+ddl_search_po_value:    //ul[@id='rb-ddl-search-selected']/li[contains(.,'PO Number')]
+ddl_search_gr_value:    //ul[@id='rb-ddl-search-selected']/li[contains(.,'GR Number')]
+txt_no_result_found:    //span[@class='font-empty-list']
+txt_search_results:    //div[@class='word-result']  
+lbl_po_search_results: //div[@class='word-result']/span[contains(.,'PO Number')]
+lbl_po_created_search_results: //div[@class='word-result']/span[contains(.,'PO Created')]
+lbl_gr_search_results: //div[@class='word-result']/span[contains(.,'GR Number')]
+lbl_gr_created_search_results: //div[@class='word-result']/span[contains(.,'GR Created')]
+txt_search_results_with_keyword: //div[@class='word-result' and contains(.,'${expected_search}')]//i
+
+btn_search_calendar_create_inv_page:    //button[@id="rb-btn-search-calendar-add-inv"]
+mdl_search_type:    //div[@id='rb-ddl-search-type']
+chk_any_time_date:    //input[@id='rb-chk-any-time']
+chk_po_created_date:    //input[@id='rb-chk-po-created']
+chk_gr_created_date:    //input[@id='rb-chk-gr-created']
+rb_txt_created_gr_date_from:    //input[@id='rb-txt-created-gr-date-from']
+rb_txt_created_gr_date_to:    //input[@id='rb-txt-created-gr-date-to']
+rb_txt_created_po_date_from:    id=rb-txt-created-po-date-from
+rb_txt_created_po_date_to:   id=rb-txt-created-po-date-to
+mdl_calendar: "//div[@id='calendar-${expected_calendar}']//div[@style='display: block;']"
+mdl_calendar_date: xpath=//div[@id='calendar-${expected_calendar}']//div[@class='rc-calendar-body']
+mdl_calendar_date_select: xpath=//div[@id='calendar-${expected_calendar}']//td[@class='rc-calendar-cell']/div[.='${select_day}']
+mdl_calendar_btn_month: xpath=//div[@id='calendar-${calendar_type}']//div[@class='rc-calendar-body']
+ิbtn_next_year: xpath=//div[@id='calendar-${calendar_type}']//a[@class='rc-calendar-next-year-btn']
+btn_prev_year: xpath=//div[@id='calendar-${calendar_type}']//a[@class='rc-calendar-prev-year-btn']
+btn_next_month: xpath=//div[@id='calendar-${calendar_type}']//a[@class='rc-calendar-next-month-btn']
+btn_prev_month: xpath=//div[@id='calendar-${calendar_type}']//a[@class='rc-calendar-prev-month-btn']
+
+btn_expand_all: //i[@id='rb-ico-right-page-expand-add-inv']
+
+
+create_inv_step1_footer:
+  lbl_footer: //div[@id='invoiceTableContent']//div[@class='op-pagination']
+  btn_add_to_invoice: //div[@class='box-item-ein' and contains(.,'${invoice_no}')]//div[@class='column-5 ein-add-item']
+
+config_first_option: //*[@id="${first_option}"]/option[2]
+
+btn_delete_pogr: //tr[@class='col-detail ']//tr[${row}]//a[@class='op-tooltip mr-10']/i
+
+lbl_invoice_linenum: //tr[@class='cur-default ']/td[2][text()='${linenum}'] 
+btn_delete_invoice: //div[@class='pull-left box-top-dropdown']//button[text()='Delete']   
+btn_confirm_delete: "//div[@style='display: block;' and @class='modal']//div[@class='modal-bottom text-right']/button[text()='Yes, delete']"
+
+txt_vatBaseAmount_1_invoice_detail:    id=rb_txt_vatBaseAmount_1
+txt_vat_1_invoice_detail:    id=rb_txt_vat_1
+lbl_header_invoice_amount: "//div[@style='display: block;']//strong[@id='rb-lbl-pr-amount']/span"
+lbl_invoice_amount_exclude_vat:   //tr[@class='cur-default ']/td[5]/span
+lbl_invoice_amount_include_vat:    //tr[@class='cur-default ']/td[9]/span
+lbl_retention:    //tr[@class='cur-default ']/td[6]/span
+
+lbl_invoice_details_first_row_second_col: //table[@class="in-col-detail create"]//tbody//tr[1]//td[2]
+lbl_invoice_details_first_row_POnumber: //table[@class="in-col-detail create"]//tbody//tr[1]//td[3]
+lbl_invoice_details_first_row_GRnumber: //table[@class="in-col-detail create"]//tbody//tr[1]//td[5]
+lbl_invoice_details_first_row_invoiceamount: //table[@class="in-col-detail create"]//tbody//tr[1]//td[8]/span
+lbl_invoice_details_first_row_retentionamount: //table[@class="in-col-detail create"]//tbody//tr[1]//td[9]/span
+
+#lbl_invoice_details_page_header
+lbl_invoice_details_page_POnumber: //div[@class="top-view-title"]/div
+lbl_invoice_details_page_GRnumber: //div[@class="top-view-title"]/strong
+lbl_invoice_details_page_buyername: //div[div[text()="รายละเอียดของใบแจ้งหนี้" or text()="Invoice Details"]]/following-sibling::div//div[@id="rb-lbl-buyer"]
+lbl_invoice_details_page_invoiceamount: //div[div[text()="รายละเอียดของใบแจ้งหนี้" or text()="Invoice Details"]]/following-sibling::div//strong[@id="rb-lbl-pr-amount"]
+lbl_invoice_details_page_currency: //div[div[text()="รายละเอียดของใบแจ้งหนี้" or text()="Invoice Details"]]/following-sibling::div//strong[2]
+ 

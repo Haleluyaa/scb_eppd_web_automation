@@ -1,0 +1,16 @@
+############### Left panel menu ##################
+menu_home_locator: //*[@data-rb="HOME_menu"]
+menu_invoice_locator: //*[@data-rb="INVOICE_menu"]
+menu_cndn_locator: //*[@data-rb="CREDIT NOTE_menu"]
+menu_approve_cndn_locator: //a[@data-rb="Approve Credit Note_menu_lv2"]
+
+
+############# Top Menu ##########################
+menu_signout_locator: //li[@class="logout"]
+menu_selected_language_locator:
+menu_selected_th_lang_locator : //span[@class="lang-flag icon-flag-th"]
+menu_selected_us_lang_locator : //span[@class="lang-flag icon-flag-us"]
+
+
+
+

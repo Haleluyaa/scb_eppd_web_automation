@@ -1,0 +1,2 @@
+btn_create_creditdebitnote_locator:  id=rb-btn-create-credit-note
+ddl_creditdebitnote_selected_locator: id=rb-ddl-invoice-selected

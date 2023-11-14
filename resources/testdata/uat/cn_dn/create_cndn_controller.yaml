@@ -1,0 +1,57 @@
+CREATE_CNDN_1PO_TEMPLATE: ${CURDIT}/../mockdata_template/create_cndn/1po_item/create_cndn_1_po.yaml
+CREATE_ELASTIC_1PO_TEMPLATE: ${CURDIT}/../mockdata_template/create_cndn/1po_item/create_elastic_1_po.yaml
+
+SUPPLIER_CNDN_1PO:
+  groupNum: 1
+  userName: ''
+  userID: TT00100
+  buyerMpID: ''
+  creditNote:
+  - creditNoteId: 1
+    creditNoteNum: '${preparecndn_num}'
+    creditNoteDate: '${prepare_cndn_date}'
+    cndnitem:
+    - invoiceId: 10399
+      creditNoteAmount: '2'
+      invoiceCreditNoteAmount:
+      - 2
+    taxInvoiceNum: '${preparetaxcndn_num}'
+    taxInvoiceDate: '${prepare_taxcndn_date}'
+    vat: 1
+    vatBaseAmount: 2
+    includeVAT: '3'
+    excludeVAT: '2'
+    currency: THB
+  attachments:
+  - headerAttachment: []
+    itemAttachment:
+    - itemDetailAttachment: []
+  appType: EInvoiceSupplier
+  cnOrDn: CN
+  isBuyer: false
+
+SUPPLIER_ELASTIC_1PO: 
+  invoiceID: 10399
+  buyerName: True Move H Universal CommunicationCo., Ltd. (Head Office)
+  buyerMpID: 19553eee-b30a-46dd-b978-d75f807295ce
+  supplierMpID: 5845252c-78fc-1000-b962-c0a805660001
+  currency: THB
+  invoiceNum: EED-BUGBATCH-INV05
+  createdBy: TT00100
+  createdDate: '2020-02-25T09:15:00.000+0000'
+  excludeVat: 500
+  retention: 0
+  vat: 0
+  includeVat: 500
+  remainingAmount: ${remaining_invoice}
+  invoiceItems:
+  - invoiceID: 10399
+    invoiceItemID: 11232
+    lineNum: 1
+    poNum: '4601011299'
+    poAmount: 6000
+    grNum: '17984'
+    grAmount: 1000
+    invoiceAmount: 500
+    retention: 0 
+

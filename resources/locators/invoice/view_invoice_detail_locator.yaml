@@ -1,0 +1,6 @@
+obj_view_invoice_detail:
+  tbl_po_detail:
+    row_first: //*[@id="rb-modal-viewinvoice"]//table[@class="in-col-detail"]/tbody/tr[1]/td[2]
+    row_first_nongr: //table[@class="table-default table-border table-ein-list einb-table"]//tr[@class="col-detail non-gr-ein"]//table[@class="in-col-detail"]//tr[1]/td[3]
+
+  btn_action: //*[@class="popup-top-action hide-sm"]//a[contains(.,'${invoice_action_button}')]

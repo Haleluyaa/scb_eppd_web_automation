@@ -1,0 +1,21 @@
+btn_upload_invoice: //button[@class="btn-op-default other-action"]/span[(contains(text(),'อัพโหลดไฟล์')) or (contains(text(),'Upload File'))]    #//a[@id="rb-btn-create-invoice"]/following-sibling::button
+btn_browse_upload_invoice: //input[@data-rb="uploadBtn"]
+ddl_buyer_list: id=rb-ddl-select-buyer
+txt_search_buyer_list: id=rb-txt-search-buyer
+ddl_buyer_select: //div[@id="rb-div-buyer-list"]/label/strong[text()="${buyer_name}"]
+
+error_section:
+  btn_clearfile: //div[@class="box-upload-status box-fail"]/a
+  error: //div[@class="upload-report "]
+  error_detail: //div[@class="box-upload-status box-fail"]
+  tbl_error: //table[contains(@class,"fixed_headers table-fix-error")]
+  error_number: //div[@class="box-upload-status box-fail"]/strong
+  error_desc: //div[@class="box-upload-status box-fail"]/span
+  #tbl_error: //table[@class="fixed_headers table-fix-error "]
+  tbl_error_rows: //table[@class="fixed_headers table-fix-error "]/tbody//tr
+  tbl_error_rows_column: //table[@class="fixed_headers table-fix-error "]/tbody/tr[${index_row}]/td[contains(@data-rb,'field')]
+  tbl_error_rows_row: //table[@class="fixed_headers table-fix-error "]/tbody/tr[${index_row}]/td[contains(@data-rb,'row')]
+  tbl_error_rows_desc: //table[@class="fixed_headers table-fix-error "]/tbody/tr[${index_row}]/td[contains(@data-rb,'desc')]/span[2]
+
+tab_upload_status: //a[@class="list-tab-menu active" and text()="Upload Status"]
+lbl_success_bar: //div[@class="box-alert box-fixed-content box-alert-success"]

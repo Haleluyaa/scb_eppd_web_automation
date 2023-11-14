@@ -1,0 +1,10 @@
+################  FILES
+UPLOAD_INVOICE: Supplier-Offline-success1.xls
+UPLOAD_INVOICE_INVALID_REQUIRED_FIELD: Supplier-Offline-fail_required_fields.xls
+UPLOAD_INVOICE_INVALID_DUP_SUPPLIER_NUMBER: Supplier-Offline-fail_dupplicate_supplier_number.xls
+UPLOAD_INVOICE_INVALID_DUPPLICATE_DATA: Supplier-Offline-editable-suppliernum-fail_dupplicate_supplier.xls
+UPLOAD_INVOICE_INVALID_EXCEED_LIMIT_DATA: Supplier-Offline-editable-suppliernum-fail-max_length.xls  
+UPLOAD_INVOICE_INVALID_NO_DATA: Supplier-Offline-fail_no_data.xls
+UPLOAD_INVOICE_INVALID_ROWS_NUMBER: Supplier-Offline-1000rows-andmore.xls
+UPLOAD_INVOICE_INVALID_FILE_SIZE: InvoiceTemplate_Oversize3555kb.xls
+UPLOAD_INVOICE_INVALID_FILE_FORMAT: 

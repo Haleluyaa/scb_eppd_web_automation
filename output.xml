@@ -1,0 +1,2662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.3 on darwin)" generated="20210521 18:05:57.111" rpa="false">
+<suite id="s1" name="Supplier Create Po Invoice" source="/Users/thanawitchaisuphapsirikun/Works/ascend_Pantavanij/Workspace/ptvn-einvoice-web-automation/testcases/sanity/supplier_create_po_invoice.robot">
+<kw name="Go to einvoice website via SWW with &quot;TT00273&quot; and &quot;Password1&quot;" library="common_ep_login_keywords" type="setup">
+<kw name="Go to SWW" library="common_ep_login_keywords">
+<kw name="Open browser with ${SWW_WEB} and ${BROWSER}" library="common_web_keywords">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${browser}'=='Chrome' or '${browser}'=='chrome'</arg>
+<arg>Open normal browser ${url} and ${browser}</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}'=='Firefox' or '${browser}'=='firefox'</arg>
+<arg>Open firefox browser ${url} and ${browser}</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}'=='IE' or '${browser}'=='ie'</arg>
+<arg>Open internet explorer browser ${url} and ${browser}</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}'=='Edge' or '${browser}'=='edge'</arg>
+<arg>Open edge browser ${url} and ${browser}</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}'=='Android' or '${browser}'=='android'</arg>
+<arg>Open android browser ${url} and ${browser}</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}'=='IOS' or '${browser}'=='ios'</arg>
+<arg>Open ios browser ${url} and ${browser}</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}'=='HeadlessChrome' or '${browser}'=='headlesschrome'</arg>
+<arg>Open chrome browser in headless ${url} and ${browser}</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}'=='HeadlessFirefox' or '${browser}'=='headlessfirefox'</arg>
+<arg>Open firefox browser in headless ${url} and ${browser}</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}'=='PabotChrome' or '${browser}'=='pabotchrome'</arg>
+<arg>Open chorme browser via pabot on ${url} and chrome</arg>
+<arg>ELSE</arg>
+<arg>Open chrome as normal browser on ${url}</arg>
+</arguments>
+<assign>
+<var>${open_browser}</var>
+</assign>
+<kw name="Open normal browser http://supplierportal.demo.pantavanij.com/AccountPortal/Login and chrome" library="common_web_keywords">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Run</arg>
+<arg>kill $(pgrep chromium)</arg>
+</arguments>
+<kw name="Run" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the output.</doc>
+<arguments>
+<arg>kill $(pgrep chromium)</arg>
+</arguments>
+<msg timestamp="20210521 18:05:57.884" level="INFO">Running command 'kill $(pgrep chromium) 2&gt;&amp;1'.</msg>
+<status status="PASS" starttime="20210521 18:05:57.882" endtime="20210521 18:05:57.912"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:05:57.882" endtime="20210521 18:05:57.912"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210521 18:05:57.913" level="INFO">Opening browser 'chrome' to base url 'http://supplierportal.demo.pantavanij.com/AccountPortal/Login'.</msg>
+<status status="PASS" starttime="20210521 18:05:57.913" endtime="20210521 18:06:03.038"></status>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<arguments>
+<arg>1920</arg>
+<arg>1080</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:03.039" endtime="20210521 18:06:03.148"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:05:57.881" endtime="20210521 18:06:03.148"></status>
+</kw>
+<msg timestamp="20210521 18:06:03.148" level="INFO">${open_browser} = None</msg>
+<status status="PASS" starttime="20210521 18:05:57.881" endtime="20210521 18:06:03.148"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:05:57.880" endtime="20210521 18:06:03.148"></status>
+</kw>
+<kw name="Add local storage 'swwWeMallRemember' to browser" library="common_ep_login_keywords">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>localStorage.setItem("swwWeMallRemember", true);</arg>
+</arguments>
+<msg timestamp="20210521 18:06:03.149" level="INFO">Executing JavaScript:
+localStorage.setItem("swwWeMallRemember", true);
+Without any arguments.</msg>
+<status status="PASS" starttime="20210521 18:06:03.149" endtime="20210521 18:06:03.153"></status>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20210521 18:06:03.154" endtime="20210521 18:06:03.405"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:03.148" endtime="20210521 18:06:03.405"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.3s</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:03.405" endtime="20210521 18:06:03.405"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>0.1s</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:03.406" endtime="20210521 18:06:03.708"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:05:57.880" endtime="20210521 18:06:03.708"></status>
+</kw>
+<kw name="Input Username And Password For Login Supplier Web Work" library="common_ep_login_keywords">
+<arguments>
+<arg>${sww_username}</arg>
+<arg>${sww_password}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${txt_sww_username}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:03.709" endtime="20210521 18:06:04.333"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_sww_username}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20210521 18:06:04.334" level="INFO">Typing text 'TT00273' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20210521 18:06:04.333" endtime="20210521 18:06:05.392"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${txt_sww_password}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:05.392" endtime="20210521 18:06:06.021"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_sww_password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20210521 18:06:06.022" level="INFO">Typing text 'Password1' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20210521 18:06:06.021" endtime="20210521 18:06:06.992"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_sww_submit_login}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:06.993" endtime="20210521 18:06:07.616"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_sww_submit_login}</arg>
+</arguments>
+<msg timestamp="20210521 18:06:07.616" level="INFO">Clicking element '//*[@type='submit']'.</msg>
+<status status="PASS" starttime="20210521 18:06:07.616" endtime="20210521 18:06:19.831"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:03.708" endtime="20210521 18:06:19.832"></status>
+</kw>
+<kw name="Click Link Invoice Management On Supplier Web Work And Redirect To Invoice Management system" library="common_ep_login_keywords">
+<doc>This keyword for redirect to invoice management from supplier web work system</doc>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${env}' == 'beta' or '${env}' == 'prod'</arg>
+<arg>Run Keywords</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${lnk_sww_invoice}</arg>
+<arg>${TIMEOUT}</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>${lnk_sww_invoice}</arg>
+<arg>ELSE IF</arg>
+<arg>'${env}' == 'uat'</arg>
+<arg>Run Keywords</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${uat_lnk_sww_invoice}</arg>
+<arg>${TIMEOUT}</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>${uat_lnk_sww_invoice}</arg>
+</arguments>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${uat_lnk_sww_invoice}</arg>
+<arg>${TIMEOUT}</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>${uat_lnk_sww_invoice}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${uat_lnk_sww_invoice}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:19.833" endtime="20210521 18:06:20.454"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${uat_lnk_sww_invoice}</arg>
+</arguments>
+<msg timestamp="20210521 18:06:20.455" level="INFO">Clicking element '//a[contains(., "Invoice Management (UAT)")]'.</msg>
+<status status="PASS" starttime="20210521 18:06:20.455" endtime="20210521 18:06:21.099"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:19.833" endtime="20210521 18:06:21.099"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:19.832" endtime="20210521 18:06:21.099"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:19.832" endtime="20210521 18:06:21.099"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:05:57.880" endtime="20210521 18:06:21.099"></status>
+</kw>
+<test id="s1-t1" name="Create invoice online for buyer TRUE">
+<kw name="User create Invoice by using PO with buyer &quot;${CPF_BUYER_NAME_EN_SANITY}&quot; currency &quot;${ALL_CURRENCY_EN}&quot;" library="supplier_create_invoice_keywords">
+<kw name="Click &quot;Create New Invoice&quot; button" library="supplier_create_invoice_keywords">
+<kw name="Wait until loading complete" library="common_web_keywords">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${loading_overflow}</arg>
+<arg>2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${loading_overflow}</arg>
+<arg>2s</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210521 18:06:26.795" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-108.png"&gt;&lt;img src="selenium-screenshot-108.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210521 18:06:26.110" endtime="20210521 18:06:26.795"></status>
+</kw>
+<msg timestamp="20210521 18:06:26.796" level="FAIL">Element '//*[@class="loading-overflow"]' not visible after 2 seconds.</msg>
+<status status="FAIL" starttime="20210521 18:06:21.102" endtime="20210521 18:06:26.796"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:21.102" endtime="20210521 18:06:26.796"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Page Does Not Contain Element</arg>
+<arg>${loading_overflow}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<arguments>
+<arg>${loading_overflow}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:26.797" endtime="20210521 18:06:27.210"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:26.796" endtime="20210521 18:06:27.210"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:21.102" endtime="20210521 18:06:27.211"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_create_invoice}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:27.211" endtime="20210521 18:06:30.309"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_create_invoice}</arg>
+</arguments>
+<msg timestamp="20210521 18:06:30.309" level="INFO">Clicking element '//*[contains(@id,'rb-btn-create')]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210521 18:06:32.420" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-109.png"&gt;&lt;img src="selenium-screenshot-109.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210521 18:06:31.692" endtime="20210521 18:06:32.420"></status>
+</kw>
+<msg timestamp="20210521 18:06:32.422" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;div id="rb-btn-create-invoice" class="button btn-op-default other-action text-center " data-reactid=".0.0.1:1:4.0.1.1.0.0.0"&gt;...&lt;/div&gt; is not clickable at point (152, 197). Other element would receive the click: &lt;div class="loading-overflow" data-reactid=".0.0.1:0.0"&gt;...&lt;/div&gt;
+  (Session info: chrome=90.0.4430.212)
+</msg>
+<status status="FAIL" starttime="20210521 18:06:30.309" endtime="20210521 18:06:32.422"></status>
+</kw>
+<status status="FAIL" starttime="20210521 18:06:21.101" endtime="20210521 18:06:32.422"></status>
+</kw>
+<status status="FAIL" starttime="20210521 18:06:21.101" endtime="20210521 18:06:32.422"></status>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary" type="teardown">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20210521 18:06:32.423" endtime="20210521 18:06:33.015"></status>
+</kw>
+<doc>Create Invoice
+tc01 search buyer
+tc02 po list initial data , pagination
+tc03 search PO
+tc04 expand PO list
+tc05 validate required field
+tc08 adjust VAT
+tc06 delete po from invoice (select PO/GR and then remove)</doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" starttime="20210521 18:06:21.100" endtime="20210521 18:06:33.016" critical="yes">ElementClickInterceptedException: Message: element click intercepted: Element &lt;div id="rb-btn-create-invoice" class="button btn-op-default other-action text-center " data-reactid=".0.0.1:1:4.0.1.1.0.0.0"&gt;...&lt;/div&gt; is not clickable at point (152, 197). Other element would receive the click: &lt;div class="loading-overflow" data-reactid=".0.0.1:0.0"&gt;...&lt;/div&gt;
+  (Session info: chrome=90.0.4430.212)
+</status>
+</test>
+<test id="s1-t2" name="During create invoice online can cancel invoice at create page">
+<kw name="User create PO Invoice with buyer &quot;${CPF_BUYER_NAME_EN_SANITY}&quot; currency &quot;${ALL_CURRENCY_EN}&quot;" library="supplier_create_invoice_keywords">
+<kw name="Click &quot;Create New Invoice&quot; button" library="supplier_create_invoice_keywords">
+<kw name="Wait until loading complete" library="common_web_keywords">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${loading_overflow}</arg>
+<arg>2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${loading_overflow}</arg>
+<arg>2s</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:33.019" endtime="20210521 18:06:34.254"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:33.018" endtime="20210521 18:06:34.254"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Page Does Not Contain Element</arg>
+<arg>${loading_overflow}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<arguments>
+<arg>${loading_overflow}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:34.254" endtime="20210521 18:06:38.261"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:34.254" endtime="20210521 18:06:38.261"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:33.018" endtime="20210521 18:06:38.261"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_create_invoice}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:38.262" endtime="20210521 18:06:38.882"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_create_invoice}</arg>
+</arguments>
+<msg timestamp="20210521 18:06:38.883" level="INFO">Clicking element '//*[contains(@id,'rb-btn-create')]'.</msg>
+<status status="PASS" starttime="20210521 18:06:38.883" endtime="20210521 18:06:39.541"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:33.017" endtime="20210521 18:06:39.542"></status>
+</kw>
+<kw name="Click &quot;Select PO&quot; button" library="invoice_status_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${obj_invoice.invoice_status_section.btn_select_po}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:39.542" endtime="20210521 18:06:40.166"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${obj_invoice.invoice_status_section.btn_select_po}</arg>
+</arguments>
+<msg timestamp="20210521 18:06:40.167" level="INFO">Clicking element '//*[@id="rb-ddl-po-gr-selected"]/li[2]/a'.</msg>
+<status status="PASS" starttime="20210521 18:06:40.167" endtime="20210521 18:06:40.815"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:39.542" endtime="20210521 18:06:40.816"></status>
+</kw>
+<kw name="Click on buyer dropdownlist" library="supplier_create_invoice_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ddl_selected_buyer_offline}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:40.816" endtime="20210521 18:06:41.545"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ddl_selected_buyer_offline}</arg>
+</arguments>
+<msg timestamp="20210521 18:06:41.545" level="INFO">Clicking element 'id=rb-ddl-select-buyer'.</msg>
+<status status="PASS" starttime="20210521 18:06:41.545" endtime="20210521 18:06:42.182"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:40.816" endtime="20210521 18:06:42.182"></status>
+</kw>
+<kw name="Verify Displaying of Continue Button Must Be Disabled" library="supplier_create_invoice_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_continue}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:42.183" endtime="20210521 18:06:42.799"></status>
+</kw>
+<kw name="Element Should Be Disabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is disabled.</doc>
+<arguments>
+<arg>${btn_continue}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:42.800" endtime="20210521 18:06:43.415"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:42.182" endtime="20210521 18:06:43.416"></status>
+</kw>
+<kw name="Input value to &quot;Buyer Search&quot; text field" library="invoice_status_keywords">
+<arguments>
+<arg>${buyer_name}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${obj_invoice.create_invoice_popup.txt_search_buyer}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:43.416" endtime="20210521 18:06:44.036"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${obj_invoice.create_invoice_popup.txt_search_buyer}</arg>
+<arg>${buyer_name}</arg>
+</arguments>
+<msg timestamp="20210521 18:06:44.037" level="INFO">Typing text 'บริษัท ดัคกาลบี้ กรุ๊ป จำกัด สำนักงานใหญ่' into text field '//*[@id="rb-txt-search-buyer"]'.</msg>
+<status status="PASS" starttime="20210521 18:06:44.037" endtime="20210521 18:06:45.227"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:43.416" endtime="20210521 18:06:45.227"></status>
+</kw>
+<kw name="Select buyer" library="supplier_create_invoice_keywords">
+<arguments>
+<arg>${buyer_name}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ddl_search_buyer_offline}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:45.228" endtime="20210521 18:06:45.845"></status>
+</kw>
+<kw name="Replace Variables" library="BuiltIn">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>${select_buyer}</arg>
+</arguments>
+<assign>
+<var>${selected_buyer}</var>
+</assign>
+<msg timestamp="20210521 18:06:45.846" level="INFO">${selected_buyer} = //div[@id='rb-div-buyer-list']/label/strong[contains(text(),'บริษัท ดัคกาลบี้ กรุ๊ป จำกัด สำนักงานใหญ่')]</msg>
+<status status="PASS" starttime="20210521 18:06:45.846" endtime="20210521 18:06:45.846"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selected_buyer}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:45.847" endtime="20210521 18:06:46.467"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${selected_buyer}</arg>
+</arguments>
+<msg timestamp="20210521 18:06:46.468" level="INFO">Clicking element '//div[@id='rb-div-buyer-list']/label/strong[contains(text(),'บริษัท ดัคกาลบี้ กรุ๊ป จำกัด สำนักงานใหญ่')]'.</msg>
+<status status="PASS" starttime="20210521 18:06:46.467" endtime="20210521 18:06:47.132"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:45.227" endtime="20210521 18:06:47.132"></status>
+</kw>
+<kw name="Verify Displaying of Buyer on Drop Down List Supplier Online" library="supplier_create_invoice_keywords">
+<arguments>
+<arg>${buyer_name}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ddl_selected_buyer_offline}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:47.133" endtime="20210521 18:06:47.748"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${ddl_selected_buyer_offline}</arg>
+<arg>${expected_value}</arg>
+</arguments>
+<msg timestamp="20210521 18:06:48.370" level="INFO">Element 'id=rb-ddl-select-buyer' contains text 'บริษัท ดัคกาลบี้ กรุ๊ป จำกัด สำนักงานใหญ่'.</msg>
+<status status="PASS" starttime="20210521 18:06:47.749" endtime="20210521 18:06:48.370"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:47.132" endtime="20210521 18:06:48.370"></status>
+</kw>
+<kw name="Click on currency dropdownlist" library="supplier_create_invoice_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ddl_selected_currency_offline}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:48.371" endtime="20210521 18:06:48.989"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ddl_selected_currency_offline}</arg>
+</arguments>
+<msg timestamp="20210521 18:06:48.990" level="INFO">Clicking element 'id=rb-ddl-select-currency'.</msg>
+<status status="PASS" starttime="20210521 18:06:48.989" endtime="20210521 18:06:49.621"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:48.371" endtime="20210521 18:06:49.621"></status>
+</kw>
+<kw name="Select currency" library="supplier_create_invoice_keywords">
+<arguments>
+<arg>${currency_name}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ddl_currency_offline_list}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:49.622" endtime="20210521 18:06:50.241"></status>
+</kw>
+<kw name="Replace Variables" library="BuiltIn">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>${select_currency}</arg>
+</arguments>
+<assign>
+<var>${selected_currency}</var>
+</assign>
+<msg timestamp="20210521 18:06:50.242" level="INFO">${selected_currency} = //div[@id='rb-div-currency-list']/label[contains(text(),'All Currency')]</msg>
+<status status="PASS" starttime="20210521 18:06:50.242" endtime="20210521 18:06:50.242"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selected_currency}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:50.242" endtime="20210521 18:06:50.862"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${selected_currency}</arg>
+</arguments>
+<msg timestamp="20210521 18:06:50.863" level="INFO">Clicking element '//div[@id='rb-div-currency-list']/label[contains(text(),'All Currency')]'.</msg>
+<status status="PASS" starttime="20210521 18:06:50.862" endtime="20210521 18:06:51.529"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:49.622" endtime="20210521 18:06:51.530"></status>
+</kw>
+<kw name="Verify Displaying of Currency on Drop Down List Supplier Online" library="supplier_create_invoice_keywords">
+<arguments>
+<arg>${currency_name}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ddl_selected_currency_offline}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:51.530" endtime="20210521 18:06:52.142"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${ddl_selected_currency_offline}</arg>
+<arg>${expected_value}</arg>
+</arguments>
+<msg timestamp="20210521 18:06:52.143" level="INFO">Verifying element 'id=rb-ddl-select-currency' contains exact text 'All Currency'.</msg>
+<status status="PASS" starttime="20210521 18:06:52.143" endtime="20210521 18:06:52.766"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:51.530" endtime="20210521 18:06:52.766"></status>
+</kw>
+<kw name="Click &quot;Next&quot; button to &quot;Create Invoice&quot;" library="invoice_status_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${obj_invoice.create_invoice_popup.btn_continue}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:52.766" endtime="20210521 18:06:53.388"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${obj_invoice.create_invoice_popup.btn_continue}</arg>
+</arguments>
+<msg timestamp="20210521 18:06:53.389" level="INFO">Clicking element '//*[@id="rb-btn-continue"]'.</msg>
+<status status="PASS" starttime="20210521 18:06:53.388" endtime="20210521 18:06:54.088"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:52.766" endtime="20210521 18:06:54.088"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:33.017" endtime="20210521 18:06:54.088"></status>
+</kw>
+<kw name="and user select po to create '1' invoices then click &quot;Next&quot; button to summary PO of Invoice" library="supplier_create_invoice_keywords">
+<kw name="Select PO Number By Selected Row" library="supplier_create_invoice_keywords">
+<doc>This keyword is checking at the selected po in table at selected row</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Replace Variables" library="BuiltIn">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>${cbo_po_with_row}</arg>
+</arguments>
+<assign>
+<var>${cbo_po}</var>
+</assign>
+<msg timestamp="20210521 18:06:54.090" level="INFO">${cbo_po} = //div[@id='invoiceTableContent']//tr[1]//td[1]//input[@id="rb-btn-add-to-new-invoice"]</msg>
+<status status="PASS" starttime="20210521 18:06:54.090" endtime="20210521 18:06:54.090"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${cbo_po}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:54.090" endtime="20210521 18:06:55.326"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${cbo_po}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:55.326" endtime="20210521 18:06:55.634"></status>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<arguments>
+<arg>${cbo_po}</arg>
+</arguments>
+<msg timestamp="20210521 18:06:55.635" level="INFO">Selecting checkbox '//div[@id='invoiceTableContent']//tr[1]//td[1]//input[@id="rb-btn-add-to-new-invoice"]'.</msg>
+<status status="PASS" starttime="20210521 18:06:55.635" endtime="20210521 18:06:57.210"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:54.089" endtime="20210521 18:06:57.210"></status>
+</kw>
+<kw name="Click &quot;Create New PO Invoice&quot; button on step 1" library="supplier_create_invoice_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_create_invoice_step1}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:57.211" endtime="20210521 18:06:57.832"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_create_invoice_step1}</arg>
+</arguments>
+<msg timestamp="20210521 18:06:57.833" level="INFO">Clicking element '//button[@class='btn-create-light']'.</msg>
+<status status="PASS" starttime="20210521 18:06:57.832" endtime="20210521 18:06:58.479"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:57.210" endtime="20210521 18:06:58.480"></status>
+</kw>
+<kw name="Awaiting Expected Element Is Enabled" library="supplier_create_invoice_keywords">
+<doc>This keyword for waiting expected element is enable</doc>
+<arguments>
+<arg>${btn_next_step1}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${expected_locator}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:06:58.480" endtime="20210521 18:07:00.025"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:58.480" endtime="20210521 18:07:00.025"></status>
+</kw>
+<kw name="Click &quot;Next&quot; button to summary PO of Invoice" library="supplier_create_invoice_keywords">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_next_step1}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:00.025" endtime="20210521 18:07:00.944"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_next_step1}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:00.945" level="INFO">Clicking element '//button[@id='rb-btn-next' and @class='btn-op-primary ']'.</msg>
+<status status="PASS" starttime="20210521 18:07:00.945" endtime="20210521 18:07:01.609"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:00.025" endtime="20210521 18:07:01.609"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:06:54.089" endtime="20210521 18:07:01.609"></status>
+</kw>
+<kw name="User can delete a selected invoice at create invoice" library="supplier_create_invoice_keywords">
+<kw name="Verify invoice at linenum" library="supplier_create_invoice_keywords">
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Replace Variables" library="BuiltIn">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>${lbl_invoice_linenum}</arg>
+</arguments>
+<assign>
+<var>${linenum_locator}</var>
+</assign>
+<msg timestamp="20210521 18:07:01.610" level="INFO">${linenum_locator} = //tr[@class='cur-default ']/td[2][text()='1']</msg>
+<status status="PASS" starttime="20210521 18:07:01.610" endtime="20210521 18:07:01.610"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${linenum_locator}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:01.610" endtime="20210521 18:07:02.233"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:01.609" endtime="20210521 18:07:02.233"></status>
+</kw>
+<kw name="Select Checked On Invoice Table On Create Invoice At Row '1'" library="supplier_create_invoice_keywords">
+<doc>This keyword for checked at check box on first row</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=rb_cb_invoice_detail_${rownum}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:02.234" endtime="20210521 18:07:02.852"></status>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<arguments>
+<arg>id=rb_cb_invoice_detail_${rownum}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:02.853" level="INFO">Selecting checkbox 'id=rb_cb_invoice_detail_1'.</msg>
+<status status="PASS" starttime="20210521 18:07:02.853" endtime="20210521 18:07:04.415"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:02.234" endtime="20210521 18:07:04.416"></status>
+</kw>
+<kw name="Delete selected row" library="supplier_create_invoice_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_delete_invoice}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:04.417" endtime="20210521 18:07:05.039"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_delete_invoice}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:05.040" level="INFO">Clicking element '//div[@class='pull-left box-top-dropdown']//button[text()='Delete']'.</msg>
+<status status="PASS" starttime="20210521 18:07:05.040" endtime="20210521 18:07:05.677"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_confirm_delete}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:05.677" endtime="20210521 18:07:06.297"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_confirm_delete}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:06.297" level="INFO">Clicking element '//div[@style='display: block;' and @class='modal']//div[@class='modal-bottom text-right']/button[text()='Yes, delete']'.</msg>
+<status status="PASS" starttime="20210521 18:07:06.297" endtime="20210521 18:07:06.959"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:04.416" endtime="20210521 18:07:06.959"></status>
+</kw>
+<kw name="Verify deleted invoice at linenum" library="supplier_create_invoice_keywords">
+<arguments>
+<arg>2</arg>
+</arguments>
+<kw name="Replace Variables" library="BuiltIn">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>${lbl_invoice_linenum}</arg>
+</arguments>
+<assign>
+<var>${linenum_locator}</var>
+</assign>
+<msg timestamp="20210521 18:07:06.960" level="INFO">${linenum_locator} = //tr[@class='cur-default ']/td[2][text()='2']</msg>
+<status status="PASS" starttime="20210521 18:07:06.960" endtime="20210521 18:07:06.960"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>${linenum_locator}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:06.961" endtime="20210521 18:07:07.382"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:06.960" endtime="20210521 18:07:07.382"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:01.609" endtime="20210521 18:07:07.383"></status>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary" type="teardown">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20210521 18:07:07.383" endtime="20210521 18:07:08.171"></status>
+</kw>
+<doc>Create Invoice
+tc07 delete po from invoice (select PO and then remove)</doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="PASS" starttime="20210521 18:06:33.016" endtime="20210521 18:07:08.171" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Create invoice online and adjust partial invoice">
+<kw name="User create PO Invoice with buyer &quot;${CPF_BUYER_NAME_EN_SANITY}&quot; currency &quot;${ALL_CURRENCY_EN}&quot;" library="supplier_create_invoice_keywords">
+<kw name="Click &quot;Create New Invoice&quot; button" library="supplier_create_invoice_keywords">
+<kw name="Wait until loading complete" library="common_web_keywords">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${loading_overflow}</arg>
+<arg>2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${loading_overflow}</arg>
+<arg>2s</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:08.173" endtime="20210521 18:07:09.524"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:08.173" endtime="20210521 18:07:09.524"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Page Does Not Contain Element</arg>
+<arg>${loading_overflow}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<arguments>
+<arg>${loading_overflow}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:09.525" endtime="20210521 18:07:13.501"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:09.525" endtime="20210521 18:07:13.501"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:08.173" endtime="20210521 18:07:13.501"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_create_invoice}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:13.502" endtime="20210521 18:07:14.121"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_create_invoice}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:14.123" level="INFO">Clicking element '//*[contains(@id,'rb-btn-create')]'.</msg>
+<status status="PASS" starttime="20210521 18:07:14.122" endtime="20210521 18:07:14.782"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:08.172" endtime="20210521 18:07:14.782"></status>
+</kw>
+<kw name="Click &quot;Select PO&quot; button" library="invoice_status_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${obj_invoice.invoice_status_section.btn_select_po}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:14.783" endtime="20210521 18:07:15.406"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${obj_invoice.invoice_status_section.btn_select_po}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:15.406" level="INFO">Clicking element '//*[@id="rb-ddl-po-gr-selected"]/li[2]/a'.</msg>
+<status status="PASS" starttime="20210521 18:07:15.406" endtime="20210521 18:07:16.057"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:14.782" endtime="20210521 18:07:16.057"></status>
+</kw>
+<kw name="Click on buyer dropdownlist" library="supplier_create_invoice_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ddl_selected_buyer_offline}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:16.058" endtime="20210521 18:07:16.696"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ddl_selected_buyer_offline}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:16.697" level="INFO">Clicking element 'id=rb-ddl-select-buyer'.</msg>
+<status status="PASS" starttime="20210521 18:07:16.697" endtime="20210521 18:07:17.338"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:16.057" endtime="20210521 18:07:17.338"></status>
+</kw>
+<kw name="Verify Displaying of Continue Button Must Be Disabled" library="supplier_create_invoice_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_continue}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:17.339" endtime="20210521 18:07:17.966"></status>
+</kw>
+<kw name="Element Should Be Disabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is disabled.</doc>
+<arguments>
+<arg>${btn_continue}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:17.967" endtime="20210521 18:07:18.583"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:17.338" endtime="20210521 18:07:18.583"></status>
+</kw>
+<kw name="Input value to &quot;Buyer Search&quot; text field" library="invoice_status_keywords">
+<arguments>
+<arg>${buyer_name}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${obj_invoice.create_invoice_popup.txt_search_buyer}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:18.584" endtime="20210521 18:07:19.203"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${obj_invoice.create_invoice_popup.txt_search_buyer}</arg>
+<arg>${buyer_name}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:19.203" level="INFO">Typing text 'บริษัท ดัคกาลบี้ กรุ๊ป จำกัด สำนักงานใหญ่' into text field '//*[@id="rb-txt-search-buyer"]'.</msg>
+<status status="PASS" starttime="20210521 18:07:19.203" endtime="20210521 18:07:20.321"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:18.583" endtime="20210521 18:07:20.322"></status>
+</kw>
+<kw name="Select buyer" library="supplier_create_invoice_keywords">
+<arguments>
+<arg>${buyer_name}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ddl_search_buyer_offline}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:20.322" endtime="20210521 18:07:20.939"></status>
+</kw>
+<kw name="Replace Variables" library="BuiltIn">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>${select_buyer}</arg>
+</arguments>
+<assign>
+<var>${selected_buyer}</var>
+</assign>
+<msg timestamp="20210521 18:07:20.940" level="INFO">${selected_buyer} = //div[@id='rb-div-buyer-list']/label/strong[contains(text(),'บริษัท ดัคกาลบี้ กรุ๊ป จำกัด สำนักงานใหญ่')]</msg>
+<status status="PASS" starttime="20210521 18:07:20.939" endtime="20210521 18:07:20.940"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selected_buyer}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:20.940" endtime="20210521 18:07:21.561"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${selected_buyer}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:21.562" level="INFO">Clicking element '//div[@id='rb-div-buyer-list']/label/strong[contains(text(),'บริษัท ดัคกาลบี้ กรุ๊ป จำกัด สำนักงานใหญ่')]'.</msg>
+<status status="PASS" starttime="20210521 18:07:21.561" endtime="20210521 18:07:22.199"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:20.322" endtime="20210521 18:07:22.199"></status>
+</kw>
+<kw name="Verify Displaying of Buyer on Drop Down List Supplier Online" library="supplier_create_invoice_keywords">
+<arguments>
+<arg>${buyer_name}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ddl_selected_buyer_offline}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:22.200" endtime="20210521 18:07:22.824"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${ddl_selected_buyer_offline}</arg>
+<arg>${expected_value}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:23.443" level="INFO">Element 'id=rb-ddl-select-buyer' contains text 'บริษัท ดัคกาลบี้ กรุ๊ป จำกัด สำนักงานใหญ่'.</msg>
+<status status="PASS" starttime="20210521 18:07:22.825" endtime="20210521 18:07:23.443"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:22.200" endtime="20210521 18:07:23.444"></status>
+</kw>
+<kw name="Click on currency dropdownlist" library="supplier_create_invoice_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ddl_selected_currency_offline}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:23.444" endtime="20210521 18:07:24.065"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ddl_selected_currency_offline}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:24.066" level="INFO">Clicking element 'id=rb-ddl-select-currency'.</msg>
+<status status="PASS" starttime="20210521 18:07:24.065" endtime="20210521 18:07:24.701"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:23.444" endtime="20210521 18:07:24.701"></status>
+</kw>
+<kw name="Select currency" library="supplier_create_invoice_keywords">
+<arguments>
+<arg>${currency_name}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ddl_currency_offline_list}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:24.702" endtime="20210521 18:07:25.328"></status>
+</kw>
+<kw name="Replace Variables" library="BuiltIn">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>${select_currency}</arg>
+</arguments>
+<assign>
+<var>${selected_currency}</var>
+</assign>
+<msg timestamp="20210521 18:07:25.329" level="INFO">${selected_currency} = //div[@id='rb-div-currency-list']/label[contains(text(),'All Currency')]</msg>
+<status status="PASS" starttime="20210521 18:07:25.328" endtime="20210521 18:07:25.329"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selected_currency}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:25.329" endtime="20210521 18:07:25.947"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${selected_currency}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:25.948" level="INFO">Clicking element '//div[@id='rb-div-currency-list']/label[contains(text(),'All Currency')]'.</msg>
+<status status="PASS" starttime="20210521 18:07:25.948" endtime="20210521 18:07:26.582"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:24.701" endtime="20210521 18:07:26.582"></status>
+</kw>
+<kw name="Verify Displaying of Currency on Drop Down List Supplier Online" library="supplier_create_invoice_keywords">
+<arguments>
+<arg>${currency_name}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ddl_selected_currency_offline}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:26.582" endtime="20210521 18:07:27.200"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${ddl_selected_currency_offline}</arg>
+<arg>${expected_value}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:27.201" level="INFO">Verifying element 'id=rb-ddl-select-currency' contains exact text 'All Currency'.</msg>
+<status status="PASS" starttime="20210521 18:07:27.201" endtime="20210521 18:07:27.820"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:26.582" endtime="20210521 18:07:27.820"></status>
+</kw>
+<kw name="Click &quot;Next&quot; button to &quot;Create Invoice&quot;" library="invoice_status_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${obj_invoice.create_invoice_popup.btn_continue}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:27.821" endtime="20210521 18:07:28.439"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${obj_invoice.create_invoice_popup.btn_continue}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:28.440" level="INFO">Clicking element '//*[@id="rb-btn-continue"]'.</msg>
+<status status="PASS" starttime="20210521 18:07:28.440" endtime="20210521 18:07:29.125"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:27.821" endtime="20210521 18:07:29.125"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:08.172" endtime="20210521 18:07:29.125"></status>
+</kw>
+<kw name="and user select po to create '1' invoices then click &quot;Next&quot; button to summary PO of Invoice" library="supplier_create_invoice_keywords">
+<kw name="Select PO Number By Selected Row" library="supplier_create_invoice_keywords">
+<doc>This keyword is checking at the selected po in table at selected row</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Replace Variables" library="BuiltIn">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>${cbo_po_with_row}</arg>
+</arguments>
+<assign>
+<var>${cbo_po}</var>
+</assign>
+<msg timestamp="20210521 18:07:29.128" level="INFO">${cbo_po} = //div[@id='invoiceTableContent']//tr[1]//td[1]//input[@id="rb-btn-add-to-new-invoice"]</msg>
+<status status="PASS" starttime="20210521 18:07:29.127" endtime="20210521 18:07:29.128"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${cbo_po}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:29.128" endtime="20210521 18:07:29.827"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${cbo_po}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:29.827" endtime="20210521 18:07:30.134"></status>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<arguments>
+<arg>${cbo_po}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:30.134" level="INFO">Selecting checkbox '//div[@id='invoiceTableContent']//tr[1]//td[1]//input[@id="rb-btn-add-to-new-invoice"]'.</msg>
+<status status="PASS" starttime="20210521 18:07:30.134" endtime="20210521 18:07:31.732"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:29.127" endtime="20210521 18:07:31.732"></status>
+</kw>
+<kw name="Click &quot;Create New PO Invoice&quot; button on step 1" library="supplier_create_invoice_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_create_invoice_step1}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:31.733" endtime="20210521 18:07:32.352"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_create_invoice_step1}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:32.353" level="INFO">Clicking element '//button[@class='btn-create-light']'.</msg>
+<status status="PASS" starttime="20210521 18:07:32.353" endtime="20210521 18:07:32.998"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:31.732" endtime="20210521 18:07:32.998"></status>
+</kw>
+<kw name="Awaiting Expected Element Is Enabled" library="supplier_create_invoice_keywords">
+<doc>This keyword for waiting expected element is enable</doc>
+<arguments>
+<arg>${btn_next_step1}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${expected_locator}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:32.999" endtime="20210521 18:07:34.546"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:32.998" endtime="20210521 18:07:34.546"></status>
+</kw>
+<kw name="Click &quot;Next&quot; button to summary PO of Invoice" library="supplier_create_invoice_keywords">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${btn_next_step1}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:34.547" endtime="20210521 18:07:35.468"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_next_step1}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:35.469" level="INFO">Clicking element '//button[@id='rb-btn-next' and @class='btn-op-primary ']'.</msg>
+<status status="PASS" starttime="20210521 18:07:35.468" endtime="20210521 18:07:36.146"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:34.547" endtime="20210521 18:07:36.146"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:29.126" endtime="20210521 18:07:36.146"></status>
+</kw>
+<kw name="and Get &quot;PO number&quot; &quot;${CPF_BUYER_NAME_EN_SANITY}&quot; &quot;Invoice Amount&quot; &quot;${THB_CURRENCY_DISPLAY}&quot; from create invoice step 2" library="supplier_create_invoice_keywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${lbl_POinvoice_details_first_row_POnumber}</arg>
+</arguments>
+<assign>
+<var>${POnumber_step2}</var>
+</assign>
+<msg timestamp="20210521 18:07:36.775" level="INFO">${POnumber_step2} = 6803635725</msg>
+<status status="PASS" starttime="20210521 18:07:36.147" endtime="20210521 18:07:36.775"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${buyer_name}</arg>
+</arguments>
+<assign>
+<var>${buyername_step2}</var>
+</assign>
+<msg timestamp="20210521 18:07:36.776" level="INFO">${buyername_step2} = บริษัท ดัคกาลบี้ กรุ๊ป จำกัด สำนักงานใหญ่</msg>
+<status status="PASS" starttime="20210521 18:07:36.775" endtime="20210521 18:07:36.776"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${lbl_POinvoice_details_first_row_invoiceamount}</arg>
+</arguments>
+<assign>
+<var>${Invoiceamount_step2}</var>
+</assign>
+<msg timestamp="20210521 18:07:37.397" level="INFO">${Invoiceamount_step2} = 6,000.00</msg>
+<status status="PASS" starttime="20210521 18:07:36.776" endtime="20210521 18:07:37.397"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${currency_code}</arg>
+</arguments>
+<assign>
+<var>${currencycode_step2}</var>
+</assign>
+<msg timestamp="20210521 18:07:37.397" level="INFO">${currencycode_step2} = THB</msg>
+<status status="PASS" starttime="20210521 18:07:37.397" endtime="20210521 18:07:37.397"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${POnumber_step2}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:37.398" level="INFO">${POnumber_step2} = 6803635725</msg>
+<status status="PASS" starttime="20210521 18:07:37.398" endtime="20210521 18:07:37.398"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${buyername_step2}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:37.399" level="INFO">${buyername_step2} = บริษัท ดัคกาลบี้ กรุ๊ป จำกัด สำนักงานใหญ่</msg>
+<status status="PASS" starttime="20210521 18:07:37.398" endtime="20210521 18:07:37.399"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${Invoiceamount_step2}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:37.399" level="INFO">${Invoiceamount_step2} = 6,000.00</msg>
+<status status="PASS" starttime="20210521 18:07:37.399" endtime="20210521 18:07:37.399"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${currencycode_step2}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:37.400" level="INFO">${currencycode_step2} = THB</msg>
+<status status="PASS" starttime="20210521 18:07:37.399" endtime="20210521 18:07:37.400"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:36.146" endtime="20210521 18:07:37.400"></status>
+</kw>
+<kw name="and Click first row of PO to drew down to &quot;PO Invoice Details&quot;" library="supplier_create_invoice_keywords">
+<kw name="Wait until loading complete" library="common_web_keywords">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${loading_overflow}</arg>
+<arg>2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${loading_overflow}</arg>
+<arg>2s</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210521 18:07:40.549" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-110.png"&gt;&lt;img src="selenium-screenshot-110.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210521 18:07:39.884" endtime="20210521 18:07:40.549"></status>
+</kw>
+<msg timestamp="20210521 18:07:40.550" level="FAIL">Element '//*[@class="loading-overflow"]' not visible after 2 seconds.</msg>
+<status status="FAIL" starttime="20210521 18:07:37.401" endtime="20210521 18:07:40.550"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:37.401" endtime="20210521 18:07:40.550"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Page Does Not Contain Element</arg>
+<arg>${loading_overflow}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<arguments>
+<arg>${loading_overflow}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:40.550" endtime="20210521 18:07:40.967"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:40.550" endtime="20210521 18:07:40.967"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:37.400" endtime="20210521 18:07:40.968"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${lbl_POinvoice_details_first_row_second_col}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:40.968" endtime="20210521 18:07:41.897"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${lbl_POinvoice_details_first_row_second_col}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:41.897" level="INFO">Clicking element '//table[@class="table-bl-datial create"]//tbody//tr[1]//td[2]'.</msg>
+<status status="PASS" starttime="20210521 18:07:41.897" endtime="20210521 18:07:42.554"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:37.400" endtime="20210521 18:07:42.554"></status>
+</kw>
+<kw name="and Verify &quot;PO Invoice Details&quot; show correct data from create invoice step 2" library="supplier_create_invoice_keywords">
+<kw name="Wait until loading complete" library="common_web_keywords">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${loading_overflow}</arg>
+<arg>2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${loading_overflow}</arg>
+<arg>2s</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210521 18:07:45.660" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-111.png"&gt;&lt;img src="selenium-screenshot-111.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210521 18:07:45.035" endtime="20210521 18:07:45.660"></status>
+</kw>
+<msg timestamp="20210521 18:07:45.661" level="FAIL">Element '//*[@class="loading-overflow"]' not visible after 2 seconds.</msg>
+<status status="FAIL" starttime="20210521 18:07:42.556" endtime="20210521 18:07:45.661"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:42.556" endtime="20210521 18:07:45.661"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Page Does Not Contain Element</arg>
+<arg>${loading_overflow}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<arguments>
+<arg>${loading_overflow}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:45.661" endtime="20210521 18:07:46.077"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:45.661" endtime="20210521 18:07:46.077"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:42.556" endtime="20210521 18:07:46.077"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${lbl_POinvoice_details_page_POnumber}</arg>
+</arguments>
+<assign>
+<var>${POnumber_details}</var>
+</assign>
+<msg timestamp="20210521 18:07:46.703" level="INFO">${POnumber_details} = PO Number: 6803635725</msg>
+<status status="PASS" starttime="20210521 18:07:46.077" endtime="20210521 18:07:46.703"></status>
+</kw>
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${POnumber_details}</arg>
+<arg>:${SPACE}</arg>
+</arguments>
+<assign>
+<var>@{POnumber}</var>
+</assign>
+<msg timestamp="20210521 18:07:46.704" level="INFO">@{POnumber} = [ PO Number | 6803635725 ]</msg>
+<status status="PASS" starttime="20210521 18:07:46.704" endtime="20210521 18:07:46.704"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${lbl_invoice_details_page_buyername}</arg>
+</arguments>
+<assign>
+<var>${buyername_details}</var>
+</assign>
+<msg timestamp="20210521 18:07:47.331" level="INFO">${buyername_details} = บริษัท ดัคกาลบี้ กรุ๊ป จำกัด สำนักงานใหญ่</msg>
+<status status="PASS" starttime="20210521 18:07:46.704" endtime="20210521 18:07:47.332"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${lbl_POinvoice_details_page_invoiceamount}</arg>
+</arguments>
+<assign>
+<var>${Invoiceamount_details}</var>
+</assign>
+<msg timestamp="20210521 18:07:47.955" level="INFO">${Invoiceamount_details} = 6,000.00</msg>
+<status status="PASS" starttime="20210521 18:07:47.332" endtime="20210521 18:07:47.955"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${lbl_invoice_details_page_currency}</arg>
+</arguments>
+<assign>
+<var>${currencycode_details}</var>
+</assign>
+<msg timestamp="20210521 18:07:48.576" level="INFO">${currencycode_details} = THB</msg>
+<status status="PASS" starttime="20210521 18:07:47.955" endtime="20210521 18:07:48.576"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${POnumber}[1]</arg>
+<arg>${POnumber_step2}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:48.577" endtime="20210521 18:07:48.577"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${buyername_details}</arg>
+<arg>${buyername_step2}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:48.578" endtime="20210521 18:07:48.578"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Invoiceamount_details}</arg>
+<arg>${Invoiceamount_step2}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:48.578" endtime="20210521 18:07:48.578"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${currencycode_details}</arg>
+<arg>${currencycode_step2}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:48.579" endtime="20210521 18:07:48.579"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:42.555" endtime="20210521 18:07:48.579"></status>
+</kw>
+<kw name="and Modify data &quot;Invoice amount&quot; &quot;Retention&quot; all items" library="supplier_create_invoice_keywords">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>${gr_detail.tr_row}</arg>
+</arguments>
+<assign>
+<var>${items_row}</var>
+</assign>
+<msg timestamp="20210521 18:07:48.892" level="INFO">${items_row} = 3</msg>
+<status status="PASS" starttime="20210521 18:07:48.580" endtime="20210521 18:07:48.892"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${count_enabled}</arg>
+<arg>${0}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:48.896" level="INFO">${count_enabled} = 0</msg>
+<status status="PASS" starttime="20210521 18:07:48.893" endtime="20210521 18:07:48.896"></status>
+</kw>
+<kw name="${row} IN RANGE [ 1 | ${items_row}+1 ]" type="for">
+<kw name="${row} = 1" type="foritem">
+<kw name="Replace Variables" library="BuiltIn">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>${gr_detail.txt_invoice_amount_row}</arg>
+</arguments>
+<assign>
+<var>${inv_locator}</var>
+</assign>
+<msg timestamp="20210521 18:07:48.897" level="INFO">${inv_locator} = (//*[contains(@id,"rb_txt_gr_item_amount")])[1]</msg>
+<status status="PASS" starttime="20210521 18:07:48.896" endtime="20210521 18:07:48.897"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Enabled</arg>
+<arg>${inv_locator}</arg>
+</arguments>
+<assign>
+<var>${row_check}</var>
+</assign>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>${inv_locator}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:48.897" endtime="20210521 18:07:49.820"></status>
+</kw>
+<msg timestamp="20210521 18:07:49.820" level="INFO">${row_check} = True</msg>
+<status status="PASS" starttime="20210521 18:07:48.897" endtime="20210521 18:07:49.820"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${row_check} == True</arg>
+<arg>Put "Invoice amount" "Retention" to an item</arg>
+<arg>${row}</arg>
+</arguments>
+<kw name="Put &quot;Invoice amount&quot; &quot;Retention&quot; to an item" library="supplier_create_invoice_keywords">
+<arguments>
+<arg>${row}</arg>
+</arguments>
+<kw name="Set invoice amount on invoice details at row" library="supplier_create_invoice_keywords">
+<arguments>
+<arg>2</arg>
+<arg>${row}</arg>
+</arguments>
+<kw name="Replace Variables" library="BuiltIn">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>${gr_detail.txt_invoice_amount_row}</arg>
+</arguments>
+<assign>
+<var>${invoice_locator}</var>
+</assign>
+<msg timestamp="20210521 18:07:49.823" level="INFO">${invoice_locator} = (//*[contains(@id,"rb_txt_gr_item_amount")])[1]</msg>
+<status status="PASS" starttime="20210521 18:07:49.822" endtime="20210521 18:07:49.823"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${invoice_locator}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:49.823" endtime="20210521 18:07:50.441"></status>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<doc>Double clicks the element identified by ``locator``.</doc>
+<arguments>
+<arg>${invoice_locator}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:50.441" level="INFO">Double clicking element '(//*[contains(@id,"rb_txt_gr_item_amount")])[1]'.</msg>
+<status status="PASS" starttime="20210521 18:07:50.441" endtime="20210521 18:07:51.376"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${invoice_locator}</arg>
+<arg>DELETE</arg>
+</arguments>
+<msg timestamp="20210521 18:07:51.377" level="INFO">Clicking element '(//*[contains(@id,"rb_txt_gr_item_amount")])[1]' with DELETE.</msg>
+<status status="PASS" starttime="20210521 18:07:51.377" endtime="20210521 18:07:52.265"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${invoice_locator}</arg>
+<arg>${invoice_amount}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:52.266" level="INFO">Typing text '2' into text field '(//*[contains(@id,"rb_txt_gr_item_amount")])[1]'.</msg>
+<status status="PASS" starttime="20210521 18:07:52.265" endtime="20210521 18:07:53.220"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:49.822" endtime="20210521 18:07:53.221"></status>
+</kw>
+<kw name="Set retention amount on invoice details at row" library="supplier_create_invoice_keywords">
+<arguments>
+<arg>1</arg>
+<arg>${row}</arg>
+</arguments>
+<kw name="Replace Variables" library="BuiltIn">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>${gr_detail.txt_retention_amount_row}</arg>
+</arguments>
+<assign>
+<var>${retention_locator}</var>
+</assign>
+<msg timestamp="20210521 18:07:53.222" level="INFO">${retention_locator} = (//*[contains(@id,"rb_txt_gr_item_retention")])[1]</msg>
+<status status="PASS" starttime="20210521 18:07:53.221" endtime="20210521 18:07:53.222"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${retention_locator}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:53.222" endtime="20210521 18:07:53.845"></status>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<doc>Double clicks the element identified by ``locator``.</doc>
+<arguments>
+<arg>${retention_locator}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:53.845" level="INFO">Double clicking element '(//*[contains(@id,"rb_txt_gr_item_retention")])[1]'.</msg>
+<status status="PASS" starttime="20210521 18:07:53.845" endtime="20210521 18:07:54.732"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${retention_locator}</arg>
+<arg>DELETE</arg>
+</arguments>
+<msg timestamp="20210521 18:07:54.733" level="INFO">Clicking element '(//*[contains(@id,"rb_txt_gr_item_retention")])[1]' with DELETE.</msg>
+<status status="PASS" starttime="20210521 18:07:54.732" endtime="20210521 18:07:55.615"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${retention_locator}</arg>
+<arg>${retention_amount}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:55.616" level="INFO">Typing text '1' into text field '(//*[contains(@id,"rb_txt_gr_item_retention")])[1]'.</msg>
+<status status="PASS" starttime="20210521 18:07:55.616" endtime="20210521 18:07:56.577"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:53.221" endtime="20210521 18:07:56.577"></status>
+</kw>
+<kw name="Select retention type amount on invoice details at row" library="supplier_create_invoice_keywords">
+<arguments>
+<arg>${row}</arg>
+</arguments>
+<kw name="Replace Variables" library="BuiltIn">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>${gr_detail.ddl_retention_select_row}</arg>
+</arguments>
+<assign>
+<var>${retention_select_locator}</var>
+</assign>
+<msg timestamp="20210521 18:07:56.579" level="INFO">${retention_select_locator} = (//*[contains(@id,"rb_txt_gr_item_retention")])[1]/following-sibling::div</msg>
+<status status="PASS" starttime="20210521 18:07:56.578" endtime="20210521 18:07:56.579"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${retention_select_locator}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:56.579" level="INFO">Clicking element '(//*[contains(@id,"rb_txt_gr_item_retention")])[1]/following-sibling::div'.</msg>
+<status status="PASS" starttime="20210521 18:07:56.579" endtime="20210521 18:07:57.243"></status>
+</kw>
+<kw name="Replace Variables" library="BuiltIn">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>${gr_detail.ddl_retention_option_row_amount}</arg>
+</arguments>
+<assign>
+<var>${retention_locator}</var>
+</assign>
+<msg timestamp="20210521 18:07:57.244" level="INFO">${retention_locator} = (//*[contains(@id,"rb_txt_gr_item_retention")])[1]/following-sibling::div/div[2]//li/a[text()="Amount"]</msg>
+<status status="PASS" starttime="20210521 18:07:57.244" endtime="20210521 18:07:57.244"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${retention_locator}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:57.244" endtime="20210521 18:07:57.865"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${retention_locator}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:57.865" level="INFO">Clicking element '(//*[contains(@id,"rb_txt_gr_item_retention")])[1]/following-sibling::div/div[2]//li/a[text()="Amount"]'.</msg>
+<status status="PASS" starttime="20210521 18:07:57.865" endtime="20210521 18:07:58.508"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:56.577" endtime="20210521 18:07:58.508"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:49.821" endtime="20210521 18:07:58.508"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:49.821" endtime="20210521 18:07:58.508"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${row_check} == True</arg>
+<arg>Counting number</arg>
+</arguments>
+<kw name="Counting number" library="supplier_create_invoice_keywords">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${count_enabled} + 1</arg>
+</arguments>
+<assign>
+<var>${temp}</var>
+</assign>
+<msg timestamp="20210521 18:07:58.510" level="INFO">${temp} = 1</msg>
+<status status="PASS" starttime="20210521 18:07:58.509" endtime="20210521 18:07:58.510"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${count_enabled}</arg>
+<arg>${temp}</arg>
+</arguments>
+<msg timestamp="20210521 18:07:58.510" level="INFO">${count_enabled} = 1</msg>
+<status status="PASS" starttime="20210521 18:07:58.510" endtime="20210521 18:07:58.510"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:58.509" endtime="20210521 18:07:58.510"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:58.509" endtime="20210521 18:07:58.510"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:48.896" endtime="20210521 18:07:58.511"></status>
+</kw>
+<kw name="${row} = 2" type="foritem">
+<kw name="Replace Variables" library="BuiltIn">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>${gr_detail.txt_invoice_amount_row}</arg>
+</arguments>
+<assign>
+<var>${inv_locator}</var>
+</assign>
+<msg timestamp="20210521 18:07:58.511" level="INFO">${inv_locator} = (//*[contains(@id,"rb_txt_gr_item_amount")])[2]</msg>
+<status status="PASS" starttime="20210521 18:07:58.511" endtime="20210521 18:07:58.511"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Enabled</arg>
+<arg>${inv_locator}</arg>
+</arguments>
+<assign>
+<var>${row_check}</var>
+</assign>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>${inv_locator}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:58.512" endtime="20210521 18:07:59.438"></status>
+</kw>
+<msg timestamp="20210521 18:07:59.438" level="INFO">${row_check} = True</msg>
+<status status="PASS" starttime="20210521 18:07:58.511" endtime="20210521 18:07:59.439"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${row_check} == True</arg>
+<arg>Put "Invoice amount" "Retention" to an item</arg>
+<arg>${row}</arg>
+</arguments>
+<kw name="Put &quot;Invoice amount&quot; &quot;Retention&quot; to an item" library="supplier_create_invoice_keywords">
+<arguments>
+<arg>${row}</arg>
+</arguments>
+<kw name="Set invoice amount on invoice details at row" library="supplier_create_invoice_keywords">
+<arguments>
+<arg>2</arg>
+<arg>${row}</arg>
+</arguments>
+<kw name="Replace Variables" library="BuiltIn">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>${gr_detail.txt_invoice_amount_row}</arg>
+</arguments>
+<assign>
+<var>${invoice_locator}</var>
+</assign>
+<msg timestamp="20210521 18:07:59.440" level="INFO">${invoice_locator} = (//*[contains(@id,"rb_txt_gr_item_amount")])[2]</msg>
+<status status="PASS" starttime="20210521 18:07:59.440" endtime="20210521 18:07:59.440"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${invoice_locator}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:07:59.441" endtime="20210521 18:08:00.057"></status>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<doc>Double clicks the element identified by ``locator``.</doc>
+<arguments>
+<arg>${invoice_locator}</arg>
+</arguments>
+<msg timestamp="20210521 18:08:00.057" level="INFO">Double clicking element '(//*[contains(@id,"rb_txt_gr_item_amount")])[2]'.</msg>
+<status status="PASS" starttime="20210521 18:08:00.057" endtime="20210521 18:08:00.965"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${invoice_locator}</arg>
+<arg>DELETE</arg>
+</arguments>
+<msg timestamp="20210521 18:08:00.966" level="INFO">Clicking element '(//*[contains(@id,"rb_txt_gr_item_amount")])[2]' with DELETE.</msg>
+<status status="PASS" starttime="20210521 18:08:00.965" endtime="20210521 18:08:01.848"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${invoice_locator}</arg>
+<arg>${invoice_amount}</arg>
+</arguments>
+<msg timestamp="20210521 18:08:01.849" level="INFO">Typing text '2' into text field '(//*[contains(@id,"rb_txt_gr_item_amount")])[2]'.</msg>
+<status status="PASS" starttime="20210521 18:08:01.849" endtime="20210521 18:08:02.807"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:59.440" endtime="20210521 18:08:02.807"></status>
+</kw>
+<kw name="Set retention amount on invoice details at row" library="supplier_create_invoice_keywords">
+<arguments>
+<arg>1</arg>
+<arg>${row}</arg>
+</arguments>
+<kw name="Replace Variables" library="BuiltIn">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>${gr_detail.txt_retention_amount_row}</arg>
+</arguments>
+<assign>
+<var>${retention_locator}</var>
+</assign>
+<msg timestamp="20210521 18:08:02.808" level="INFO">${retention_locator} = (//*[contains(@id,"rb_txt_gr_item_retention")])[2]</msg>
+<status status="PASS" starttime="20210521 18:08:02.808" endtime="20210521 18:08:02.808"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${retention_locator}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:08:02.808" endtime="20210521 18:08:03.430"></status>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<doc>Double clicks the element identified by ``locator``.</doc>
+<arguments>
+<arg>${retention_locator}</arg>
+</arguments>
+<msg timestamp="20210521 18:08:03.431" level="INFO">Double clicking element '(//*[contains(@id,"rb_txt_gr_item_retention")])[2]'.</msg>
+<status status="PASS" starttime="20210521 18:08:03.430" endtime="20210521 18:08:04.318"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${retention_locator}</arg>
+<arg>DELETE</arg>
+</arguments>
+<msg timestamp="20210521 18:08:04.319" level="INFO">Clicking element '(//*[contains(@id,"rb_txt_gr_item_retention")])[2]' with DELETE.</msg>
+<status status="PASS" starttime="20210521 18:08:04.318" endtime="20210521 18:08:05.198"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${retention_locator}</arg>
+<arg>${retention_amount}</arg>
+</arguments>
+<msg timestamp="20210521 18:08:05.198" level="INFO">Typing text '1' into text field '(//*[contains(@id,"rb_txt_gr_item_retention")])[2]'.</msg>
+<status status="PASS" starttime="20210521 18:08:05.198" endtime="20210521 18:08:06.158"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:08:02.807" endtime="20210521 18:08:06.158"></status>
+</kw>
+<kw name="Select retention type amount on invoice details at row" library="supplier_create_invoice_keywords">
+<arguments>
+<arg>${row}</arg>
+</arguments>
+<kw name="Replace Variables" library="BuiltIn">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>${gr_detail.ddl_retention_select_row}</arg>
+</arguments>
+<assign>
+<var>${retention_select_locator}</var>
+</assign>
+<msg timestamp="20210521 18:08:06.160" level="INFO">${retention_select_locator} = (//*[contains(@id,"rb_txt_gr_item_retention")])[2]/following-sibling::div</msg>
+<status status="PASS" starttime="20210521 18:08:06.159" endtime="20210521 18:08:06.160"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${retention_select_locator}</arg>
+</arguments>
+<msg timestamp="20210521 18:08:06.160" level="INFO">Clicking element '(//*[contains(@id,"rb_txt_gr_item_retention")])[2]/following-sibling::div'.</msg>
+<status status="PASS" starttime="20210521 18:08:06.160" endtime="20210521 18:08:06.804"></status>
+</kw>
+<kw name="Replace Variables" library="BuiltIn">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>${gr_detail.ddl_retention_option_row_amount}</arg>
+</arguments>
+<assign>
+<var>${retention_locator}</var>
+</assign>
+<msg timestamp="20210521 18:08:06.805" level="INFO">${retention_locator} = (//*[contains(@id,"rb_txt_gr_item_retention")])[2]/following-sibling::div/div[2]//li/a[text()="Amount"]</msg>
+<status status="PASS" starttime="20210521 18:08:06.804" endtime="20210521 18:08:06.805"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${retention_locator}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:08:06.805" endtime="20210521 18:08:07.423"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${retention_locator}</arg>
+</arguments>
+<msg timestamp="20210521 18:08:07.424" level="INFO">Clicking element '(//*[contains(@id,"rb_txt_gr_item_retention")])[2]/following-sibling::div/div[2]//li/a[text()="Amount"]'.</msg>
+<status status="PASS" starttime="20210521 18:08:07.423" endtime="20210521 18:08:08.065"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:08:06.159" endtime="20210521 18:08:08.065"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:59.439" endtime="20210521 18:08:08.065"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:59.439" endtime="20210521 18:08:08.065"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${row_check} == True</arg>
+<arg>Counting number</arg>
+</arguments>
+<kw name="Counting number" library="supplier_create_invoice_keywords">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${count_enabled} + 1</arg>
+</arguments>
+<assign>
+<var>${temp}</var>
+</assign>
+<msg timestamp="20210521 18:08:08.067" level="INFO">${temp} = 2</msg>
+<status status="PASS" starttime="20210521 18:08:08.066" endtime="20210521 18:08:08.067"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${count_enabled}</arg>
+<arg>${temp}</arg>
+</arguments>
+<msg timestamp="20210521 18:08:08.067" level="INFO">${count_enabled} = 2</msg>
+<status status="PASS" starttime="20210521 18:08:08.067" endtime="20210521 18:08:08.067"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:08:08.066" endtime="20210521 18:08:08.067"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:08:08.066" endtime="20210521 18:08:08.067"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:58.511" endtime="20210521 18:08:08.067"></status>
+</kw>
+<kw name="${row} = 3" type="foritem">
+<kw name="Replace Variables" library="BuiltIn">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>${gr_detail.txt_invoice_amount_row}</arg>
+</arguments>
+<assign>
+<var>${inv_locator}</var>
+</assign>
+<msg timestamp="20210521 18:08:08.068" level="INFO">${inv_locator} = (//*[contains(@id,"rb_txt_gr_item_amount")])[3]</msg>
+<status status="PASS" starttime="20210521 18:08:08.068" endtime="20210521 18:08:08.068"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Enabled</arg>
+<arg>${inv_locator}</arg>
+</arguments>
+<assign>
+<var>${row_check}</var>
+</assign>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>${inv_locator}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:08:08.069" endtime="20210521 18:08:08.995"></status>
+</kw>
+<msg timestamp="20210521 18:08:08.995" level="INFO">${row_check} = True</msg>
+<status status="PASS" starttime="20210521 18:08:08.068" endtime="20210521 18:08:08.995"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${row_check} == True</arg>
+<arg>Put "Invoice amount" "Retention" to an item</arg>
+<arg>${row}</arg>
+</arguments>
+<kw name="Put &quot;Invoice amount&quot; &quot;Retention&quot; to an item" library="supplier_create_invoice_keywords">
+<arguments>
+<arg>${row}</arg>
+</arguments>
+<kw name="Set invoice amount on invoice details at row" library="supplier_create_invoice_keywords">
+<arguments>
+<arg>2</arg>
+<arg>${row}</arg>
+</arguments>
+<kw name="Replace Variables" library="BuiltIn">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>${gr_detail.txt_invoice_amount_row}</arg>
+</arguments>
+<assign>
+<var>${invoice_locator}</var>
+</assign>
+<msg timestamp="20210521 18:08:08.997" level="INFO">${invoice_locator} = (//*[contains(@id,"rb_txt_gr_item_amount")])[3]</msg>
+<status status="PASS" starttime="20210521 18:08:08.997" endtime="20210521 18:08:08.997"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${invoice_locator}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:08:08.997" endtime="20210521 18:08:09.620"></status>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<doc>Double clicks the element identified by ``locator``.</doc>
+<arguments>
+<arg>${invoice_locator}</arg>
+</arguments>
+<msg timestamp="20210521 18:08:09.621" level="INFO">Double clicking element '(//*[contains(@id,"rb_txt_gr_item_amount")])[3]'.</msg>
+<status status="PASS" starttime="20210521 18:08:09.621" endtime="20210521 18:08:10.521"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${invoice_locator}</arg>
+<arg>DELETE</arg>
+</arguments>
+<msg timestamp="20210521 18:08:10.522" level="INFO">Clicking element '(//*[contains(@id,"rb_txt_gr_item_amount")])[3]' with DELETE.</msg>
+<status status="PASS" starttime="20210521 18:08:10.521" endtime="20210521 18:08:11.415"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${invoice_locator}</arg>
+<arg>${invoice_amount}</arg>
+</arguments>
+<msg timestamp="20210521 18:08:11.415" level="INFO">Typing text '2' into text field '(//*[contains(@id,"rb_txt_gr_item_amount")])[3]'.</msg>
+<status status="PASS" starttime="20210521 18:08:11.415" endtime="20210521 18:08:12.368"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:08:08.996" endtime="20210521 18:08:12.368"></status>
+</kw>
+<kw name="Set retention amount on invoice details at row" library="supplier_create_invoice_keywords">
+<arguments>
+<arg>1</arg>
+<arg>${row}</arg>
+</arguments>
+<kw name="Replace Variables" library="BuiltIn">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>${gr_detail.txt_retention_amount_row}</arg>
+</arguments>
+<assign>
+<var>${retention_locator}</var>
+</assign>
+<msg timestamp="20210521 18:08:12.369" level="INFO">${retention_locator} = (//*[contains(@id,"rb_txt_gr_item_retention")])[3]</msg>
+<status status="PASS" starttime="20210521 18:08:12.369" endtime="20210521 18:08:12.369"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${retention_locator}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:08:12.369" endtime="20210521 18:08:12.988"></status>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<doc>Double clicks the element identified by ``locator``.</doc>
+<arguments>
+<arg>${retention_locator}</arg>
+</arguments>
+<msg timestamp="20210521 18:08:12.989" level="INFO">Double clicking element '(//*[contains(@id,"rb_txt_gr_item_retention")])[3]'.</msg>
+<status status="PASS" starttime="20210521 18:08:12.988" endtime="20210521 18:08:13.870"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${retention_locator}</arg>
+<arg>DELETE</arg>
+</arguments>
+<msg timestamp="20210521 18:08:13.871" level="INFO">Clicking element '(//*[contains(@id,"rb_txt_gr_item_retention")])[3]' with DELETE.</msg>
+<status status="PASS" starttime="20210521 18:08:13.871" endtime="20210521 18:08:14.765"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${retention_locator}</arg>
+<arg>${retention_amount}</arg>
+</arguments>
+<msg timestamp="20210521 18:08:14.765" level="INFO">Typing text '1' into text field '(//*[contains(@id,"rb_txt_gr_item_retention")])[3]'.</msg>
+<status status="PASS" starttime="20210521 18:08:14.765" endtime="20210521 18:08:15.730"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:08:12.368" endtime="20210521 18:08:15.731"></status>
+</kw>
+<kw name="Select retention type amount on invoice details at row" library="supplier_create_invoice_keywords">
+<arguments>
+<arg>${row}</arg>
+</arguments>
+<kw name="Replace Variables" library="BuiltIn">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>${gr_detail.ddl_retention_select_row}</arg>
+</arguments>
+<assign>
+<var>${retention_select_locator}</var>
+</assign>
+<msg timestamp="20210521 18:08:15.732" level="INFO">${retention_select_locator} = (//*[contains(@id,"rb_txt_gr_item_retention")])[3]/following-sibling::div</msg>
+<status status="PASS" starttime="20210521 18:08:15.732" endtime="20210521 18:08:15.732"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${retention_select_locator}</arg>
+</arguments>
+<msg timestamp="20210521 18:08:15.733" level="INFO">Clicking element '(//*[contains(@id,"rb_txt_gr_item_retention")])[3]/following-sibling::div'.</msg>
+<status status="PASS" starttime="20210521 18:08:15.732" endtime="20210521 18:08:16.404"></status>
+</kw>
+<kw name="Replace Variables" library="BuiltIn">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>${gr_detail.ddl_retention_option_row_amount}</arg>
+</arguments>
+<assign>
+<var>${retention_locator}</var>
+</assign>
+<msg timestamp="20210521 18:08:16.405" level="INFO">${retention_locator} = (//*[contains(@id,"rb_txt_gr_item_retention")])[3]/following-sibling::div/div[2]//li/a[text()="Amount"]</msg>
+<status status="PASS" starttime="20210521 18:08:16.405" endtime="20210521 18:08:16.405"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${retention_locator}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:08:16.406" endtime="20210521 18:08:17.023"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${retention_locator}</arg>
+</arguments>
+<msg timestamp="20210521 18:08:17.024" level="INFO">Clicking element '(//*[contains(@id,"rb_txt_gr_item_retention")])[3]/following-sibling::div/div[2]//li/a[text()="Amount"]'.</msg>
+<status status="PASS" starttime="20210521 18:08:17.023" endtime="20210521 18:08:17.665"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:08:15.731" endtime="20210521 18:08:17.665"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:08:08.996" endtime="20210521 18:08:17.665"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:08:08.996" endtime="20210521 18:08:17.665"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${row_check} == True</arg>
+<arg>Counting number</arg>
+</arguments>
+<kw name="Counting number" library="supplier_create_invoice_keywords">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${count_enabled} + 1</arg>
+</arguments>
+<assign>
+<var>${temp}</var>
+</assign>
+<msg timestamp="20210521 18:08:17.667" level="INFO">${temp} = 3</msg>
+<status status="PASS" starttime="20210521 18:08:17.666" endtime="20210521 18:08:17.667"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${count_enabled}</arg>
+<arg>${temp}</arg>
+</arguments>
+<msg timestamp="20210521 18:08:17.667" level="INFO">${count_enabled} = 3</msg>
+<status status="PASS" starttime="20210521 18:08:17.667" endtime="20210521 18:08:17.667"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:08:17.666" endtime="20210521 18:08:17.667"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:08:17.665" endtime="20210521 18:08:17.667"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:08:08.067" endtime="20210521 18:08:17.667"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:48.896" endtime="20210521 18:08:17.667"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>"{:,.2f}".format(${count_enabled} * 2)</arg>
+</arguments>
+<assign>
+<var>${detail_subtotal}</var>
+</assign>
+<msg timestamp="20210521 18:08:17.668" level="INFO">${detail_subtotal} = 6.00</msg>
+<status status="PASS" starttime="20210521 18:08:17.668" endtime="20210521 18:08:17.668"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>"{:,.2f}".format(${count_enabled} * 1)</arg>
+</arguments>
+<assign>
+<var>${detail_retention}</var>
+</assign>
+<msg timestamp="20210521 18:08:17.669" level="INFO">${detail_retention} = 3.00</msg>
+<status status="PASS" starttime="20210521 18:08:17.668" endtime="20210521 18:08:17.669"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>"{:,.2f}".format(${detail_subtotal} - ${detail_retention})</arg>
+</arguments>
+<assign>
+<var>${detail_invoice_amount}</var>
+</assign>
+<msg timestamp="20210521 18:08:17.669" level="INFO">${detail_invoice_amount} = 3.00</msg>
+<status status="PASS" starttime="20210521 18:08:17.669" endtime="20210521 18:08:17.669"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${detail_subtotal}</arg>
+</arguments>
+<msg timestamp="20210521 18:08:17.670" level="INFO">${detail_subtotal} = 6.00</msg>
+<status status="PASS" starttime="20210521 18:08:17.669" endtime="20210521 18:08:17.670"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${detail_retention}</arg>
+</arguments>
+<msg timestamp="20210521 18:08:17.670" level="INFO">${detail_retention} = 3.00</msg>
+<status status="PASS" starttime="20210521 18:08:17.670" endtime="20210521 18:08:17.670"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${detail_invoice_amount}</arg>
+</arguments>
+<msg timestamp="20210521 18:08:17.670" level="INFO">${detail_invoice_amount} = 3.00</msg>
+<status status="PASS" starttime="20210521 18:08:17.670" endtime="20210521 18:08:17.671"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:07:48.579" endtime="20210521 18:08:17.671"></status>
+</kw>
+<kw name="then Verify &quot;PO Invoice Amount&quot; show correctly on &quot;Invoice Details&quot; page and save" library="supplier_create_invoice_keywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${lbl_POinvoice_details_page_invoiceamount}</arg>
+</arguments>
+<assign>
+<var>${actual_Invoiceamount}</var>
+</assign>
+<msg timestamp="20210521 18:08:18.292" level="INFO">${actual_Invoiceamount} = 3.00</msg>
+<status status="PASS" starttime="20210521 18:08:17.672" endtime="20210521 18:08:18.292"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${actual_Invoiceamount}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:08:18.293" endtime="20210521 18:08:18.293"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual_Invoiceamount}</arg>
+<arg>${detail_invoice_amount}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:08:18.293" endtime="20210521 18:08:18.293"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${gr_detail.create_step2_btn_save_invoice_amount}</arg>
+</arguments>
+<msg timestamp="20210521 18:08:18.294" level="INFO">Clicking button '//div[@class="full-popup-bottom"]//button[@class="btn-op-primary"]'.</msg>
+<status status="PASS" starttime="20210521 18:08:18.294" endtime="20210521 18:08:19.894"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:08:17.671" endtime="20210521 18:08:19.894"></status>
+</kw>
+<kw name="and &quot;PO Invoice Amount&quot; &quot;Retention Amount&quot; show correctly on create invoice step 2" library="supplier_create_invoice_keywords">
+<kw name="Verify &quot;PO Invoice Amount&quot; &quot;Retention Amount&quot; at PO/GR first row" library="supplier_create_invoice_keywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${lbl_POinvoice_details_first_row_invoiceamount}</arg>
+</arguments>
+<assign>
+<var>${POGR_invoiceamount}</var>
+</assign>
+<msg timestamp="20210521 18:08:20.519" level="INFO">${POGR_invoiceamount} = 6.00</msg>
+<status status="PASS" starttime="20210521 18:08:19.895" endtime="20210521 18:08:20.519"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${lbl_POinvoice_details_first_row_retentionamount}</arg>
+</arguments>
+<assign>
+<var>${POGR_retentionamount}</var>
+</assign>
+<msg timestamp="20210521 18:08:21.145" level="INFO">${POGR_retentionamount} = 3.00</msg>
+<status status="PASS" starttime="20210521 18:08:20.520" endtime="20210521 18:08:21.146"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${POGR_invoiceamount}</arg>
+<arg>${detail_subtotal}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:08:21.146" endtime="20210521 18:08:21.147"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${POGR_retentionamount}</arg>
+<arg>${detail_retention}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:08:21.147" endtime="20210521 18:08:21.147"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:08:19.895" endtime="20210521 18:08:21.147"></status>
+</kw>
+<kw name="Verify &quot;Invoice Amount&quot; &quot;Retention Amount&quot; at Invoice first row" library="supplier_create_invoice_keywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${lbl_invoice_amount_exclude_vat}</arg>
+</arguments>
+<assign>
+<var>${inv_invoiceamount}</var>
+</assign>
+<msg timestamp="20210521 18:08:21.770" level="INFO">${inv_invoiceamount} = 6.00</msg>
+<status status="PASS" starttime="20210521 18:08:21.148" endtime="20210521 18:08:21.770"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${lbl_retention}</arg>
+</arguments>
+<assign>
+<var>${inv_retentionamount}</var>
+</assign>
+<msg timestamp="20210521 18:08:22.395" level="INFO">${inv_retentionamount} = 3.00</msg>
+<status status="PASS" starttime="20210521 18:08:21.771" endtime="20210521 18:08:22.395"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${inv_invoiceamount}</arg>
+<arg>${detail_subtotal}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:08:22.396" endtime="20210521 18:08:22.396"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${inv_retentionamount}</arg>
+<arg>${detail_retention}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:08:22.396" endtime="20210521 18:08:22.396"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:08:21.147" endtime="20210521 18:08:22.396"></status>
+</kw>
+<kw name="Verify Displaying Of Value On Invoice Amount (Include VAT)" library="supplier_create_invoice_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${txt_vat_1_invoice_detail}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:08:22.397" endtime="20210521 18:08:23.017"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${lbl_invoice_amount_exclude_vat}</arg>
+</arguments>
+<assign>
+<var>${actual_invoice_amount_exclude_vat}</var>
+</assign>
+<msg timestamp="20210521 18:08:23.631" level="INFO">${actual_invoice_amount_exclude_vat} = 6.00</msg>
+<status status="PASS" starttime="20210521 18:08:23.017" endtime="20210521 18:08:23.631"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${lbl_retention}</arg>
+</arguments>
+<assign>
+<var>${actual_retention}</var>
+</assign>
+<msg timestamp="20210521 18:08:24.245" level="INFO">${actual_retention} = 3.00</msg>
+<status status="PASS" starttime="20210521 18:08:23.632" endtime="20210521 18:08:24.245"></status>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_vat_1_invoice_detail}</arg>
+</arguments>
+<assign>
+<var>${actual_vat_amount}</var>
+</assign>
+<msg timestamp="20210521 18:08:24.863" level="INFO">${actual_vat_amount} = 0</msg>
+<status status="PASS" starttime="20210521 18:08:24.245" endtime="20210521 18:08:24.863"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>'${actual_invoice_amount_exclude_vat}'.replace(',','')</arg>
+</arguments>
+<assign>
+<var>${actual_invoice_amount_exclude_vat}</var>
+</assign>
+<msg timestamp="20210521 18:08:24.864" level="INFO">${actual_invoice_amount_exclude_vat} = 6.00</msg>
+<status status="PASS" starttime="20210521 18:08:24.864" endtime="20210521 18:08:24.864"></status>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<doc>Converts the given item to a floating point number.</doc>
+<arguments>
+<arg>${actual_invoice_amount_exclude_vat}</arg>
+</arguments>
+<assign>
+<var>${actual_invoice_amount_exclude_vat}</var>
+</assign>
+<msg timestamp="20210521 18:08:24.865" level="INFO">${actual_invoice_amount_exclude_vat} = 6.0</msg>
+<status status="PASS" starttime="20210521 18:08:24.865" endtime="20210521 18:08:24.865"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${actual_invoice_amount_exclude_vat} - ${actual_retention} + ${actual_vat_amount}</arg>
+</arguments>
+<assign>
+<var>${actual_invoice_amount_include_vat}</var>
+</assign>
+<msg timestamp="20210521 18:08:24.866" level="INFO">${actual_invoice_amount_include_vat} = 3.0</msg>
+<status status="PASS" starttime="20210521 18:08:24.866" endtime="20210521 18:08:24.866"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>"{:,.2f}".format(${actual_invoice_amount_include_vat})</arg>
+</arguments>
+<assign>
+<var>${actual_invoice_amount_include_vat}</var>
+</assign>
+<msg timestamp="20210521 18:08:24.867" level="INFO">${actual_invoice_amount_include_vat} = 3.00</msg>
+<status status="PASS" starttime="20210521 18:08:24.867" endtime="20210521 18:08:24.867"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${actual_invoice_amount_include_vat}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:08:24.867" endtime="20210521 18:08:24.867"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${lbl_invoice_amount_include_vat}</arg>
+<arg>${actual_invoice_amount_include_vat}</arg>
+</arguments>
+<msg timestamp="20210521 18:08:24.868" level="INFO">Verifying element '//tr[@class='cur-default ']/td[9]/span' contains exact text '3.00'.</msg>
+<status status="PASS" starttime="20210521 18:08:24.868" endtime="20210521 18:08:25.490"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>${tbl_po.tr_rows}</arg>
+</arguments>
+<assign>
+<var>${row_count}</var>
+</assign>
+<msg timestamp="20210521 18:08:25.804" level="INFO">${row_count} = 2</msg>
+<status status="PASS" starttime="20210521 18:08:25.490" endtime="20210521 18:08:25.804"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${row_count}&gt;2</arg>
+<arg>Calculate all invoice Amount (Include Vat)</arg>
+<arg>${row_count}</arg>
+<arg>ELSE</arg>
+<arg>Get Invoice Amount Include Vat to compare</arg>
+</arguments>
+<assign>
+<var>${invoice_amount_include_vat}</var>
+</assign>
+<kw name="Get Invoice Amount Include Vat to compare" library="supplier_create_invoice_keywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${tbl_po.lbl_invoice_amount_include_vat2}</arg>
+</arguments>
+<assign>
+<var>${invoice_amount_include_vat}</var>
+</assign>
+<msg timestamp="20210521 18:08:26.426" level="INFO">${invoice_amount_include_vat} = 3.00</msg>
+<status status="PASS" starttime="20210521 18:08:25.805" endtime="20210521 18:08:26.426"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>'${invoice_amount_include_vat}'.replace(',','')</arg>
+</arguments>
+<assign>
+<var>${invoice_amount_include_vat}</var>
+</assign>
+<msg timestamp="20210521 18:08:26.427" level="INFO">${invoice_amount_include_vat} = 3.00</msg>
+<status status="PASS" starttime="20210521 18:08:26.427" endtime="20210521 18:08:26.427"></status>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<doc>Converts the given item to a floating point number.</doc>
+<arguments>
+<arg>${invoice_amount_include_vat}</arg>
+</arguments>
+<assign>
+<var>${invoice_amount_include_vat}</var>
+</assign>
+<msg timestamp="20210521 18:08:26.428" level="INFO">${invoice_amount_include_vat} = 3.0</msg>
+<status status="PASS" starttime="20210521 18:08:26.428" endtime="20210521 18:08:26.428"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>"{:,.2f}".format(${invoice_amount_include_vat})</arg>
+</arguments>
+<assign>
+<var>${invoice_amount_include_vat}</var>
+</assign>
+<msg timestamp="20210521 18:08:26.429" level="INFO">${invoice_amount_include_vat} = 3.00</msg>
+<status status="PASS" starttime="20210521 18:08:26.428" endtime="20210521 18:08:26.429"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:08:25.805" endtime="20210521 18:08:26.429"></status>
+</kw>
+<msg timestamp="20210521 18:08:26.429" level="INFO">${invoice_amount_include_vat} = 3.00</msg>
+<status status="PASS" starttime="20210521 18:08:25.804" endtime="20210521 18:08:26.429"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${lbl_header_invoice_amount}</arg>
+</arguments>
+<assign>
+<var>${header_invoice_amount}</var>
+</assign>
+<msg timestamp="20210521 18:08:27.050" level="INFO">${header_invoice_amount} = 3.00</msg>
+<status status="PASS" starttime="20210521 18:08:26.430" endtime="20210521 18:08:27.050"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${header_invoice_amount}</arg>
+<arg>${invoice_amount_include_vat}</arg>
+</arguments>
+<status status="PASS" starttime="20210521 18:08:27.051" endtime="20210521 18:08:27.051"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:08:22.397" endtime="20210521 18:08:27.051"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:08:19.894" endtime="20210521 18:08:27.051"></status>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary" type="teardown">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20210521 18:08:27.052" endtime="20210521 18:08:27.676"></status>
+</kw>
+<doc>Create Invoice
+tc09 adjust partial invoice</doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="PASS" starttime="20210521 18:07:08.171" endtime="20210521 18:08:27.676" critical="yes"></status>
+</test>
+<kw name="Run Keywords" library="BuiltIn" type="teardown">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Delete All Cookies</arg>
+<arg>Close browser</arg>
+</arguments>
+<kw name="Delete All Cookies" library="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20210521 18:08:27.678" endtime="20210521 18:08:28.029"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210521 18:08:28.029" endtime="20210521 18:08:28.388"></status>
+</kw>
+<status status="PASS" starttime="20210521 18:08:27.677" endtime="20210521 18:08:28.388"></status>
+</kw>
+<status status="FAIL" starttime="20210521 18:05:57.112" endtime="20210521 18:08:28.388"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1">Critical Tests</stat>
+<stat pass="2" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="1">Sanity</stat>
+</tag>
+<suite>
+<stat pass="2" fail="1" id="s1" name="Supplier Create Po Invoice">Supplier Create Po Invoice</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,44 @@
+obj_cndn_status:
+  right_menu:
+    lnk_cndn_menu: //a[@data-rb="CREDIT NOTE_menu"]
+
+  cndn_status_section:
+    btn_create_invoice_label: //*[@id="rb-btn-create-credit-note"][contains(.,'Create CN/DN') or ('สร้างใบลดหนี้หรือใบเพิ่มหนี้')]
+  cndn_search_filter_section:
+    ddl_cndn_filter: //*[@class="box-dropdown-title"]//span[contains(.,'CN/DN Number')]
+    lbl_cndn_filter: //*[@class='box-dropdown-list form-dropdown-list']//a[contains(.,'${cndn_filter}')]
+
+obj_search:
+  txt_search: //*[@id="rb-txt-cndn-status-search-text"] 
+  btn_search: //button[@class="btn-op-primary btn-search"]  
+
+obj_cndn_tooltip:
+  btn_tooltip: //*[@data-tooltip="Information Need"]
+  spn_tooltip: //*[@class="op-tooltip-text center"]
+
+obj_request_modal:
+  mdl_request_document: //*[@id="modalCreateInvoice"]
+  lbl_request_document_message: //*[@class="color-sub break-word"]
+  spn_request_document_buyer: //*[@class="color-sub"]//span
+  spn_request_document_datetime: //*[@class="color-sub font-xxs"]
+
+btn_create:
+  btn_create_cndn: //*[@id="rb-btn-create-credit-note"]
+  btn_options_select_invoice: //div[@class="box-dropdown-list form-dropdown-list"]//a[contains(text(),'Select Invoice') or contains(text(),'เลือกใบแจ้งหนี้')]    #//*[@id="rb-ddl-invoice-selected"]  
+
+modal_create_cndn:  
+  modal: //*[@id="rb-modal-addinvoice-content"]
+  rdo_invoice_type:
+    credit_note: (//*[@name="cnOrDn"])[1]
+    debit_note: (//*[@name="cnOrDn"])[2]
+  ddl_buyer:  
+    ddl_selected_buyer_cndn_locator: id=rb-ddl-select-buyer
+    txt_search_buyer_cndn_locator: id=rb-txt-search-buyer
+    list_buyer_cndn_locator: //div[@id="rb-div-buyer-list"]
+    list_select_buyer_cndn_locator: //div[@id="rb-div-buyer-list"]/label[contains(text(),'${buyer_name}')]
+  ddl_currency:
+    ddl_currency_cndn_locator: id=rb-ddl-select-currency
+    list_currency_cndn_locator: //*[@id="rb-div-currency-list"]/label[contains(text(),'${currency}')]
+  btn_continue:   //button[@id="rb-btn-continue"]
+
+

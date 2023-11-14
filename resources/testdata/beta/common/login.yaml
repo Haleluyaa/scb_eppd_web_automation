@@ -1,0 +1,18 @@
+######true login and permission
+true_app_type_1: invoice_01
+true_app_type_2: invoice_04
+true_view_1: invoice_05
+true_password: password@2019
+
+######mtl login and permission
+mtl_app_type_1: 800498
+mtl_view_1: 84799
+mtl_password: 12345
+MTL_INVOICE_03: m_invoice_03
+
+######cpall login and permission
+cpall_app_type_1: invoice_01
+cpall_view_1: invoice_05
+true_password: password@2019
+
+TIMEOUT: 30s

@@ -1,0 +1,58 @@
+obj_view_cndn:
+  lbl_section_header: (//*[@class='full-popup-inner']//div[@class='top-view-title']//parent::*)[1]
+  lbl_section_under: //*[@class='full-popup-inner']//div[@class='box-row']
+  lbl_header: //*[@class='full-popup-title pull-left'][contains(.,'View Credit / Debit Note')]
+  div_view_cndn: //div[@class='information-bar']
+  btn_information_need: //div[@class="top-view-title"]//a[@class="pending op-tooltip"]
+
+  action:
+    btn_edit: //*[@class='popup-top-action hide-sm']//a[contains(.,'Edit')]
+    btn_print_cover: //*[@class='popup-top-action hide-sm']//a[contains(.,'Print Cover')]
+    btn_print_billing: //*[@class='popup-top-action hide-sm']//a[contains(.,'Print Billing')]
+    btn_history: //*[@class='popup-top-action hide-sm']//a[contains(.,'History')]
+
+  cndn_detail_section:
+    tbl_invoice_firstrow_with_columm: //table[@class='in-col-detail']//tbody//td[${ret_col_no}]
+    tbl_invoice_header_with_columm: //table[@class='in-col-detail']//thead//th
+
+  gr_detail_modal:
+    tbl_gr_data_rows: //*[@id='modalHistory']//tbody//tr    
+    tbl_gr_data_specify_row: //*[@id='modalHistory']//tbody//tr[${row_number}]
+    lbl_x_mark_to_close: //*[@id='modalHistory']//*[@class='pull-right']
+    div_modal_gr_detail: //*[@id='modalHistory']//*[text()='GR Details:']
+
+modal_information_need: 
+  modal: //div[@id='modalCreateInvoice']//div[@class='modal-content']
+  lbl_note: //div[@id='modalCreateInvoice']//div[@class='modal-content']//p[1]
+  lbl_buyer: //div[@id='modalCreateInvoice']//div[@class='modal-content']//p[2]/span[1]
+  lbl_date: //div[@id='modalCreateInvoice']//div[@class='modal-content']//p[2]/span[2]
+
+cndn_level_attach:
+  btn_choose_file_contract: //div[@class='box-overflow-file'][1]//button[@class='btn-op-default']
+  btn_choose_file_cndn: //div[@class='box-overflow-file'][2]//button[@class='btn-op-default']
+  btn_choose_file_taxinvoice: //div[@class='box-overflow-file'][3]//button[@class='btn-op-default']
+  btn_choose_file_others: //div[@class='box-overflow-file'][4]//button[@class='btn-op-default']
+  browse_contract: //*[@id="modalAlert"]//div[@class='box-overflow-file'][1]//input[@type="file"]
+  browse_cndn: //*[@id="modalAlert"]//div[@class='box-overflow-file'][2]//input[@type="file"]
+  browse_taxinvoice : //*[@id="modalAlert"]//div[@class='box-overflow-file'][3]//input[@type="file"]
+  browse_others: //*[@id="modalAlert"]//div[@class='box-overflow-file'][4]//input[@type="file"]
+  lbl_file_name_contract_with_row: (//ul[@class=" attachment-list pd-t-10"])[1]/li[${filerow}]//span[@class="font-normal color-info"]/span[1]
+  lbl_file_name_cndn_with_row: (//ul[@class=" attachment-list pd-t-10"])[2]/li[${filerow}]//span[@class="font-normal color-info"]/span[1]
+  lbl_file_name_taxinvoice_with_row: (//ul[@class=" attachment-list pd-t-10"])[3]/li[${filerow}]//span[@class="font-normal color-info"]/span[1]
+  lbl_file_name_others_with_row: (//ul[@class=" attachment-list pd-t-10"])[4]/li[${filerow}]//span[@class="font-normal color-info"]/span[1]
+  txt_note_contract_with_row: (//ul[@class=" attachment-list pd-t-10"])[1]/li[${filerow}]//input
+  txt_note_cndn_with_row: (//ul[@class=" attachment-list pd-t-10"])[2]/li[${filerow}]//input
+  txt_note_taxinvoice_with_row: (//ul[@class=" attachment-list pd-t-10"])[3]/li[${filerow}]//input
+  txt_note_others_with_row: (//ul[@class=" attachment-list pd-t-10"])[4]/li[${filerow}]//input
+  btn_file_delete_contract_with_row: (//ul[@class=" attachment-list pd-t-10"])[1]/li[${filerow}]//a[@class="attachment-remove"]
+  btn_file_delete_cndn_with_row: (//ul[@class=" attachment-list pd-t-10"])[2]/li[${filerow}]//a[@class="attachment-remove"]
+  btn_file_delete_taxinvoice_with_row: (//ul[@class=" attachment-list pd-t-10"])[3]/li[${filerow}]//a[@class="attachment-remove"]
+  btn_file_delete_others_with_row: (//ul[@class=" attachment-list pd-t-10"])[4]/li[${filerow}]//a[@class="attachment-remove"]
+  btn_cndn_attach: //table[@class="table-default table-border table-ein-list einb-table"]/tbody/tr/td[7]/a
+  btn_done: //div[@id='modalAlert' and @style='display:block;']/div[@class='modal-overlay']//button[@class='btn-op-primary']  
+
+footer_section:
+  btn_resubmit: //div[@class="full-popup-bottom"]//button  
+  btn_footer_submit_yes: //button[@id='btnCon' and @class='btn-op-primary']
+
+lbl_success_bar: //div[@class="box-alert box-fixed-content box-alert-success"]

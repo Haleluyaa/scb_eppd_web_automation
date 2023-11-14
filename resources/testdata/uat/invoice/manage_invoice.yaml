@@ -1,0 +1,5 @@
+CREATE_1_INVOICE_SUCCESS_ON_SUCCESS_BAR_TH: "สำเร็จ: สร้างใบแจ้งหนี้ 1 ใบและส่งไปยังผู้ซื้อเรียบร้อยแล้ว"
+
+TEXT:
+  INVOICE_NUMBER_TH: เลขที่ใบแจ้งหนี้
+  INVOICE_NUMBER: Invoice Number

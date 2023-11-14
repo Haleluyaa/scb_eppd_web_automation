@@ -1,0 +1,45 @@
+#####Login
+btn_login_ep_locator: //*[contains(@id,"login_btn") or contains(@id,"btn_login")]
+txt_ep_username_locator: id=username
+txt_ep_password_locator: id=password
+beta_invoice_management_link_locator: //a[@href='javascript:requestHome("eiv");']
+uat_invoice_management_link_locator: //a[@href='javascript:requestHome("eivuat");']
+prod_invoice_management_link_locator: //a[@href='javascript:requestHome("eiv");']
+signout_menu: //*[@class="logout"]
+icon_user_profile: //*[contains(@class,'nav-profile')]
+#####SWW_Login
+txt_sww_username: id=username
+txt_sww_password: id=password
+btn_sww_submit_login: //*[@type='submit']
+txt_eid: id=eid
+
+#SWW_eInvoice_home
+lnk_sww_invoice: //a[contains(., "Invoice Management")]
+uat_lnk_sww_invoice: //a[contains(., "Invoice Management (UAT)")]
+
+#ep_eInvoice_home
+todo_list_invoice_link_locator: //*[@id="borg_tbl"]/tbody/tr[3]/td[3]/a/img
+
+#buyer_manage_invoice
+btn_search_button_buyer_manage_invoice: id=rb-buyer-search
+txt_input_criteria_buyer_manage_invoice: id=rb-txt-buyer-search-text
+
+tbl_manage_invoice_count_result: //table[@id="rb-tbl-buyer-invoice"]/tbody//tr
+ddl_buyer_status_search_invoice_status_locator:   id=rb-dd-buyer-status
+ddl_buyer_status_search_invoice_in_status_locator:   //*[@class="box-dropdown-list form-dropdown-list ein-dropdown-list"]/ul/li[contains(.,REPLACE_ME)]
+btn_expand_action_approve_list: id=rb-bdd-action-
+td_first_buyer_invoice_number: //td[@class="buyer-inv-num"][1]/span
+btn_close_view_detail: //a[@class="full-popup-close pull-right"]
+
+loading_box: //*[@class="loading-box"]
+loading_overflow: //*[@class="loading-overflow"]
+
+btn_lanuage:    //div[contains(@class,"lang-selected-box")]
+btn_lang_en:    //a/span[contains(@class,"icon-flag-us")]
+btn_lang_th:    //a/span[contains(@class,"icon-flag-th")]
+
+##Code of conduct
+modal_code_of_conduct: //*[@id="dialog-confirm"]
+modal_code_of_conduct_tab: //*[@tabindex="-1"]
+btn_acknowledged: //div[@id="dialog-confirm"]//input[@type="button"]
+msg_code_of_conduct: //*[@id="dialog-confirm"][@class="ui-dialog-content ui-widget-content"]

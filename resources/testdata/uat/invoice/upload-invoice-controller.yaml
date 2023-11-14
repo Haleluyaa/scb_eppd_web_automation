@@ -1,0 +1,29 @@
+#UPLOAD_INVOICE_XLSX: ${CURDIT}/../resources/testdata/uat/uploadfiles/UploadInvoiceTemplate.xlsx
+UPLOAD_INVOICE_TEMPLATE: ${CURDIT}/../mockdata_template/upload-invoice-controller/upload-invoice-controller-template.yaml
+UPLOAD_INVOICE_TEMPLATE_FILE_NAME: upload-invoice-controller-template.yaml
+
+UPLOAD_DRAFT_INV_VALIDATE:
+  buyerMpId: 19553eee-b30a-46dd-b978-d75f807295ce
+  buyerName: True Move H Universal Communication Co., Ltd. (Head Office)
+  createdBy: ปภัสสรา สุขพิชญกานต์
+  fileDownload: /api/attachments/downloadAttachment?uniqueFilename=19553eee-b30a-46dd-b978-d75f807295ce/2020/9/20200911101324889&filename=InvoiceTemplate1.xlsx&bucketName=invoice.upload
+  fileName: InvoiceTemplate1
+  importedBy: ปภัสสรา สุขพิชญกานต์
+  invoiceType: 1
+  invoices: 
+    -
+      grLineNum: 1
+      grNumber: 17986
+      invoiceAmount: 10
+      invoiceDate: 20/10/2020
+      invoiceNum: DR
+      itemDesc: Test submit draft invoice
+      poNumber: 4601011300
+      retentionAmount: 2
+      rowNumber: 1
+      taxInvoiceDate: 20/10/2020
+      taxInvoiceNumber: TXN
+      vatAmount: 2
+      vatBaseAmount: 10
+  supplierMpId: 5845252c-78fc-1000-b962-c0a805660001
+  uploadInvoiceHistoryId: 0

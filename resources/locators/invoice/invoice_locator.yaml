@@ -1,0 +1,64 @@
+obj_invoice:
+  invoice_status_section:
+    btn_create_invoice: //*[@id="rb-btn-create-invoice"]
+    btn_select_pr_po: //*[@id="rb-ddl-po-gr-selected"]
+    btn_create_invoice_label: //*[@id="rb-btn-create-invoice"]//*[contains(.,'Create Invoice')]
+  
+  create_invoice_popup:
+    ddl_select_buyer: //*[@id="rb-ddl-select-buyer"]
+    txt_search_buyer: //*[@id="rb-txt-search-buyer"]    
+    ddl_select_buyer_item_1: //*[@id="rb-ddl-select-buyer-items"]//label[1]
+    ddl_select_currency: //*[@id="rb-ddl-select-currency"]
+    btn_continue: //*[@id="rb-btn-continue"]
+
+  search_invoice: 
+    txt_search_invoice: //*[@id="rb-txt-invoice-status-search-text"]
+    btn_search : //button[@class="btn-op-primary btn-search"]
+    btn_calendar: //button[@class="btn-calendar"]  
+    lbl_status: //*[@id="rb-bdl-status-invoice"]
+    ddl_status: //*[@id="rb-bdl-status-invoice"]//a[contains(.,'${invoice_status}')]
+    lbl_filter: //*[@class="box-dropdown-title"]
+    ddl_filter: //*[@class="box-dropdown-list form-dropdown-list"]//a[contains(.,'${invoice_filter}')]
+    rdo_anytime: //*[@id="rb-cb-invoice-status-any"]
+    rdo_buyer_anytime: //*[@id="rb-cb-buyer-any"]
+    rdo_date_range: //*[@id="rb-cb-invoice-status-created"]
+    rdo_buyer_date_range: //*[@id="rb-cb-buyer-received-date"]
+    rdo_due_date: //*[@id="rb-cb-invoice-status-due"]
+
+
+  invoice_list:
+    tbl_first_row: //*[@id="pageContent"]//table/tbody/tr[1]/td[@class="ein-buyer-name"]/span
+    lbl_firstrow_data_status: //table[@class="table-default table-border table-ein-list"]//tr[${row}]/td[@class="col-action-dot"]
+    btn_action_with_row: (//div[contains(@id,"rb-bdd-action-")])[${row}]
+    tbl_result_row: //*[@class='frontend-items-list']//table//tbody//tr 
+    tbl_result_header_row: //*[@class='frontend-items-list']//table//thead//th
+    tbl_firstrow_with_columm: (//*[@class='frontend-items-list']//table//tbody//tr)[1]//td[${ret_col_no}]
+    action_menu:
+      btn_delete_first_row: //div[contains(@id,"rb-ddl-action-selected-0")]//a[contains(.,'Delete')]
+    mdl_confirm_delete: //div[@id="modalAlert"]//span[text()="Delete Invoice"]
+    btn_confirm_delete: //div[@id="modalAlert"]//button[span[text()="Yes"]]
+    txt_no_result_found: //div[@class="frontend-items-list"]//span[text()="No results found."]
+    tbl_selectrow_on_column: //*[@id="pageContent"]/div/div[4]/div[1]//table/tbody/tr[${row_number}]/td[${ret_col_no}]
+    tbl_result_empty: //*[@class="font-empty-list"]
+  right_menu:
+    lnk_invoice_menu: //a[@data-rb='INVOICE_menu'] 
+    
+lbl_success_bar: //div[@class='box-alert box-fixed-content box-alert-success']    
+
+
+btn_action: id=rb-bdd-action-${row_index}
+
+tbl_invoice_list:
+  col_invoice_num: //tr[${row_num}]/td[position()=(count(//tr/th[text()[contains(.,'Invoice Number') or contains(.,'เลขที่ใบแจ้งหนี้')]]/preceding-sibling::*)+1) ]
+  col_buyer: //tr[${row_num}]/td[position()=(count(//tr/th[text()[contains(.,'Buyer') or contains(.,'ผู้ซื้อ')]]/preceding-sibling::*)+1) ]
+  col_create_date: //tr[${row_num}]/td[position()=(count(//tr/th[text()[contains(.,'Created Date') or contains(.,'วันที่สร้าง')]]/preceding-sibling::*)+1)]
+  col_status_label: //tr[${row_num}]/td[position()=(count(//tr/th[text()[contains(.,'Status') or contains(.,'สถานะ')]]/preceding-sibling::*)+1)]/div/span 
+
+action_invoice:
+  history: //*[@id="rb-ddl-action-selected-${row_num}"]/ul/li/a/i[@class="pr-icon-action icon-${action}"]  
+invoice_status_tab_menu:
+  invoice_status: //div[@class="frontend-tab-menu"]/a[(contains(text(),'สถานะใบแจ้งหนี้')) or (contains(text(),'Invoice Status'))]
+  upload_status: //div[@class="frontend-tab-menu"]/a[(contains(text(),'สถานะการอัพโหลด')) or (contains(text(),'Upload Status'))]  
+
+
+

@@ -1,0 +1,11 @@
+VIEW_CLOSED_CNDN_NO : SupplierCN
+WITHIN_DATE : AA12.34
+WITHIN: 30
+CONFIG_DATA: 123456789
+CLOSE_CNDN_NUMBER: keeptestcancel01
+PAYMENT_LOCATION_NAME: "โอนเงินเข้าบัญชีธนาคาร (Media Clearing)"
+NOTE: testRobot
+FISCAL_YEAR: "2019"
+FIDOC: "1951000326"
+lbl_FIDOC: Invoice Number (SAP)
+lbl_FIYEAR: Invoice Year (SAP)

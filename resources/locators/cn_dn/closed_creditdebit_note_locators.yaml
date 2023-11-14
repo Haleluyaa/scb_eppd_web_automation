@@ -1,0 +1,38 @@
+duedate:
+  rdo_group : rb-cb-typeRadio
+  rdo_within_date_value : duedateWithIn
+  rdo_within_date : //*[@id="duedateWithIn"]
+  txt_within_date : //*[@id="rb-txt-duedate-within"]
+  calendar: //*[@id="open-calendar"]
+
+payment_location:
+  txt_payment_location: //*[@id="paymentLocID"]  
+  option_first: //*[@id="paymentLocID"]/option[1] 
+  option_select: //*[@id="paymentLocID"]/option[contains(text(),'${payment_location_data}')]
+
+txtarea_note_approve : //textarea[@id='rb-ta-buyer-approve']
+
+btn:
+  close_cndn: //*[@id="btnCon"]
+
+config:
+  txt_with_value: //label[span[contains(.,'${lbl_config}')]]${UI_locator}  
+  ddl_with_value: (//li[@class='einb-form-control'])[${row_seq}]//select/option[text()!='Please select...']
+  ddl: (//li[@class='einb-form-control'])[${row_seq}]//select
+  lbl: (//li[@class='einb-form-control'])[${row_ui}]//label[span[contains(.,'${lbl_config}')]]
+
+txt_number: //*[@id="input_26"]
+ddl_option: //*[@id="input_27"]
+calendar_menu: //*[@id="calendar-25"]
+
+msg_required:
+  duedate: //*[@id="rb_modalCreateInvoice"]//div[@class="set-colin-input pull-left"]//span[@class="text-form-error"] 
+  payment_location: //*[@id="rb_modalCreateInvoice"]//div[@class="set-colin-input"]//span[@class="text-form-error"]
+  config: //label[span[contains(.,'${lbl_configuration_fields}')]]/following-sibling::span//span[contains(.,'${error_msg}')]
+
+ico_x_closed_modal: //*[@id="rb_modalCreateInvoice"]/div/div/div[1]/div[1]/a/i[@class="icon-cross"]
+close_cndn_modal_title: //*[@id="rb_modalCreateInvoice"]//div[@class="modal-title"]
+
+check_config_txt: //div/li[${seq}]/div/input
+check_config_date: //div/li[${seq}]/div/div/input
+check_config_ddl: //div/li[${seq}]/div/div/select

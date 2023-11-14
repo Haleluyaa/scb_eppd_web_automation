@@ -1,0 +1,129 @@
+approvalID: 12711
+invoiceID: 11497
+approverID: Invoice_03
+statusID: 4
+buyerMpID: 19553EEE-B30A-46DD-B978-D75F807295CE
+approvalNote: Looked
+paymentLocation: 
+dueDate: 
+invoiceApprovalDtoList:
+- invoiceID: 11498
+  approvalID: 12712
+  approvalTypeID: 1
+  approvalDescription: Verify Document
+  seqNum: 1
+  nextSeq: 0
+  prevSeq: 0
+  approver: 
+  approverGroup: A
+  approvalStatusID: 1
+  approveBeginDate: '2020-09-15'
+  approveEndDate: 4000-02-01 07:00
+  approvalCreateDate: '2020-09-15'
+  approvalNote: 
+  adHocType: Approver
+  userDtoList:
+  - userID: 01002591
+    firstNameEN: Pattama Settapakdee
+    lastNameEN: ''
+    phoneNo: " "
+    email: epcbox@ptvnservice.com
+  - userID: Invoice_03
+    firstNameEN: Verify Document 03
+    lastNameEN: ''
+    phoneNo: 02 034 4401
+    email: invoice_03@mailinator.com
+  - userID: Invoice_04
+    firstNameEN: ผู้อนุมัติเอกสาร 04
+    lastNameEN: ''
+    phoneNo: 02 034 4401 ต่อ 99
+    email: invoice_04@mailinator.com
+  - userID: AP_Admin01
+    firstNameEN: AP Admin 01
+    lastNameEN: ''
+    phoneNo: ''
+    email: yuvaporn.ped@pantavanij.com
+  - userID: AP_Admin02
+    firstNameEN: AP Admin 02
+    lastNameEN: ''
+    phoneNo: "-"
+    email: epcbox@pantavanij.com
+  - userID: AP_Admin03
+    firstNameEN: AP Admin 03
+    lastNameEN: ''
+    phoneNo: "-"
+    email: epcbox@pantavanij.com
+  - userID: AP_Admin04
+    firstNameEN: AP Admin 04
+    lastNameEN: ''
+    phoneNo: "-"
+    email: apadmin@mailinator.com
+  - userID: AP_Admin05
+    firstNameEN: AP Admin 05
+    lastNameEN: ''
+    phoneNo: "-"
+    email: apadmin@mailinator.com
+  - userID: AP_Admin07
+    firstNameEN: AP Admin 07
+    lastNameEN: ''
+    phoneNo: "-"
+    email: ap07@mailinator.com
+  - userID: AP_Admin09
+    firstNameEN: AP Admin 09
+    lastNameEN: ''
+    phoneNo: "-"
+    email: ap09@mailinator.com
+  - userID: AP_Admin12
+    firstNameEN: AP Admin 12
+    lastNameEN: ''
+    phoneNo: "-"
+    email: apadmin@mailinator.com
+  - userID: AP_Admin13
+    firstNameEN: AP Admin 13
+    lastNameEN: ''
+    phoneNo: ''
+    email: epcbox@ptvnservice.com
+  - userID: 01034998
+    firstNameEN: " Kanittha Chuanchumsri"
+    lastNameEN: ''
+    phoneNo: 0-2699-2577
+    email: epcbox@ptvnservice.com
+  - userID: '01026261'
+    firstNameEN: " Sirirat Thangjai"
+    lastNameEN: ''
+    phoneNo: 0-2699-2577
+    email: epcbox@ptvnservice.com
+  - userID: 01009204
+    firstNameEN: " Jiraporn Reangsri"
+    lastNameEN: ''
+    phoneNo: 0-2699-2577
+    email: epcbox@ptvnservice.com
+  - userID: 01002418
+    firstNameEN: " janphen surawatdecha"
+    lastNameEN: ''
+    phoneNo: 0-2699-2577
+    email: epcbox@ptvnservice.com
+  - userID: 01010941
+    firstNameEN: Wanthita Mahaploenjit
+    lastNameEN: ''
+    phoneNo: 0-2699-2577
+    email: epcbox@ptvnservice.com
+  - userID: 01008897
+    firstNameEN: " Sunantika Sumpantawongkawee"
+    lastNameEN: ''
+    phoneNo: 0-2699-2577
+    email: epcbox@ptvnservice.com
+  - userID: 01003598
+    firstNameEN: Supaporn Kandhanabat
+    lastNameEN: ''
+    phoneNo: 0-2699-2577
+    email: epcbox@ptvnservice.com
+uiItemSaveDtoList: []
+uiAccountSaveList: []
+attachmentSaveEdit:
+  invoiceID: 11498
+  updateBy: Invoice_03
+  invoiceAttachments: []
+  invoiceItemAttachments: []
+poUIItemSaveDtoList: []
+poItemUIItemSaveDtoList: []

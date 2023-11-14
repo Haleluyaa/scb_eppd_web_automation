@@ -1,0 +1,15 @@
+########### Environemtn #############
+## Supplier Web Work
+SWW_API_AUTHEN:    http://supplierportal.demo.pantavanij.com/ServiceAPI/api/AccountPortal/LoginValidate?languageId=1&browserType=IE&clientIPAddress=192.168.1.1
+SWW_WEB: http://supplierportal.demo.pantavanij.com/AccountPortal/Login
+##EP BETA
+CPALL_EP_WEB: http://cpallep.stg.pantavanij.com/Firstpage.action
+TRUE_EP_WEB: http://ep.demo.pantavanij.com/true/Firstpage.action
+MTL_EP_WEB: https://muangthaiep-dev.pantavanij.com/Firstpage.action
+MTL_EP_HOME: http://muangthaiep-dev.pantavanij.com/PortalHome.action
+#Invoice
+EINVOICE_URL_WEB:    http://beta-invoice-portal.oneplanets.com
+BUYER_APPROVE_URI:    /BuyerApprove
+BUYER_STATUS_URI:    /BuyerStatus
+BUYER_APPROVE_CNDN_URI: /ApproveCreditNote
+

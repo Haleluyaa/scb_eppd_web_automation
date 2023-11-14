@@ -1,0 +1,24 @@
+invoiceID: 10399
+buyerName: True Move H Universal CommunicationCo., Ltd. (Head Office)
+buyerMpID: 19553eee-b30a-46dd-b978-d75f807295ce
+supplierMpID: 5845252c-78fc-1000-b962-c0a805660001
+currency: THB
+invoiceNum: EED-BUGBATCH-INV05
+createdBy: TT00100
+createdDate: '2020-02-25T09:15:00.000+0000'
+excludeVat: 500
+retention: 0
+vat: 0
+includeVat: 500
+remainingAmount: 292
+invoiceItems:
+- invoiceID: 10399
+  invoiceItemID: 11232
+  lineNum: 1
+  poNum: '4601011299'
+  poAmount: 6000
+  grNum: '17984'
+  grAmount: 1000
+  invoiceAmount: 500
+  retention: 0
+

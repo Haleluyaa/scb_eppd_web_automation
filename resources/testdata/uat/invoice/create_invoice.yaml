@@ -1,0 +1,19 @@
+BUYER_NAME: True Move H
+BUYER_NAME_EN_TRUE: True Move H Universal Communication Co., Ltd. (Head Office)
+RETENTION_AMOUNT: "10.01"
+ERROR_AMOUNT_LARGER: This amount cannot be larger than the invoice amount.
+
+BUYER_NAME_TH_MTL: บริษัท เมืองไทยประกันชีวิต จำกัด (มหาชน)
+SUPPLIER_NAME_TH_PTVN: บริษัท พันธวณิช จำกัด
+SUPPLIER_NAME_EN_AIS: Advanced Info Service
+ALL_CURRENCY_TH: ทุกสกุลเงิน
+ALL_CURRENCY_EN: All Currency 
+THB_CURRENCY_EN: THB - Thai Baht
+THB_CURRENCY_DISPLAY: THB
+VAT7: 7
+
+S_BUYER_NAME_EN_SANITY: True Move H Universal Communication Co., Ltd. (Head Office)
+B_BUYER_NAME_EN_SANITY: True Move H Universal Communication Co., Ltd. (Head Office)
+SUPPLIER_NAME_EN_SANITY: Advanced Info Service
+
+REQUIRED_FIELDS_ALERT_TH: จำเป็นต้องระบุ.

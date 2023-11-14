@@ -1,0 +1,5 @@
+INVOICE_VALIDATE_RETENTION:
+  OFFLINE: XXXX
+  ONLINE: XXXX  
+
+CREATE_1_INVOICE_SUCCESS_ON_SUCCESS_BAR_EN: Success:1 invoice has been successfully created and submitted to buyer.  

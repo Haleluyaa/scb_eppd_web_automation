@@ -1,0 +1,25 @@
+####Modal create invoice
+mdl_create_cndn_locator: id=rb-modal-addinvoice-content
+
+##### Radio button group InvoiceType ########
+rdo_invoice_type_creditnote_locator: (//*[@name="cnOrDn"])[1]    #//*[@name="cnOrDn" and contains(text(),'Credit Note')]  OR //*[@name="cnOrDn" and contains(text(),'ใบลดหนี้')]
+rdo_invoice_type_debitnote_locator: (//*[@name="cnOrDn"])[2]       #//*[@name="cnOrDn" and contains(text(),'Debit Note')]  OR //*[@name="cnOrDn" and contains(text(),'ใบเพิ่มหนี้')]
+
+#### Drop down list buyer ########
+ddl_selected_buyer_cndn_locator: id=rb-ddl-select-buyer
+txt_search_buyer_cndn_locator: id=rb-txt-search-buyer
+list_buyer_cndn_locator: //div[@id="rb-div-buyer-list"]
+list_select_buyer_cndn_locator: //div[@id="rb-div-buyer-list"]/label[contains(text(),'REPLACE_ME')]    #REPLACE_ME with buyer name
+
+ddl_currency_cndn_locator: id=rb-ddl-select-currency
+list_currency_cndn_locator: //*[@id="rb-div-currency-list"]/label[contains(text(),'REPLACE_ME')]    #REPLACE_ME with currency code
+
+########### Button continue to create invoice step 1 #############
+btn_continue_enabled_locator: //button[@id="rb-btn-continue"][@class="btn-op-primary"]
+btn_continue_disabled_locator: //button[@id="rb-btn-continue"][@class=btn-op-disabled disabled"]
+
+
+
+
+
+

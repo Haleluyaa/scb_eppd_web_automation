@@ -1,0 +1,36 @@
+########### Environemtn #############
+## Supplier Web Work
+SWW_API_AUTHEN:    http://supplierportal.demo.pantavanij.com/ServiceAPI/api/AccountPortal/LoginValidate?languageId=1&browserType=IE&clientIPAddress=192.168.1.1
+SWW_WEB: http://supplierportal.demo.pantavanij.com/AccountPortal/Login
+##EP BETA
+CPALL_EP_WEB: http://cpallep.stg.pantavanij.com/Firstpage.action
+TRUE_EP_WEB: http://ep.demo.pantavanij.com/true/Firstpage.action
+MTL_EP_WEB: http://muangthaiep.stg.pantavanij.com/Firstpage.action
+MTL_EP_HOME: http://muangthaiep.stg.pantavanij.com/PortalHome.action
+#Invoice
+EINVOICE_URL_WEB:    http://uat-invoice-portal.oneplanets.com
+EINVOICE_URL_API: http://uat-api-invoice.oneplanets.com
+BUYER_APPROVE_URI:    /BuyerApprove
+BUYER_STATUS_URI:    /BuyerStatus
+BUYER_APPROVE_CNDN_URI: /ApproveCreditNote
+BUYER_MANAGE_CNDN_URI: /ManageCreditNote
+
+#URI
+CREATE_CNDN_SUPPLIER_URI: /api/creditNote/offline
+CREATE_CNDN_ELASTIC_URI: /api/elasticSearch
+GET_INV_ELASTIC_PORTAL_URI: /api/elasticSearch/invoiceID
+UPLOAD_INVOICE_URI_WRAPPER: /api/invoices/upload
+UPLOAD_INVOICE_URI: /api/uploadInvoice
+DELETE_DRAFT_INVOICE_URI:    /api/invoices
+GROUP_INVOICE_URI: /api/groupInvoices
+APPROVAL_WORKFLOW_URI: /api/approveWorkFlow
+APPROVAL_URI: /api/approval
+
+APPROVAL_ENDPOINT:
+  url: http://uat-api-invoice.oneplanets.com
+  uri: /api/approval
+WORKFLOW_ENDPOINT:   
+  url: http://uat-api-invoice.oneplanets.com
+  uri: /api/approveWorkFlow
+
+

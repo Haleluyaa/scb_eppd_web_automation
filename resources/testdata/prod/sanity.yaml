@@ -1,0 +1,21 @@
+SWW_USER: AA29175
+SWW_PASS: True1234
+
+
+# Supplier Create  Invoice
+CREATE_STEP1_FILTER:
+  CREATE_DATE_FROM: 01/01/2020
+  CREATE_DATE_TO: 31/05/2020  
+
+STATUS:
+  PENDING: Pending
+  AWAITING_APPROVAL: Awaiting Approval
+  COMPLETED: Completed
+  REJECTED: Rejected
+  EXPIRED: Expired
+  DOCUMENT_RETURN: Document Return
+  CANCELLED: Cancelled
+  COMPLETED_RETENTION: Completed (Retention)
+  PARTIALLY_PAID: Partially Paid
+  FULLY_PAID: Fully Paid
+

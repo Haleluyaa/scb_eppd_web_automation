@@ -1,0 +1,3 @@
+obj_closed_cndn:
+  txt_due_date: //*[@id='open-calendar']
+  

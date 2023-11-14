@@ -1,0 +1,27 @@
+groupNum: 1
+userName: ''
+userID: TT00100
+buyerMpID: ''
+creditNote:
+- creditNoteId: 1
+  creditNoteNum: CN20200515/02
+  creditNoteDate: '2020-05-15'
+  cndnitem:
+  - invoiceId: 10399
+    creditNoteAmount: '2'
+    invoiceCreditNoteAmount:
+    - 2
+  taxInvoiceNum: CN20200515/02
+  taxInvoiceDate: '2020-05-15'
+  vat: 1
+  vatBaseAmount: 2
+  includeVAT: '3'
+  excludeVAT: '2'
+  currency: THB
+attachments:
+- headerAttachment: []
+  itemAttachment:
+  - itemDetailAttachment: []
+appType: EInvoiceSupplier
+cnOrDn: CN
+isBuyer: false

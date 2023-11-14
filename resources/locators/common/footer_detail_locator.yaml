@@ -1,0 +1,2 @@
+btn_back_to_invoice_step_1_cndn_locator: //button[@class="btn-op-default mr-10"]
+btn_submit_invoice: //button[@class="btn-op-primary false"]

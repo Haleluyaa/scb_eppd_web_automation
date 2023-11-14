@@ -1,0 +1,6 @@
+APPROVAL_WORKFLOW_TEMPLATE: ${CURDIT}/../mockdata_template/work-flow-controller/approval-workflow-controller.yaml
+APPROVAL_WORKFLOW_TEMPLATE_FILE_NAME: approval-workflow-controller.yaml
+
+INVOICE_BUYER_SUPPLIER:
+  buyer_mpid: 19553EEE-B30A-46DD-B978-D75F807295CE
+  supplier_mpid: 5845252c-78fc-1000-b962-c0a805660001

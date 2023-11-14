@@ -1,0 +1,52 @@
+btn_select_inv: //ul[@id='rb-ddl-po-gr-selected']
+btn_create_cndn: //a[@id='rb-btn-create-invoice']    
+btn_continue: id=rb-btn-continue
+ddl_selected_buyer_offline: id=rb-ddl-select-buyer
+txt_search_buyer: id=rb-txt-search-buyer
+ddl_selected_supplier_offline: id=rb-ddl-select-supplier
+txt_search_supplier: id=rb-txt-search-supplier
+ddl_selected_currency_offline: id=rb-ddl-select-currency
+ddl_selected_buyer_offline_default_value: id=rb-ddl-select-buyer
+ddl_selected_supplier_offline_default_value: id=rb-ddl-select-supplier
+ddl_search_buyer_offline: //div[@id='rb-div-buyer-list']
+ddl_search_supplier_offline: //div[@id='rb-div-supplier-list']
+ddl_currency_offline_list: //div[@id='rb-div-currency-list']
+
+select_buyer: //div[@id='rb-div-buyer-list']/label/strong[contains(text(),'${selected_value}')]
+select_supplier: //div[@id='rb-div-supplier-list']/label/strong[contains(text(),'${selected_value}')]
+select_currency: //div[@id='rb-div-currency-list']/label[contains(text(),'${selected_value}')]
+
+btn_search_button: id=rb-btn-search-button-add-credit
+txt_input_criteria: id=rb-txt-search-add-credit
+chb_inv_list_with_row: //*[@id="rb-tbl-invoice-list"]/tbody/tr[${row}]/td[1]/input[@id="rb-btn-add-to-new-credit"]
+
+btn_create_invoice_step1: //button[@class="btn-op-primary btn-add-invoice "]/span[2] 
+btn_next_step1: //button[@id='rb-btn-next' and @class='btn-op-primary '] 
+
+btn_inv_detail: (//tbody//tr[@class="col-detail "])[${cndn_row}]//tbody//tr[${inv_row}]/td[3]
+btn_inv_detail_save: //div[@class="full-popup-bottom"]//button[@class="btn-op-primary"]
+txt_cndn_amt: (//input[contains(@id,'rb_txt_gr_item_amount')])[${row_num}]
+
+txt_cndn_number: rb_txt_invoice_number_${row}
+txt_cndn_date: //td/div[@id="rb_calendar_invoiceDate_${row}"]
+
+ico_step_1: //li[@class='boxstep step1 active']/span/i
+ico_step_last: //li[@class='boxstep steplast active']/span/i
+
+lbl_inv_details_header: //div[(text()='รายละเอียดของใบแจ้งหนี้') or (text()='Invoice Details')]
+lbl_amount_cndn: //div[@class="full-popup-wrap" and not(@id="rb-modal-create-credit-add")]//div[@class="text-right pull-right buyer-ein-amount"]//*[@id="rb-lbl-pr-amount"]/span[text()='${amt}']
+
+btn_footer_submit: //button[@class='btn-op-primary false']
+btn_footer_submit_yes: //button[@id='btnCon' and @class='btn-op-primary']
+
+calendar_menu:
+  btn_previous_year: //*[@id="rb_calendarPopup"]//a[@class="rc-calendar-prev-year-btn"]
+  btn_previous_month: //*[@id="rb_calendarPopup"]//a[@class="rc-calendar-prev-month-btn"]
+  btn_next_year: //*[@id="rb_calendarPopup"]//a[@class="rc-calendar-next-month-btn"]
+  btn_next_month: //*[@id="rb_calendarPopup"]//a[@class="rc-calendar-next-month-btn"]
+  spn_month_select: //*[@id="rb_calendarPopup"]//a[@class="rc-calendar-month-select"]
+  spn_year_select: //*[@id="rb_calendarPopup"]//a[@class="rc-calendar-year-select"]
+  cell_current_date: //td[@role="gridcell"][@class="rc-calendar-cell rc-calendar-today rc-calendar-selected-day"]
+
+CNDN_ONLINE_ID: '5'
+CNDN_OFFLINE_ID: '6' 

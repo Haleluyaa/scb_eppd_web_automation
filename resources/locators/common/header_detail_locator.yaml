@@ -1,0 +1,5 @@
+############# Header Details Locator ##################### 
+lbl_selected_buyer_locator: id=rb-lbl-buyer
+lbl_created_date_locator:  id=rb-lbl-create-date
+lbl_summary_all_amount_locator: id=rb-lbl-pr-amount
+lbl_summary_all_amount_currency_locator: //strong[@id="rb-lbl-pr-amount"]/strong[@class="font-sub-title color-info"]

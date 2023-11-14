@@ -1,0 +1,12 @@
+TRUE_CODE: truecorp
+MTL_CODE: mtl
+CPALL_CODE: cpall
+TRUE_MPID: 19553eee-b30a-46dd-b978-d75f807295ce
+MTL_MPID: dbb7cc10-41d9-491e-854b-08536e84fase
+TRUE_EID: 66
+
+
+JSON_PATH:
+  BUYER_MANAGE_INVOICE_ACTION: ${CURDIR}/../../../resources/testdata/${env}/thirdparty/buyer_manage_invoice_action.json
+  
+

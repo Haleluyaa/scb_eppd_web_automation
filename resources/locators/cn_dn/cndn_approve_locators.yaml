@@ -1,0 +1,78 @@
+ddl_filter_condition_locator: id=rb-ddl-condition
+approve_cndn_label: //a[@class="list-tab-menu active"]
+
+ddl_filter_condition_top_value_locator: //div[@class="all-cost-dropdown-list"]/ul/li[1]/a
+ddl_filter_condition_second_value_locator: //div[@class="all-cost-dropdown-list"]/ul/li[2]/a
+ddl_filter_condition_under_my_approval_locator: //div[@class="all-cost-dropdown-list"]/ul/li[(@class="child-cost")][${row_number}]
+ddl_filter_condition_bottom_value_locator: //div[@class="all-cost-dropdown-list"]/ul/li[${row_number}]/a
+ddl_filter_condition_data_rows_locator: //div[@class="all-cost-dropdown-list"]/ul/li
+ddl_filter_condition_my_approval_data_rows_locator: //div[@class="all-cost-dropdown-list"]/ul/li[(@class="child-cost" and contains(@data-reactid,"$"))]
+ddl_filter_condition_on_option_locator: //div[@class="all-cost-dropdown-list"]/ul/li/a[text()="${filter_condition}"]
+ddl_filter_condition_selected_option_locator: //div[@id="rb-ddl-condition-list"]/span
+
+ddl_tax_invoice_WithTaxInvoice: id=tax-filter-with
+ddl_tax_invoice_AllTaxInvoice: id=tax-filter-all
+ddl_tax_invoice_NoTaxInvoice: id=tax-filter-no
+ddl_tax_invoice: id=tax-filter-box-dropdown
+
+btn_tax_invoice_filter: id=tax-filter
+
+
+ddl_approval_status: id=rb-dd-buyer-status
+ddl_approval_status_with_value: //li/a[text()='${selected_approval_status}']
+
+lbl_totol_footer: //div[@id="rb-lbl-records-summary-add-inv"]/span[2]
+tbl_cndn_approval_list:
+  row_per_page: //table[@id="rb-tbl-buyer-credit-note"]/tbody/tr
+  row_data_with_columm: (//table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[not(contains(@class,'col-detail'))])[${row_number}]/td[${ret_col_no}]
+  row_data_with_columm_status: (//table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[not(contains(@class,'col-detail'))])[${row_number}]/td[${ret_col_no}]/div
+  firstrow_data_with_columm: //table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[1]/td[${ret_col_no}]
+  firstrow: //table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[1]
+  header_row: //table//thead//th
+  row_specific_number: //table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[${row}]
+
+obj_search:
+  txt_search: //*[@id="rb-txt-buyer-search-text"] 
+  btn_search: //button[@id="rb-buyer-search"]  
+btn_three_dot_first_row: //*[@id="rb-bdd-action-1"]
+btn_action_specific_row : //*[@id="rb-bdd-action-${row_no}"] 
+btn_action_option_specific_row: //*[@id="rb-ddl-action-selected-${row_no}"]  
+obj_action_menu:
+  history: //*[@class="pr-icon-action icon-history"] 
+  edit: //*[@class="pr-icon-action icon-edit"]  
+  
+actions:
+  close_cndn : //*[@id="rb-ddl-action-selected-${row_no}"]/ul/li/a/i[@class="pr-icon-action icon-close-invoice"]  
+  edit: //*[@class="pr-icon-action icon-edit"] 
+
+obj_table:
+  tbl_cndn_result_row: //*[@class='frontend-items-list']//table//tbody//tr 
+  tbl_cndn_result_header_row: //*[@class='frontend-items-list']//table//thead//th
+  tbl_cndn_result_header_text: //*[@class='frontend-items-list']//table//thead//tr
+  tbl_cndn_firstrow_with_columm: (//*[@class='frontend-items-list']//table//tbody//tr)[1]//td[${ret_col_no}]
+  tbl_cndn_firstrow_data_with_columm: //*[@class='frontend-items-list']//table//tbody//tr[1]//td[${ret_col_no}]
+  ddl_cndn_status: //*[@id='rb-bdl-status-cndn']
+  lbl_cndn_status: //*[@id='rb-bdl-status-cndn']//a[contains(.,'${cndn_status}')]  
+  lbl_cndn_num: (//table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[not(contains(@class,'col-detail'))])[${row_num}]/td[@class="buyer-inv-num"]/span[1]
+  lbl_cndn_num_w_taxicon: (//table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[not(contains(@class,'col-detail'))])[${row_num}]/td[@class="buyer-inv-num"]//*[@class="icon-tax-invoice op-tooltip"]
+  lbl_buyer: (//table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[not(contains(@class,'col-detail'))])[${row_num}]/td[@class="ein-buyer-name"]/span[1]
+  lbl_supplier: (//table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[not(contains(@class,'col-detail'))])[${row_num}]/td[@class="ein-buyer-sup"]/span[1]
+  lbl_receiveddate: (//table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[not(contains(@class,'col-detail'))])[${row_num}]/td[@class="ein-buyer-sup"]/following-sibling::td
+  lbl_costcenter: (//table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[not(contains(@class,'col-detail'))])[${row_num}]/td[@class="ein-buyer-sup"]/following-sibling::td[2]
+  lbl_type: (//table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[not(contains(@class,'col-detail'))])[${row_num}]/td[contains(@class,'buyer-type')]
+  lbl_notetype: (//table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[not(contains(@class,'col-detail'))])[${row_num}]/td[contains(@class,'buyer-note-type')]
+  lbl_includevat: (//table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[not(contains(@class,'col-detail'))])[${row_num}]/td[contains(@class,'buyer-note-type')]/following-sibling::td
+  lbl_status: (//table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[not(contains(@class,'col-detail'))])[${row_num}]/td[@class="col-action-dot"]/div[contains(@class,'ein-text-status')]
+  tbl_expandsion_with_row: (//*[@class='frontend-items-list']//table//tbody//tr[@class="col-detail"])[${row_num}]
+  tbl_expand_button: //table[@id="rb-tbl-buyer-credit-note"]/tbody/tr[${row_num}]/td[contains(@class,'col-ein-no')]//*[@class="icon-arrow-right-page"]
+  tbl_refno: (//*[@class='frontend-items-list']//table//tbody//tr[@class="col-detail"])[${row_num}]//div[@class="blxw-header"]/span[@class="blxw-hd"]
+  tbl_inv_num: ((//*[@class='frontend-items-list']//table//tbody//tr[@class="col-detail"])[${row_num}]//div[@class="blxw-left"])[${inv_row_num}] 
+  tbl_inv_count: (//*[@class='frontend-items-list']//table//tbody//tr[@class="col-detail"])[${row_num}]//div[@class="blxw-left"]
+  tbl_po_count: (//*[@class='frontend-items-list']//table//tbody//tr[@class="col-detail"])[${row_num}]//div[@class="blxw-right"]
+  tbl_po_num: ((//*[@class='frontend-items-list']//table//tbody//tr[@class="col-detail"])[${row_num}]//div[@class="blxw-right"]//div[@class="blxw-table-header"]//span[@class="blxw-cd"][1])[${inv_row_num}]
+  tbl_gr_num: ((//*[@class='frontend-items-list']//table//tbody//tr[@class="col-detail"])[${row_num}]//div[@class="blxw-right"]//div[@class="blxw-table-header"]//span[@class="blxw-cd"][2])[${inv_row_num}]
+  tbl_cost_center: ((//*[@class='frontend-items-list']//table//tbody//tr[@class="col-detail"])[${row_num}]//div[@class="blxw-right"]//div[@class="blxw-table-header"]//span[@class="blxw-cd"][3])[${inv_row_num}]
+  tbl_detail_count: (//*[@class='frontend-items-list']//table//tbody//tr[@class="col-detail"])[${row_num}]//div[@class="blxw-right"]//table/tbody/tr/td[@class="blxw-num"]
+  tbl_no: ((//*[@class='frontend-items-list']//table//tbody//tr[@class="col-detail"])[${row_num}]//div[@class="blxw-right"]//table/tbody/tr/td[@class="blxw-num"])[${detail_row_num}]
+  tbl_Item_name: ((//*[@class='frontend-items-list']//table//tbody//tr[@class="col-detail"])[${row_num}]//div[@class="blxw-right"]//table/tbody/tr/td[@class="blxw-name"])[${detail_row_num}]
+cndn_firstrow_action_list_with_data_and_row_number: //div[@id="rb-ddl-action-selected-1"]/ul/li[${row_number}]/a/span

@@ -1,0 +1,4 @@
+ATTACHED_INVOICE_FILE: ${CURDIT}/../resources/testdata/${env}/attachment/wh1200.jpg
+ATTACHED_PO_FILE: ${CURDIT}/../resources/testdata/${env}/attachment/wh1200.jpg
+
+MSG_GR_AMT_EXCEED: Invoice item detail amount exceeds GR line amount.

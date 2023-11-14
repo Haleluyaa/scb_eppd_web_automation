@@ -1,0 +1,186 @@
+################  FILES
+UPLOAD_INVOICE_SUCCESS: InvoiceTemplate_Pass.xls
+UPLOAD_INVOICE_INVALID_REQUIRED_FIELD: InvoiceTemplate_Invalid_Required_field.xls
+UPLOAD_INVOICE_INVALID_FIELD_FORMAT: InvoiceTemplate_Invalid_field_format.xls
+UPLOAD_INVOICE_INVALID_DUPPLICATE_DATA: InvoiceTemplate_Invalid_Dup.xls
+UPLOAD_INVOICE_INVALID_EXCEED_LIMIT_DATA: InvoiceTemplate_Invalid_Max_length.xls
+UPLOAD_INVOICE_INVALID_NO_DATA: InvoiceTemplate_Invalid_nodata.xls
+UPLOAD_INVOICE_INVALID_ROWS_NUMBER: InvoiceTemplate_Oversize1100record.xls
+UPLOAD_INVOICE_INVALID_FILE_OVER_SIZE: InvoiceTemplate_Oversize3555kb.xls
+UPLOAD_INVOICE_INVALID_FILE_FORMAT: upload_invoice.yaml
+
+# UPLOAD_INVOICE_SUCCESS_DATA:
+#   INVOICENO:
+#   HEADER:
+#   DETAIL:
+
+INVOICE_UPLOAD_IN_QUEUE:
+  EN: Success:The upload process has been in queued currently.  
+
+UPLOAD_INVOICE_ERRORMSG_INVALID_FILE_SIZE: 
+  error_num: 0
+  error_num_with_text: "Upload Failed:"
+  error_txt: The upload failed due to oversized. Please try again.
+
+UPLOAD_INVOICE_ERRORMSG_INVALID_FILE_FORMAT: 
+  error_num: 0
+  error_num_with_text: "Upload Failed:"
+  error_txt: The upload failed due to incorrect format. Please try again.
+
+UPLOAD_INVOICE_ERRORMSG_INVALID_NO_DATA: 
+  error_num: 0
+  error_num_with_text: "Upload Failed:"
+  error_txt: No Record data. Please try again.
+
+UPLOAD_INVOICE_ERRORMSG_INVALID_ROWS_NUMBER: 
+  error_num: 0
+  error_num_with_text: "Upload Failed:"
+  error_txt: The upload failed due to oversized. Please try again.
+
+UPLOAD_INVOICE_ERRORMSG_INVALID_DUPPLICATE_DATA: 
+  error_num: 2
+  error_num_with_text: "2 Error Found:"
+  error_txt: The upload failed due to the following results. Please check and try again.
+  error_list_row_1:
+    row_num: "2"
+    desc: Data is duplicated in the file.
+    column: Invoice Number
+  error_list_row_2:
+    row_num: "3"
+    desc: Data is duplicated in the file.
+    column: Invoice Number
+
+UPLOAD_INVOICE_ERRORMSG_INVALID_REQUIRED_FIELD: 
+  error_num: 7
+  error_num_with_text: "7 Error Found:"
+  error_txt: The upload failed due to the following results. Please check and try again.
+  error_list_row_1:
+    row_num: "2"
+    desc: Data cannot be blank.
+    column: Invoice Number
+  error_list_row_2:
+    row_num: "3"
+    desc: Data cannot be blank.
+    column: Invoice Date  
+  error_list_row_3:
+    row_num: "5"
+    desc: Data cannot be blank.
+    column: PO Number
+  error_list_row_4:
+    row_num: "6"
+    desc: Data cannot be blank.
+    column: GR Number
+  error_list_row_5:
+    row_num: "7"
+    desc: Data cannot be blank.
+    column: GR Linenum  
+  error_list_row_6:
+    row_num: "8"
+    desc: Data cannot be blank.
+    column: Invoice Amount  
+  error_list_row_7:
+    row_num: "9"
+    desc: Data cannot be blank.
+    column: VAT Base Amount  
+
+UPLOAD_INVOICE_ERRORMSG_INVALID_EXCEED_LIMIT_DATA: 
+  error_num: 9
+  error_num_with_text: "9 Error Found:"
+  error_txt: The upload failed due to the following results. Please check and try again.
+  error_list_row_1:
+    row_num: "2"
+    desc: Over maximum 20 digits.
+    column: Invoice Number
+  error_list_row_2:
+    row_num: "3"
+    desc: Over maximum 10 digits.
+    column: Invoice Date  
+  error_list_row_3:
+    row_num: "4"
+    desc: Over maximum 20 digits.
+    column: Tax ID
+  error_list_row_4:
+    row_num: "5"
+    desc: Over maximum 10 digits.
+    column: Tax Invoice Date
+  error_list_row_5:
+    row_num: "6"
+    desc: Over maximum 20 digits.
+    column: VAT Amount 
+  error_list_row_6:
+    row_num: "7"
+    desc: Over maximum 20 digits.
+    column: VAT Base Amount
+  error_list_row_7:
+    row_num: "8"
+    desc: Over maximum 20 digits.
+    column: PO Number
+  error_list_row_8:
+    row_num: "9"
+    desc: Over maximum 15 digits.
+    column: Invoice Amount
+  error_list_row_9:
+    row_num: "10"
+    desc: Over maximum 255 digits.
+    column: Item Description       
+
+UPLOAD_INVOICE_ERRORMSG_INVALID_FIELD_FORMAT: 
+  error_num: 14
+  error_num_with_text: "14 Error Found:"
+  error_txt: The upload failed due to the following results. Please check and try again.
+  error_list_row_1:
+    row_num: "2"
+    desc: Incorrect format.
+    column: GR Number
+  error_list_row_2:
+    row_num: "3"
+    desc: Incorrect format.
+    column: Invoice Date  
+  error_list_row_3:
+    row_num: "4"
+    desc: Incorrect format.
+    column: GR Linenum
+  error_list_row_4:
+    row_num: "5"
+    desc: Incorrect format.
+    column: Invoice Date
+  error_list_row_5:
+    row_num: "6"
+    desc: Incorrect format.
+    column: Invoice Date
+  error_list_row_6:
+    row_num: "7"
+    desc: Incorrect format.
+    column: Invoice Date
+  error_list_row_7:
+    row_num: "8"
+    desc: Incorrect format.
+    column: Tax Invoice Date
+  error_list_row_8:
+    row_num: "9"
+    desc: Incorrect format.
+    column: Tax Invoice Date
+  error_list_row_9:
+    row_num: "10"
+    desc: Incorrect format.
+    column: Tax Invoice Date    
+  error_list_row_10:
+    row_num: "11"
+    desc: Incorrect format.
+    column: Tax Invoice Date    
+  error_list_row_11:
+    row_num: "12"
+    desc: Incorrect format.
+    column: VAT Amount
+  error_list_row_12:
+    row_num: "13"
+    desc: Incorrect format.
+    column: VAT Base Amount
+  error_list_row_13:
+    row_num: "15"
+    desc: Incorrect format.
+    column: Invoice Amount
+  error_list_row_14:
+    row_num: "16"
+    desc: Incorrect format.
+    column: Retention Amount

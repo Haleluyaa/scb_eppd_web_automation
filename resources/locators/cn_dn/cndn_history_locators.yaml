@@ -1,0 +1,20 @@
+modal_history: //div[@class="modal-inner modal-history"] 
+history_title: //*[@id="rb_modalCreateInvoice"]//div[@class="modal-title"]
+history_header:
+  lbl_cndn_number: //div[@class="modal-inner modal-history"]//div[@class="pull-left mr-50"]//div[@class="color-normal"]
+  lbl_buyer: //div[@class="modal-inner modal-history"]//div[@class="pull-left mr-50 text-max-300"]//div[@class="title-sub color-normal"]
+  lbl_create_date: //div[@class="modal-inner modal-history"]//div[@class="pull-left"]//div[@class="color-normal"]
+
+tbl_history_detail:
+  row_all: //*[@id="rb_tb_creditNote_history"]/tbody/tr
+  col_date: //*[@id="rb_tb_creditNote_history"]/tbody/tr[REPLACE_ME]/td[1]
+  col_activity: //*[@id="rb_tb_creditNote_history"]/tbody/tr[REPLACE_ME]/td[2]
+  col_actionby: //*[@id="rb_tb_creditNote_history"]/tbody/tr[REPLACE_ME]/td[3]    
+
+tbl_history:
+  row_all_activity: //*[@id="rb_tb_creditNote_history"]/tbody/tr/td[2]
+  row_selected_activity: //*[@id="rb_tb_creditNote_history"]/tbody/tr[${row_num}]/td[2]
+  row_all_action_by: //*[@id="rb_tb_creditNote_history"]/tbody/tr[${row_num}]/td[3]
+  row_all_date: //*[@id="rb_tb_creditNote_history"]/tbody/tr[${row_num}]/td[1]  
+
+  

@@ -1,0 +1,18 @@
+obj_invoice_details:
+  ddl_retention_input: //*[contains(@id,"rb_txt_gr_item_retention")][not(@disabled)]
+  ddl_retention_unit: //*[contains(@id,"rb_txt_gr_item_retention")][not(@disabled)]//parent::div//div[@class='box-dropdown']
+  lbl_Amount_in_list: //div[@class='box-dropdown-list form-dropdown-list open']//a[text()='Amount']
+  lbl_percent_in_list: //div[@class='box-dropdown-list form-dropdown-list open']//a[text()='%']
+  btn_save: //button[text()='Save']
+  lbl_error_in_retention_field: //td[@data-reactid='${reactid_td_retention}']//span[@class='text-form-error text-left']
+  action:
+    btn_delete: //div[@class="popup-top-action hide-sm"]//span[text()="Delete"]
+
+tbl_nested_inv1:
+  row_selected: //*[@id="rb-modal-viewinvoice"]//table/tbody/tr[2]//table/tbody/tr[${row_num}]
+  col_po_no: //*[@id="rb-modal-viewinvoice"]//table/tbody/tr[2]//table/tbody//tr[${row_num}]/td[position()=(count(//tr/th[text()[contains(.,'PO Number') or contains(.,'เลขที่การสั่งซื้อ')]]/preceding-sibling::*)+1) ]
+  col_gr_no: //*[@id="rb-modal-viewinvoice"]//table/tbody/tr[2]//table/tbody//tr[${row_num}]/td[position()=(count(//tr/th[text()[contains(.,'GR Number') or contains(.,'เลขที่การทำรับสินค้า')]]/preceding-sibling::*)+1) ]
+
+obj_action:
+  history: //*[@id="rb-modal-viewinvoice"]//*[text()[contains(.,'ประวัติการทำรายการ') or contains(.,'History')]]
+  edit: //*[@id="rb-modal-viewinvoice"]//*[text()[contains(.,'แก้ไข') or contains(.,'Edit')]]

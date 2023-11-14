@@ -1,0 +1,63 @@
+############ Search Detail Locator ######################
+txt_search_add_credit_debit_locator: id=rb-txt-search-add-credit
+btn_search_add_credit_debit_locator: id=rb-btn-search-button-add-credit
+
+
+############ Item Selected Locator ######################
+lbl_selected_number_invoice_locator: //div[@class="box-select-item-header"]/div[@class="pull-right"]
+btn_add_invoice_enabled_locator: //button[@class="btn-op-primary btn-add-invoice "]
+btn_add_invoice_disabled_locator: //button[@class="btn-op-primary btn-add-invoice btn-op-disabled"]
+btn_add_to_previous_locator: //div[@class="column-5 ein-add-item"]
+
+#----------Box row Invoice CN DN sequence------------------
+box_row_invoice_content_locator: //div[@class="box-select-in-item-content"]
+box_row_invoice_number_locator: //div[@class="box-select-in-item-content"]/div[@class="box-item-ein"] 
+
+#Replace SEQ_REPLACE_ME by sequence of box-row, default is 1
+lbl_number_of_seq_invoice_locator: //div[@class="box-item-ein"][SEQ_REPLACE_ME]/div[@class="box-row"]/div[@class="column-7"]/strong/sp
+lbl_number_of_selected_invoice_locator: //div[@class="box-item-ein"][SEQ_REPLACE_ME]/div[@class="box-row"]/div[@class="column-7"]/strong/span/span[2]
+lbl_amount_of_seq_invoice_locator: //div[@class="box-item-ein"][SEQ_REPLACE_ME]/div[@class="box-row"]/div[@class="column-7"]/sp
+
+
+#################Footer detail locator ########################
+btn_next_to_step2_enable_locator: //*[@id="rb-btn-next"][@class="btn-op-primary "]
+btn_next_to_step2_disabled_locator: //*[@id="rb-btn-next"][@class="btn-op-primary btn-op-disabled"]
+
+
+######################## Table locator ########################
+chk_invoice_cndn_table_header_locator_locator: id=rb-chk-add-credit
+chk_invoice_number_body_locator: id=rb-btn-add-to-new-credit    #display all check box in body table, please specifice data
+chk_invoice_number_body_specificed_row_locator: (//*[@id="rb-btn-add-to-new-credit"])[REPLACE_ME]    #Replace me with specific row number
+
+tbl_invoice_list:
+  table_list: //table[@id="rb-tbl-invoice-list"]
+  cell_by_row_and_header: //table[@id="rb-tbl-invoice-list"]//tr[${row_num}]/td[count(//table//th[text()='${column_name}']/preceding-sibling::*)+1]
+  column_by_header: //table[@id="rb-tbl-invoice-list"]//td[count(//table//th[text()='${column_name}']/preceding-sibling::*)+1]
+
+table_create_step1:  
+  list: //*[@id="table-credit-content"]
+  chk_row_1: (//*[@id="rb-btn-add-to-new-credit"])[1]
+  chk_row_2: (//*[@id="rb-btn-add-to-new-credit"])[2]
+
+search:
+  txt_search: //input[@id="rb-txt-search-add-credit"]
+  btn_search_text: id=rb-btn-search-button-add-credit
+  btn_search_calendar: id=rb-btn-search-calendar-add-credit
+  date_range:
+    any_time: id=rb-chk-any-time
+    invoice_created: id=rb-chk-credit-created
+  invoice_created:
+    txt_from: //*[@id="rb-txt-created-credit-date-from"]
+    txt_to: //*[@id="rb-txt-created-credit-date-to"]    
+  calendar_panel: //*[contains(@id,'box-calendar-${date-target}')]  
+  mdl_calendar_date: xpath=//div[@id='calendar-${expected_calendar}']//div[@class='rc-calendar-body']
+  mdl_calendar_date_select: xpath=//div[@id='calendar-${expected_calendar}']//td[@class='rc-calendar-cell']/div[.='${select_day}']
+  btn_clear_searchText: //a[@class="remove-result"][contains(@data-reactid,'searchTypeText')]
+
+btn_add_new_creditdebit_note_group: //button[@class="btn-op-primary btn-add-invoice "]  
+btn_next: id=rb-btn-next
+
+
+
+
+
