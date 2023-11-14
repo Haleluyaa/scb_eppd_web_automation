@@ -33,7 +33,6 @@ Update dictionary value
 
 Get key from dictionary
     [Arguments]    ${source_dict}
-
     @{key}    Get Dictionary Keys    ${source_dict}
     [Return]    ${key}
 

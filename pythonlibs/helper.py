@@ -75,15 +75,6 @@ def set_number_format_4digit(data) :
     result = "{0:,.4f}".format(float(data))
     return result
 
-#def delete_invoice_redis_session() :
-#     redis_db = redis.StrictRedis(host="beta-redis.oneplanets.com", port=6379, db=0)
-#     key = redis_db.keys()
-
-#     for i in key :
-#         if 'InvoiceCreateGRSession' in i :
-#             print(i)
-#             redis_db.delete(i)
-
 def random_int(start,end) :
     result = random.randint(int(start),int(end))
 

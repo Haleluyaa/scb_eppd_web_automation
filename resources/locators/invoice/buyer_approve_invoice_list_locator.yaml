@@ -1,2 +1,0 @@
-tbl_approve_invoice_list:
-  row_first: //*[@id="rb-tbl-buyer-invoice"]/tbody/tr[1]/td[3]

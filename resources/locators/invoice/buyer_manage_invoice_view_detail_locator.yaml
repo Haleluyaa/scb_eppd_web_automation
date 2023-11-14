@@ -1,7 +1,0 @@
-tbl_nested_inv1:
-  row_selected: //*[@id="pageContent"]//table/tbody/tr[2]//table/tbody/tr[${row_num}]
-  col_po_no: //*[@id="pageContent"]//table/tbody/tr[2]//table/tbody//tr[${row_num}]/td[position()=(count(//tr/th[text()[contains(.,'PO Number') or contains(.,'เลขที่การสั่งซื้อ')]]/preceding-sibling::*)+1) ]
-  col_gr_no: //*[@id="pageContent"]//table/tbody/tr[2]//table/tbody//tr[${row_num}]/td[position()=(count(//tr/th[text()[contains(.,'GR Number') or contains(.,'เลขที่การทำรับสินค้า')]]/preceding-sibling::*)+1)]
-
-btn_action:
-  history: //*[@id="pageContent"]//div[@class="full-popup-head"]//*[text()[contains(.,'ประวัติการทำรายการ') or contains(.,'History')]]

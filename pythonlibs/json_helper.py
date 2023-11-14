@@ -40,8 +40,3 @@ def parse_json(json_string):
         json_string = stringify_json(json_string)
     return load_json(json_string)
 
-# ${result}=        Get Json Value    {"foo": {"bar": [1,2,3]}}   /foo/bar
-# Should Be Equal As Strings    ${result}         [1, 2, 3]
-#
-# ${result}=       Set Json Value   {"foo": {"bar": [1,2,3]}}    /foo    12
-# Should Be Equal As Strings    ${result}       {'foo': 12}
