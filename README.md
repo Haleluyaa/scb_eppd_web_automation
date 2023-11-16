@@ -1,13 +1,13 @@
-# Invoice Web Automation
+# Eppd Web Automation Testing
 
 TODO: Write a project description
 
 ## Installation Guide
+pip3 install -r requirements.txt
 ### Robot Framework
-
+${env}= sit | uat
+Run Command : Python3 -m robot -v env:${env} -i "regression" -L TRACE ./testcases/${service_folder}/${testcase.robot}
 ### Virtual Environment
-
-
 TODO: Describe the installation process
 
 # Usage
