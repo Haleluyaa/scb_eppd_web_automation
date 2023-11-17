@@ -5,6 +5,7 @@
 
 openpyxl
 requests
+jsonpatch==1.33
 robotframework>=6.1.1
 robotframework-databaselibrary==1.3.1
 robotframework-jsonlibrary==0.4.1
