@@ -6,7 +6,8 @@ TODO: Write a project description
 pip3 install -r requirements.txt
 ### Robot Framework
 ${env}= sit | uat
-Run Command : Python3 -m robot -v env:${env} -i "regression" -L TRACE ./testcases/${service_folder}/${testcase.robot}
+${-i tagName}= -i regression | -i smoketest **optional
+Run Command : Python3 -m robot -v env:${env} -d results {-i tagname} -L TRACE ./testcases/${service_folder}/${testcase.robot}
 ### Virtual Environment
 TODO: Describe the installation process
 
