@@ -11,8 +11,7 @@ Go to eppd by chrome browser
     [Arguments]    ${username}    ${password}
     ${auth_resp}=   Post Authen rounting api    ${username}    ${password}
     ${url_auth}=   Set Variable    ${auth_resp}[generateTokenRs]
-    open_eppd_by_chrome_browser    ${url_auth}
-
-
-
+    ${path}=      find_chromedriver_path
+    ${option}=    chrome_options
+    Open Browser    ${url_auth}    Chrome    options=${option}    executable_path=${path}
 

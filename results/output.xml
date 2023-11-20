@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.9.2 on darwin)" generated="20231117 08:33:59.557" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.9.2 on darwin)" generated="20231117 20:24:30.007" rpa="false" schemaversion="4">
 <suite id="s1" name="Test Demo" source="/Users/s96681/works/Automated_scripts/scb_eppd_web_automatesting/testcases/demo_test/test_demo.robot">
 <test id="s1-t1" name="Test go to eppd with chrome" line="5">
 <kw name="Go to eppd by chrome browser" library="common_web_keywords">
@@ -18,50 +18,50 @@ Arguments: Username, Password</doc>
 <arg>X-Channel-Client=S1</arg>
 <arg>X-Channel=MANUAL</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20231117 08:33:59.756" level="INFO">${headers} = {'Content-Type': 'application/x-www-form-urlencoded', 'X-Channel-Client': 'S1', 'X-Channel': 'MANUAL'}</msg>
-<status status="PASS" starttime="20231117 08:33:59.756" endtime="20231117 08:33:59.756"/>
+<msg timestamp="20231117 20:24:30.130" level="INFO">${headers} = {'Content-Type': 'application/x-www-form-urlencoded', 'X-Channel-Client': 'S1', 'X-Channel': 'MANUAL'}</msg>
+<status status="PASS" starttime="20231117 20:24:30.130" endtime="20231117 20:24:30.130"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${domain}</var>
 <arg>https://auth-scbeppd-${env}.se.scb.co.th/</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231117 08:33:59.756" level="INFO">${domain} = https://auth-scbeppd-sit.se.scb.co.th/</msg>
-<status status="PASS" starttime="20231117 08:33:59.756" endtime="20231117 08:33:59.756"/>
+<msg timestamp="20231117 20:24:30.130" level="INFO">${domain} = https://auth-scbeppd-sit.se.scb.co.th/</msg>
+<status status="PASS" starttime="20231117 20:24:30.130" endtime="20231117 20:24:30.130"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${endpoint}</var>
 <arg>authen-routing/s1/auth/token</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231117 08:33:59.756" level="INFO">${endpoint} = authen-routing/s1/auth/token</msg>
-<status status="PASS" starttime="20231117 08:33:59.756" endtime="20231117 08:33:59.756"/>
+<msg timestamp="20231117 20:24:30.130" level="INFO">${endpoint} = authen-routing/s1/auth/token</msg>
+<status status="PASS" starttime="20231117 20:24:30.130" endtime="20231117 20:24:30.130"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${x_form_body}</var>
 <arg>${authen_rounting.body}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231117 08:33:59.756" level="INFO">${x_form_body} = {'username': 'username', 'grant_type': 'password', 'password': 'password'}</msg>
-<status status="PASS" starttime="20231117 08:33:59.756" endtime="20231117 08:33:59.756"/>
+<msg timestamp="20231117 20:24:30.131" level="INFO">${x_form_body} = {'username': 'username', 'grant_type': 'password', 'password': 'password'}</msg>
+<status status="PASS" starttime="20231117 20:24:30.130" endtime="20231117 20:24:30.131"/>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <arg>${x_form_body}</arg>
 <arg>username</arg>
 <arg>${username}</arg>
 <doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
-<status status="PASS" starttime="20231117 08:33:59.757" endtime="20231117 08:33:59.757"/>
+<status status="PASS" starttime="20231117 20:24:30.131" endtime="20231117 20:24:30.131"/>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <arg>${x_form_body}</arg>
 <arg>password</arg>
 <arg>${password}</arg>
 <doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
-<status status="PASS" starttime="20231117 08:33:59.757" endtime="20231117 08:33:59.757"/>
+<status status="PASS" starttime="20231117 20:24:30.131" endtime="20231117 20:24:30.131"/>
 </kw>
 <kw name="Create Session" library="RequestsLibrary">
 <arg>domain</arg>
 <arg>${domain}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20231117 08:33:59.757" level="INFO">Creating Session using : alias=domain, url=https://auth-scbeppd-sit.se.scb.co.th/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20231117 08:33:59.757" endtime="20231117 08:33:59.757"/>
+<msg timestamp="20231117 20:24:30.131" level="INFO">Creating Session using : alias=domain, url=https://auth-scbeppd-sit.se.scb.co.th/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231117 20:24:30.131" endtime="20231117 20:24:30.131"/>
 </kw>
 <kw name="POST On Session" library="RequestsLibrary">
 <var>${response}</var>
@@ -71,53 +71,87 @@ Arguments: Username, Password</doc>
 <arg>data=${x_form_body}</arg>
 <arg>expected_status=any</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<msg timestamp="20231117 08:33:59.786" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPSConnection object at 0x102f215b0&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /authen-routing/s1/auth/token</msg>
-<msg timestamp="20231117 08:33:59.992" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPSConnection object at 0x102f217f0&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /authen-routing/s1/auth/token</msg>
-<msg timestamp="20231117 08:34:00.399" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPSConnection object at 0x102f219d0&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /authen-routing/s1/auth/token</msg>
-<msg timestamp="20231117 08:34:00.404" level="FAIL">ConnectionError: HTTPSConnectionPool(host='auth-scbeppd-sit.se.scb.co.th', port=443): Max retries exceeded with url: /authen-routing/s1/auth/token (Caused by NewConnectionError('&lt;urllib3.connection.HTTPSConnection object at 0x102f21bb0&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))</msg>
-<status status="FAIL" starttime="20231117 08:33:59.757" endtime="20231117 08:34:00.412"/>
+<msg timestamp="20231117 20:24:30.512" level="INFO">POST Request : url=https://auth-scbeppd-sit.se.scb.co.th/authen-routing/s1/auth/token 
+ path_url=/authen-routing/s1/auth/token 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'X-Channel-Client': 'S1', 'X-Channel': 'MANUAL', 'Content-Length': '58'} 
+ body=username=TTCUSEROP1%40TTC&amp;grant_type=password&amp;password=TTC 
+ </msg>
+<msg timestamp="20231117 20:24:30.513" level="INFO">POST Response : url=https://auth-scbeppd-sit.se.scb.co.th/authen-routing/s1/auth/token 
+ status=200, reason= 
+ headers={'Date': 'Fri, 17 Nov 2023 13:24:30 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Strict-Transport-Security': 'max-age=15724800; includeSubDomains; preload'} 
+ body={"generateTokenRs":"https://scbeppd-sit.se.scb.co.th/landingpage/s1?id=f625bb72-c179-47f4-bde1-d9fd55f46862","expires_in":1700230170544} 
+ </msg>
+<msg timestamp="20231117 20:24:30.513" level="INFO">/Users/s96681/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'auth-scbeppd-sit.se.scb.co.th'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20231117 20:24:30.514" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231117 20:24:30.131" endtime="20231117 20:24:30.514"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${res_json}</var>
 <arg>${response.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" starttime="20231117 08:34:00.413" endtime="20231117 08:34:00.413"/>
+<msg timestamp="20231117 20:24:30.517" level="INFO">${res_json} = {'generateTokenRs': 'https://scbeppd-sit.se.scb.co.th/landingpage/s1?id=f625bb72-c179-47f4-bde1-d9fd55f46862', 'expires_in': 1700230170544}</msg>
+<status status="PASS" starttime="20231117 20:24:30.514" endtime="20231117 20:24:30.517"/>
 </kw>
 <return>
 <value>${res_json}</value>
-<status status="NOT RUN" starttime="20231117 08:34:00.413" endtime="20231117 08:34:00.413"/>
+<status status="PASS" starttime="20231117 20:24:30.517" endtime="20231117 20:24:30.517"/>
 </return>
-<status status="FAIL" starttime="20231117 08:33:59.755" endtime="20231117 08:34:00.413"/>
+<msg timestamp="20231117 20:24:30.517" level="INFO">${auth_resp} = {'generateTokenRs': 'https://scbeppd-sit.se.scb.co.th/landingpage/s1?id=f625bb72-c179-47f4-bde1-d9fd55f46862', 'expires_in': 1700230170544}</msg>
+<status status="PASS" starttime="20231117 20:24:30.130" endtime="20231117 20:24:30.517"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${url_auth}</var>
 <arg>${auth_resp}[generateTokenRs]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" starttime="20231117 08:34:00.413" endtime="20231117 08:34:00.413"/>
+<msg timestamp="20231117 20:24:30.518" level="INFO">${url_auth} = https://scbeppd-sit.se.scb.co.th/landingpage/s1?id=f625bb72-c179-47f4-bde1-d9fd55f46862</msg>
+<status status="PASS" starttime="20231117 20:24:30.517" endtime="20231117 20:24:30.518"/>
 </kw>
-<kw name="Open Eppd By Chrome Browser" library="common_util">
+<kw name="Find Chromedriver Path" library="common_util">
+<var>${path}</var>
+<msg timestamp="20231117 20:24:30.518" level="INFO">${path} = /Users/s96681/works/Automated_scripts/scb_eppd_web_automatesting/drivers/chrome_macx64_11906045105/chromedriver</msg>
+<status status="PASS" starttime="20231117 20:24:30.518" endtime="20231117 20:24:30.518"/>
+</kw>
+<kw name="Chrome Options" library="common_util">
+<var>${option}</var>
+<msg timestamp="20231117 20:24:30.519" level="INFO">${option} = &lt;selenium.webdriver.chrome.options.Options object at 0x10296bee0&gt;</msg>
+<status status="PASS" starttime="20231117 20:24:30.518" endtime="20231117 20:24:30.519"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url_auth}</arg>
-<status status="NOT RUN" starttime="20231117 08:34:00.413" endtime="20231117 08:34:00.413"/>
+<arg>Chrome</arg>
+<arg>options=${option}</arg>
+<arg>executable_path=${path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231117 20:24:30.521" level="INFO">Opening browser 'Chrome' to base url 'https://scbeppd-sit.se.scb.co.th/landingpage/s1?id=f625bb72-c179-47f4-bde1-d9fd55f46862'.</msg>
+<status status="PASS" starttime="20231117 20:24:30.519" endtime="20231117 20:24:54.932"/>
 </kw>
-<status status="FAIL" starttime="20231117 08:33:59.755" endtime="20231117 08:34:00.414"/>
+<status status="PASS" starttime="20231117 20:24:30.129" endtime="20231117 20:24:54.932"/>
 </kw>
-<status status="FAIL" starttime="20231117 08:33:59.755" endtime="20231117 08:34:00.414">ConnectionError: HTTPSConnectionPool(host='auth-scbeppd-sit.se.scb.co.th', port=443): Max retries exceeded with url: /authen-routing/s1/auth/token (Caused by NewConnectionError('&lt;urllib3.connection.HTTPSConnection object at 0x102f21bb0&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))</status>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//body/div[@id='root']/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/button[1]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231117 20:24:54.932" endtime="20231117 20:24:56.095"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231117 20:24:56.096" endtime="20231117 20:24:56.351"/>
+</kw>
+<status status="PASS" starttime="20231117 20:24:30.129" endtime="20231117 20:24:56.351"/>
 </test>
-<status status="FAIL" starttime="20231117 08:33:59.558" endtime="20231117 08:34:00.416"/>
+<status status="PASS" starttime="20231117 20:24:30.008" endtime="20231117 20:24:56.351"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Test Demo">Test Demo</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test Demo">Test Demo</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20231117 08:33:59.786" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPSConnection object at 0x102f215b0&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /authen-routing/s1/auth/token</msg>
-<msg timestamp="20231117 08:33:59.992" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPSConnection object at 0x102f217f0&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /authen-routing/s1/auth/token</msg>
-<msg timestamp="20231117 08:34:00.399" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPSConnection object at 0x102f219d0&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /authen-routing/s1/auth/token</msg>
 </errors>
 </robot>
