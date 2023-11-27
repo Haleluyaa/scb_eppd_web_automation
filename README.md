@@ -4,7 +4,16 @@ TODO: Write a project description
 
 ## Installation Guide
 pip3 install -r requirements.txt
+
 ### Robot Framework
+driver garantee steps: 
+    1. go directory of driver in project 
+    2. run command : xattr -d com.apple.quarantine chromedriver
+
+chromeapp garantee steps:
+    1. go to directory of chromeapp in project 
+    2. run command : xattr -d com.apple.quarantine Google_Chrome_for_Testing.app
+Robot Run command:
 ${env}= sit | uat
 ${-i tagName}= -i regression | -i smoketest **optional
 Run Command : Python3 -m robot -v env:${env} -d results {-i tagname} -L TRACE ./testcases/${service_folder}/${testcase.robot}
