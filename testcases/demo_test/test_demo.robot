@@ -1,6 +1,8 @@
 *** Settings ***
 Resource    ../../resources/global_keyword.resource
-
+*** Variables ***
+${slash}                  /
+${chrome_testing_path}    ${CURDIR}..${slash}..${slash}..${slash}drivers${slash}chrome-mac-arm64_for_testing${slash}Google_Chrome_for_Testing.app
 *** Test Cases ***
 Test go to eppd with chrome
     Go to eppd by chrome browser    TTCUSEROP1@TTC   TTC
